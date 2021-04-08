@@ -1,0 +1,66 @@
+<layout id="WatchFace">
+    <drawable class="Background" />
+ 
+    <label id="TimeLabel"
+    		x="center" y="center"
+    		font="@Fonts.HoursFont"
+    		justification="Graphics.TEXT_JUSTIFY_LEFT"
+    		color="Graphics.COLOR_BLUE" />
+    
+    <label id="MinutesDisplay"
+    		x="center" y="center"
+    		font="@Fonts.MinutesFont"
+    		justification="Graphics.TEXT_JUSTIFY_LEFT"
+    		color="Graphics.COLOR_BLUE" />
+    		     
+    <label id="SecondsDisplay"
+    		x="0" y="0"
+			font="@Fonts.SecondsFont"
+			justification="Graphics.TEXT_JUSTIFY_RIGHT"
+       		color="Graphics.COLOR_BLUE" />
+       		
+	<label id="MotivationalDisplay"
+			x="0" y="0"
+			font="Gfx.FONT_SMALL" 
+			justification="Graphics.TEXT_JUSTIFY_CENTER" 
+			color="Graphics.COLOR_GREEN" />
+			
+	<label id="DateDisplay" 
+			text="00/00/00" 
+			x="center" y="bottom" 
+			font="@Fonts.TinyFont" 
+			justification="Gfx.TEXT_JUSTIFY_CENTER" 
+			color="Gfx.COLOR_BLUE" />
+			
+	<label id="StepCountDisplay" 
+			text="00000" x="0" y="0" 
+			font="@Fonts.NormalFont" 
+			justification="Gfx.TEXT_JUSTIFY_LEFT" 
+			color="Gfx.COLOR_BLUE" />
+			
+    <label id="CaloriesDisplay" 
+    		text="0000" 
+    		x="0" y="0" 
+    		font="@Fonts.NormalFont" 
+    		justification="Gfx.TEXT_JUSTIFY_LEFT" 
+    		color="Gfx.COLOR_BLUE" />
+    		
+    <label id="NotificationDisplay" 
+    		text="000" 
+    		x="center" y="top" 
+    		font="@Fonts.NormalFont" 
+    		justification="Gfx.TEXT_JUSTIFY_LEFT" 
+    		color="Gfx.COLOR_GREEN" />
+    		
+	<label id="HeartrateDisplay" 
+			text="000" 
+			x="center" y="top" 
+			font="@Fonts.NormalFont" 
+			justification="Gfx.TEXT_JUSTIFY_CENTER" 
+			color="Gfx.COLOR_GREEN" />
+			
+	<drawable class="ProgressBar" />
+	<drawable class="Battery" />
+
+			
+</layout>

@@ -1,0 +1,54 @@
+<settings>
+
+    <setting propertyKey="@Properties.ThemeColor" title="@Strings.ThemeColorTitle">
+        <settingConfig type="list">
+        	<listEntry value="0">@Strings.RunnerAttitude</listEntry>
+            <listEntry value="1">@Strings.NightRunner</listEntry>
+            <listEntry value="2">@Strings.Twilight</listEntry>
+            <listEntry value="3">@Strings.MountainTrails</listEntry>
+            <listEntry value="4">@Strings.CityRunner</listEntry>
+            <listEntry value="5">@Strings.TrackTraining</listEntry>
+            <listEntry value="6">@Strings.RunningGirl</listEntry>
+            <listEntry value="7">@Strings.ShinyDay</listEntry>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.MotivationalPhrase" title="@Strings.MotivationalPhrase">
+        <settingConfig type="list">
+        	<listEntry value="0">@Strings.Twinkling</listEntry>
+        	<listEntry value="1">@Strings.Scrolling</listEntry>
+            <listEntry value="2">@Strings.Fixed</listEntry>
+        </settingConfig>
+    </setting>
+    
+    
+    <setting propertyKey="@Properties.PhraseRenewalTime" title="@Strings.PhraseRenewalTime">
+        <settingConfig type="list">
+        	<listEntry value="60">@Strings.OneMin</listEntry>
+            <listEntry value="300">@Strings.FiveMins</listEntry>
+            <listEntry value="900">@Strings.FifteenMins</listEntry>
+            <listEntry value="1800">@Strings.HalfHour</listEntry>
+            <listEntry value="3600">@Strings.OneHour</listEntry>
+            
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.ShowSeconds" title="@Strings.ShowSeconds">
+        <settingConfig type="boolean"/>
+    </setting>
+    
+    <setting propertyKey="@Properties.RunnerAvatar" title="@Strings.RunnerAvatar">
+        <settingConfig type="list">
+        	<listEntry value="0">@Strings.GenderSettings</listEntry>
+            <listEntry value="1">@Strings.RunnerGirl</listEntry>
+            <listEntry value="2">@Strings.RunnerBoy</listEntry>
+            <listEntry value="3">@Strings.RunnerDisabled</listEntry>            
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.StopAnimations" title="@Strings.StopAnimations">
+        <settingConfig type="boolean"/>
+    </setting>
+    
+
+</settings>

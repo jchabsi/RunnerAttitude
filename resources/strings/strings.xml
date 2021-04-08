@@ -1,0 +1,93 @@
+<strings>
+
+    <string id="AppName">RunnerAttitude</string>
+	
+	<string id="ThemeColorTitle">Color Theme</string>
+    
+    <string id="RunnerAttitude">Runner Attitude</string>
+    <string id="NightRunner">Night Runner</string>
+    <string id="Twilight">Twilight</string>
+    <string id="MountainTrails">Mountain Trails</string>
+    <string id="CityRunner">City Runner</string>
+    <string id="TrackTraining">Track Training</string>
+    <string id="RunningGirl">Running Girl</string>
+    <string id="ShinyDay">Shiny Day</string>
+    
+    <string id="MotivationalPhrase">Motivational phrase type</string>
+    
+    <string id="Scrolling">Phrase with scrolling</string>
+    <string id="Fixed">Small fixed phrase</string>
+    <string id="Twinkling">Twinkling phrase</string>
+    
+    <string id="PhraseRenewalTime">Phrase Renewal Time</string>
+    
+    <string id="OneMin">1 minute</string>
+    <string id="FiveMins">5 Minutes</string>
+    <string id="FifteenMins">15 Minutes</string>
+    <string id="HalfHour">30 Minutes</string>
+    <string id="OneHour">60 Minutes</string>    
+	
+	
+	<string id="Phrase1">Thanks for using Runner Attitude Watchface. Go for a run!</string>
+	<string id="Phrase2">Running is about finding your inner peace, and so is a life well lived</string>
+	<string id="Phrase3">Run to add life to your days.</string>
+	<string id="Phrase4">Choose running as your therapy.</string>
+	<string id="Phrase5">Ask nothing from your running, and you'll get more than you ever imagined.</string>
+	<string id="Phrase6">It being a runner what matters, not how fast or how far you could run.</string>
+	<string id="Phrase7">Winning doesn't always mean getting first place; it means getting the best out of yourself.</string>
+	<string id="Phrase8">You must do the thing you think you cannot do.</string>
+	<string id="Phrase9">If it doesn’t challenge you, it won't change you.</string>
+	<string id="Phrase10">The man who moves a mountain begins by carrying away small stones.</string>
+	<string id="Phrase11">Someone who is busier than you is running right now.</string>
+	<string id="Phrase12">Don’t fear moving slowly forward…fear standing still</string>
+	<string id="Phrase13">A one hour run is 4% of your day. No excuses.</string>
+	<string id="Phrase14">One run can change your day. Many runs can change your life.</string>
+	<string id="Phrase15">Run the first two-thirds of the race with your head and the last third with your heart.</string>
+	<string id="Phrase16">Breathe in strength and breathe out weakness</string>
+	<string id="Phrase17">Set objectives and overcome yourself.</string>
+	<string id="Phrase18">Don't procrastinate, today is your day</string>
+	<string id="Phrase19">Your mind will quit a thousand times before your body will. Feel the fear and do it anyway!</string>
+	<string id="Phrase20">Look in the mirror. That is your competition.</string>
+	<string id="Phrase21">There is not one body type that equates to success. Accept the body you have and be the best you can be with it.</string>
+	<string id="Phrase22">Everyday is a good day to run. Isn't it?</string>
+	<string id="Phrase23">Never give up, keep trying and improving</string>
+	<string id="Phrase24">Don't set limits, explore them! </string>
+	<string id="Phrase25">Compete against yourself and admire the others</string>
+	<string id="Phrase26">Run and free up your mind</string>
+	
+	<string id="Fixed1">Runner Attitude</string>
+	<string id="Fixed2">Run frequently</string>
+	<string id="Fixed3">Be persistent</string>
+	<string id="Fixed4">Sleep well</string>
+	<string id="Fixed5">Eat well</string>
+	<string id="Fixed6">Healthy life</string>
+	<string id="Fixed7">Be happy</string>
+	<string id="Fixed8">Inner peace</string>
+	<string id="Fixed9">Running therapy</string>
+	<string id="Fixed10">Inner peace</string>
+	<string id="Fixed11">Improve</string>
+	<string id="Fixed12">Be positive</string>
+	<string id="Fixed13">Inner peace</string>
+	<string id="Fixed14">IOvercome</string>
+	<string id="Fixed15">Go further</string>
+	<string id="Fixed16">Break limits</string>
+	<string id="Fixed17">Inner peace</string>
+	<string id="Fixed18">Never give up</string>
+	<string id="Fixed19">Challenges</string>
+	<string id="Fixed20">Challenges</string>
+	<string id="Fixed21">Set Objectives</string>
+	<string id="Fixed22">Challenges</string>
+	<string id="Fixed23">Enjoy today</string>
+	
+	<string id="ShowSeconds">Show seconds</string>
+	
+	<string id="RunnerAvatar">Choose progress runner avatar</string>
+	<string id="GenderSettings">Gender from watch settings</string>
+	<string id="RunnerGirl">Girl avatar</string>
+	<string id="RunnerBoy">Boy avatar</string>
+	<string id="RunnerDisabled">Hide runner avatar</string>
+	
+	<string id="StopAnimations">Stop animations on sleep mode</string>
+	
+
+</strings>

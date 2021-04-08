@@ -1,0 +1,11 @@
+<properties>
+
+    <property id="ThemeColor" type="number">0</property>
+    <property id="MotivationalPhrase" type="number">0</property>
+    <property id="PhraseRenewalTime" type="number">300</property>
+    <property id="RunnerAvatar" type="number">0</property>
+    <property id="ShowSeconds" type="boolean">true</property>
+    <property id="StopAnimations" type="boolean">false</property>
+    
+
+</properties>
