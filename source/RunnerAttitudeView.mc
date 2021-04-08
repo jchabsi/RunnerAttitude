@@ -28,7 +28,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden var iconHeart;
 	
 	hidden var showSeconds;
-	hidden var stopAnimations;
 	
 
     function initialize() {
@@ -202,9 +201,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
-    	if ( stopAnimations ) {
-    		Application.getApp().setSleep(true);
-    	}
+    	Application.getApp().setSleep(true);
     }
     
     private function setTime(dc) {
@@ -365,9 +362,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     
     function setSecondsConfig() {
     	showSeconds = Application.getApp().getProperty("ShowSeconds");
-    }
-    function setStopAnimations() {
-    	stopAnimations = Application.getApp().getProperty("StopAnimations");
     }
     		
     	 

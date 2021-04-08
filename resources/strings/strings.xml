@@ -87,7 +87,5 @@
 	<string id="RunnerBoy">Boy avatar</string>
 	<string id="RunnerDisabled">Hide runner avatar</string>
 	
-	<string id="StopAnimations">Stop animations on sleep mode</string>
-	
 
 </strings>

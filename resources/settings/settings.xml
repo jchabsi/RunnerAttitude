@@ -46,9 +46,5 @@
         </settingConfig>
     </setting>
     
-    <setting propertyKey="@Properties.StopAnimations" title="@Strings.StopAnimations">
-        <settingConfig type="boolean"/>
-    </setting>
-    
 
 </settings>

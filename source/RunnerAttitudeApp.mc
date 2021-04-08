@@ -40,9 +40,7 @@ class RunnerAttitudeApp extends Application.AppBase {
         gPhrase.selectPhrase(); 
         gPhrase.setPhraseRenewalTime(); 
         runnerAttitudeView.setSecondsConfig();
-        ProgressBar.setRunnerAvatar();
-        runnerAttitudeView.setStopAnimations();
-              
+        ProgressBar.setRunnerAvatar();   
         
         WatchUi.requestUpdate();
     }
