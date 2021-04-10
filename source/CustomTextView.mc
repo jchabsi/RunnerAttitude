@@ -10,22 +10,24 @@ class MyTextView extends WatchUi.Drawable {
     hidden var myFont;
     hidden var myX;
     hidden var myY;
+    hidden var myJust;
     
     function setColor(color) {
     	myColor = color;
     }
     
-    function initialize(text, color, font, x, y) {
+    function initialize(text, color, font, x, y, just) {
         myText = text;
         myColor = color;
         myFont = font;
         myX = x;
         myY = y;    
+        myJust = just;
         
         var dictionary = {
             :identifier => "MyTextView"
         };
-
+       
         Drawable.initialize(dictionary);    
     }
     
@@ -37,7 +39,11 @@ class MyTextView extends WatchUi.Drawable {
 	        myY,
 	        myFont,
 	        myText,          
-	        Graphics.TEXT_JUSTIFY_LEFT
+	        myJust
         );        
+    }
+    
+    function setText(text) {
+    	myText = text;
     }
 }

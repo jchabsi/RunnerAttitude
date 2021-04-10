@@ -17,8 +17,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden var hoursFont;
 	hidden var minutesFont;
 	hidden var secondsFont;
-	hidden var normalFont;
-	hidden var coolFont;
 	hidden var tinyFont;
 	
 	hidden var iconSteps;
@@ -40,8 +38,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	hoursFont = WatchUi.loadResource(Rez.Fonts.HoursFont);
 		minutesFont = WatchUi.loadResource(Rez.Fonts.MinutesFont);
 		secondsFont = WatchUi.loadResource(Rez.Fonts.SecondsFont);
-		normalFont = WatchUi.loadResource(Rez.Fonts.NormalFont);
-		coolFont = WatchUi.loadResource(Rez.Fonts.NormalFont);
 		tinyFont = WatchUi.loadResource(Rez.Fonts.TinyFont);
 
         setLayout(Rez.Layouts.WatchFace(dc));
@@ -59,8 +55,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	//var scrolledPhrase = gPhrase.selectPhrase();
     	var phraseType = Application.getApp().getProperty("MotivationalPhrase").toNumber();
     	var motivationalDisplay = View.findDrawableById("MotivationalDisplay");
-    	    	
-    	//motivationalDisplay.locX = width / 10;
     	
     	if (height > 180)  {    	
     		motivationalDisplay.locY = height / 1.6;
@@ -72,9 +66,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     		motivationalDisplay.locY = height / 1.55;
     	}
     	
-    	//motivationalDisplay.setText(scrolledPhrase);
-    	
-    	    	    	
     	//seconds
     	var viewSeconds = View.findDrawableById("SecondsDisplay");
     	var secondsX = [1.02, 1.03, 1.05, 1.07, 1.13];
@@ -101,19 +92,19 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	var stepCountDisplay = View.findDrawableById("StepCountDisplay"); 
     	stepCountDisplay.locX = width / 3.2;
     	stepCountDisplay.locY = height / 1.3;
-    	iconSteps = new MyTextView("0", gTheme.iconSteps, iconsFont, width / 4.8, height / 1.3 );  
+    	iconSteps = new MyTextView("0", gTheme.iconSteps, iconsFont, width / 4.8, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );  
     	
     	//Calories
     	var caloriesDisplay = View.findDrawableById("CaloriesDisplay"); 	
     	caloriesDisplay.locX = width / 1.5;
     	caloriesDisplay.locY = height / 1.3; 
-    	iconCalories = new MyTextView("6", gTheme.iconCalories, iconsFont, width / 1.75, height / 1.3 );
+    	iconCalories = new MyTextView("6", gTheme.iconCalories, iconsFont, width / 1.75, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Notifications
     	var notificationDisplay = View.findDrawableById("NotificationDisplay"); 	
     	notificationDisplay.locX = width / 2.45;
     	notificationDisplay.locY = height / 5.5;
-    	iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 3.7, height / 5.4 );
+    	iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 3.7, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Heart rate    	
     	var heartrateDisplay = View.findDrawableById("HeartrateDisplay"); 
@@ -125,10 +116,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	heartrateDisplay.locX = width / calcXY(hrX, width);
     	heartrateDisplay.locY = height / calcXY(hrY, height);
     	
-    	iconHeart = new MyTextView("3", gTheme.iconHeart, iconsFont, width / calcXY(heartX, width), height / calcXY(heartY, height));
+    	iconHeart = new MyTextView("3", gTheme.iconHeart, iconsFont, width / calcXY(heartX, width), height / calcXY(heartY, height), Graphics.TEXT_JUSTIFY_LEFT);
     	
     	//Blue thooth
-    	iconBT = new MyTextView("8", setBTIconColor(), iconsFont, width / 1.6, height / 5.55 );    	        
+    	iconBT = new MyTextView("8", setBTIconColor(), iconsFont, width / 1.6, height / 5.55, Graphics.TEXT_JUSTIFY_LEFT );    	        
     	    	
     }
     
