@@ -10,6 +10,9 @@
             <listEntry value="5">@Strings.TrackTraining</listEntry>
             <listEntry value="6">@Strings.RunningGirl</listEntry>
             <listEntry value="7">@Strings.ShinyDay</listEntry>
+            <listEntry value="8">@Strings.SnowRun</listEntry>
+            <listEntry value="9">@Strings.ClassicRunner</listEntry>
+            <listEntry value="10">@Strings.ForestTrain</listEntry>
         </settingConfig>
     </setting>
     

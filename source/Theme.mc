@@ -30,7 +30,10 @@ class Theme {
 		CityRunner,
 		TrackTraining,
 		RunningGirl,
-		ShinnyDay
+		ShinnyDay,
+		SnowRun,
+		ClassicRunner,
+		ForestTrain
 	}	
 	
 	function initialize() {		
@@ -212,6 +215,90 @@ class Theme {
 				trackLine = 0xFF5500;
 				trackProgress = 0x0055AA;
 				background = 0xFFFFFF;			
+				break;
+				
+			case SnowRun:			
+				time = 0x000000;
+				mins = 0x000000;
+				seconds = 0x000000;
+				phrase = 0x555555;
+				date = 0x555555;
+				iconCalories = 0x000000;
+				iconSteps = 0x000000;
+				iconHeart = 0x000000;
+				iconNotif = 0x000000;	
+				metricsText = 0x000000;
+				iconBtOff = 0xAAAAAA;
+				iconBtOn = 0x000000;
+				batteryOk = 0x000000;
+				batteryLow = 0xFF5500;
+				batteryCritical = 0xAA0000;
+				trackLine = 0x555555;
+				trackProgress = 0x000000;
+				background = 0xFFFFFF;			
+				break;
+			
+			case ClassicRunner:			
+				time = 0xFFFFFF;
+				mins = 0xAAAAAA;
+				seconds = 0xAAAAAA;
+				phrase = 0xAAAAAA;
+				date = 0xAAAAAA;
+				iconCalories = 0x000000;
+				iconSteps = 0xFFFFFF;
+				iconHeart = 0xFFFFFF;
+				iconNotif = 0xFFFFFF;	
+				metricsText = 0xFFFFFF;
+				iconBtOff = 0xAAAAAA;
+				iconBtOn = 0xFFFFFF;
+				batteryOk = 0xFFFFFF;
+				batteryLow = 0xFF5500;
+				batteryCritical = 0xAA0000;
+				trackLine = 0xAAAAAA;
+				trackProgress = 0xFFFFFF;
+				background = 0x000000;			
+				break;
+				
+			case ClassicRunner:			
+				time = 0xFFFFFF;
+				mins = 0xAAAAAA;
+				seconds = 0xAAAAAA;
+				phrase = 0xAAAAAA;
+				date = 0xAAAAAA;
+				iconCalories = 0x000000;
+				iconSteps = 0xFFFFFF;
+				iconHeart = 0xFFFFFF;
+				iconNotif = 0xFFFFFF;	
+				metricsText = 0xFFFFFF;
+				iconBtOff = 0xAAAAAA;
+				iconBtOn = 0xFFFFFF;
+				batteryOk = 0xFFFFFF;
+				batteryLow = 0xFF5500;
+				batteryCritical = 0xAA0000;
+				trackLine = 0xAAAAAA;
+				trackProgress = 0xFFFFFF;
+				background = 0x000000;			
+				break;
+				
+			case ForestTrain:			
+				time = 0xAAAA55;
+				mins = 0xAAAA55;
+				seconds = 0xAAAA55;
+				phrase = 0xAAAA55;
+				date = 0xAAAA55;
+				iconCalories = 0xFFFF00;
+				iconSteps = 0xFFAA00;
+				iconHeart = 0xFF55AA;
+				iconNotif = 0xAA55FF;	
+				metricsText = 0xFFFFFF;
+				iconBtOff = 0xAAAAAA;
+				iconBtOn = 0x00AAFF;
+				batteryOk = 0x00FF00;
+				batteryLow = 0xFFFF00;
+				batteryCritical = 0xFF5555;
+				trackLine = 0xAA5555;
+				trackProgress = 0xAAAA55;
+				background = 0x005500;			
 				break;
 		}
 	}		
