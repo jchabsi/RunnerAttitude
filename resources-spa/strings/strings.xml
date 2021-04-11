@@ -1,0 +1,96 @@
+<strings>
+
+    <string id="AppName">RunnerAttitude</string>
+	
+	<string id="ThemeColorTitle">Tema de Colores</string>
+    
+    <string id="RunnerAttitude">Runner Attitude</string>
+    <string id="NightRunner">Corredor Nocturno</string>
+    <string id="Twilight">Crepúsculo</string>
+    <string id="MountainTrails">Senderos de Montaña</string>
+    <string id="CityRunner">Corredor Urbano</string>
+    <string id="TrackTraining">Entrenamiento en Pista</string>
+    <string id="RunningGirl">Chica Corredora</string>
+    <string id="ShinyDay">Día Radiante</string>
+    <string id="SnowRun">Carrera en la Nieve</string>
+    <string id="ClassicRunner">Corredor Clásico</string>
+    <string id="ForestTrain">Entrenamiento en el Bosque</string>
+    <string id="SunsetRun">Correr al Atardecer</string>
+    
+    <string id="MotivationalPhrase">Tipo de Frase Motivacional</string>
+    
+    <string id="Scrolling">Frase con desplazamiento</string>
+    <string id="Fixed">Pequeña frase fija</string>
+    <string id="Twinkling">Frase titilante</string>
+    
+    <string id="PhraseRenewalTime">Tiempo de renovación de frases</string>
+    
+    <string id="OneMin">1 minuto</string>
+    <string id="FiveMins">5 minutos</string>
+    <string id="FifteenMins">15 minutos</string>
+    <string id="HalfHour">30 minutos</string>
+    <string id="OneHour">60 minutos</string>    
+	
+	
+	<string id="Phrase1">Gracias por usar Runner Attitude. ¡Sale a correr!</string>
+	<string id="Phrase2">Correr se trata de encontrar tu paz interior, y por lo tanto de una vida bien vivida.</string>
+	<string id="Phrase3">Corre para agregar vida a tus días.</string>
+	<string id="Phrase4">Elige el running como tu terapia.</string>
+	<string id="Phrase5">No pidas nada de correr y obtendrás más de lo que imaginaste</string>
+	<string id="Phrase6">Lo que importa es ser un corredor, no qué tan rápido o qué tan lejos puedes correr.</string>
+	<string id="Phrase7">Ganar no siempre significa obtener el primer lugar; significa sacar lo mejor de ti mismo.</string>
+	<string id="Phrase8">Debes hacer lo que crees que no puedes hacer.</string>
+	<string id="Phrase9">Si no te desafía, no te cambiará.</string>
+	<string id="Phrase10">Quien mueve una montaña comienza con pequeñas piedras.</string>
+	<string id="Phrase11">Alguien que está más ocupado que tú está corriendo en este momento.</string>
+	<string id="Phrase12">No temas avanzar lentamente ... teme quedarte quieto</string>
+	<string id="Phrase13">Correr una hora es el 4% de tu día. No hay excusas.</string>
+	<string id="Phrase14">Correr puede cambiar tu día. Hacerlo constantemente puede cambiar tu vida.</string>
+	<string id="Phrase15">Corre los primeros dos tercios de la carrera con la cabeza y el último tercio con el corazón.</string>
+	<string id="Phrase16">Respira fuerza y exhala debilidad</string>
+	<string id="Phrase17">Establece objetivos y superate a ti mismo.</string>
+	<string id="Phrase18">No procastines, hoy es tu día!</string>
+	<string id="Phrase19">Tu mente abandonará mil veces antes de que tu cuerpo. ¡Siente el miedo y de todos modos hazlo!</string>
+	<string id="Phrase20">Mírate en el espejo. Esa es tu competencia.</string>
+	<string id="Phrase21">No hay un único tipo de cuerpo que se equipare al éxito. Acepta el cuerpo que tienes y sé lo mejor que puedas con él.</string>
+	<string id="Phrase22">Cualquier día es bueno para correr. No es así?</string>
+	<string id="Phrase23">Nunca te rindas, sigue intentándolo y mejorando</string>
+	<string id="Phrase24">¡No pongas límites, explóralos! </string>
+	<string id="Phrase25">Compite contra ti mismo y admira a los demás.</string>
+	<string id="Phrase26">Corre para liberar tu mente.</string>
+	
+	<string id="Fixed1">Runner Attitude</string>
+	<string id="Fixed2">Corre seguido</string>
+	<string id="Fixed3">Sé persistente</string>
+	<string id="Fixed4">Descansa bien</string>
+	<string id="Fixed5">Aliméntate sano</string>
+	<string id="Fixed6">Vida saludable</string>
+	<string id="Fixed7">Se feliz</string>
+	<string id="Fixed8">Paz interior</string>
+	<string id="Fixed9">Correr es terapia</string>
+	<string id="Fixed10">Suma kilómetros</string>
+	<string id="Fixed11">Mejora continua</string>
+	<string id="Fixed12">Sé positivo</string>
+	<string id="Fixed13">Corre con amigos</string>
+	<string id="Fixed14">Supérate</string>
+	<string id="Fixed15">Llega lejos</string>
+	<string id="Fixed16">Rompe los límites</string>
+	<string id="Fixed17">Diviértete</string>
+	<string id="Fixed18">Nunca abandones</string>
+	<string id="Fixed19">Busca desafíos</string>
+	<string id="Fixed20">Se equilibrado</string>
+	<string id="Fixed21">Ponte objetivos</string>
+	<string id="Fixed22">Mantente enfocado</string>
+	<string id="Fixed23">Disfruta el hoy</string>
+	
+	<string id="ShowSeconds">Mostrar Segundos</string>
+	
+	<string id="RunnerAvatar">Mostrar avatar de progreso</string>
+	
+	<string id="GenderSettings">Género según configuración del reloj</string>
+	<string id="RunnerGirl">Avatar femenino</string>
+	<string id="RunnerBoy">Avatar masculino</string>
+	<string id="RunnerDisabled">No mostrar el avatar</string>
+	
+
+</strings>

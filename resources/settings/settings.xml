@@ -13,6 +13,7 @@
             <listEntry value="8">@Strings.SnowRun</listEntry>
             <listEntry value="9">@Strings.ClassicRunner</listEntry>
             <listEntry value="10">@Strings.ForestTrain</listEntry>
+            <listEntry value="11">@Strings.SunsetRun</listEntry>
         </settingConfig>
     </setting>
     

@@ -15,6 +15,7 @@
     <string id="SnowRun">Snow Run</string>
     <string id="ClassicRunner">Classic Runner</string>
     <string id="ForestTrain">Training in the Forest</string>
+    <string id="SunsetRun">Sunset Run</string>
     
     <string id="MotivationalPhrase">Motivational phrase type</string>
     
@@ -67,19 +68,19 @@
 	<string id="Fixed7">Be happy</string>
 	<string id="Fixed8">Inner peace</string>
 	<string id="Fixed9">Running therapy</string>
-	<string id="Fixed10">Inner peace</string>
-	<string id="Fixed11">Improve</string>
+	<string id="Fixed10">Add miles</string>
+	<string id="Fixed11">Self improvement</string>
 	<string id="Fixed12">Be positive</string>
-	<string id="Fixed13">Inner peace</string>
-	<string id="Fixed14">IOvercome</string>
+	<string id="Fixed13">Run with friends</string>
+	<string id="Fixed14">Overcome</string>
 	<string id="Fixed15">Go further</string>
 	<string id="Fixed16">Break limits</string>
-	<string id="Fixed17">Inner peace</string>
+	<string id="Fixed17">Enjoy your runs</string>
 	<string id="Fixed18">Never give up</string>
-	<string id="Fixed19">Challenges</string>
-	<string id="Fixed20">Challenges</string>
+	<string id="Fixed19">Find challenges</string>
+	<string id="Fixed20">Be balanced</string>
 	<string id="Fixed21">Set Objectives</string>
-	<string id="Fixed22">Challenges</string>
+	<string id="Fixed22">keep focused</string>
 	<string id="Fixed23">Enjoy today</string>
 	
 	<string id="ShowSeconds">Show seconds</string>

@@ -33,7 +33,8 @@ class Theme {
 		ShinnyDay,
 		SnowRun,
 		ClassicRunner,
-		ForestTrain
+		ForestTrain,
+		SunsetRun
 	}	
 	
 	function initialize() {		
@@ -299,6 +300,27 @@ class Theme {
 				trackLine = 0xAA5555;
 				trackProgress = 0xAAAA55;
 				background = 0x005500;			
+				break;
+			
+			case SunsetRun:
+				time = 0xFFFF00;
+				mins = 0xFFFFAA;
+				seconds = 0xFFFFAA;
+				phrase = 0xFFFF55;
+				date = 0xFFFF55;
+				iconCalories = 0xFFFFAA;
+				iconSteps = 0xFFFFAA;
+				iconHeart = 0xFFFFAA;
+				iconNotif = 0xFFFFAA;	
+				metricsText = 0xFFFFFF;
+				iconBtOff = 0xAAAAAA;
+				iconBtOn = 0xAAAAFF;
+				batteryOk = 0xAAAA55;
+				batteryLow = 0xFFFF00;
+				batteryCritical = 0xAA0000;
+				trackLine = 0xFFFFAA;
+				trackProgress = 0xFFFF00;
+				background = 0xFF5500;			
 				break;
 		}
 	}		
