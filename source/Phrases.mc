@@ -18,7 +18,6 @@ class Phrases {
 	private var rndMax = 0;
 	hidden var phrasesList;		
 	hidden var scrolledPhrase;
-	hidden var updates = 0;
 	hidden var phraseTime = 300;
 	hidden enum {
 		twinkling,
@@ -210,8 +209,8 @@ class Phrases {
     		timeBase = new Time.Moment(Time.now().value());
     	}
     	    	
-    	if (phraseType == scrolled && updates > 3 && !Application.getApp().isSleeping()) {
-	    	var firstChar = scrolledPhrase.substring(1,2);
+    	if (phraseType == scrolled && !Application.getApp().isSleeping()) {
+    		var firstChar = scrolledPhrase.substring(1,2);
 	    	scrolledPhrase = scrolledPhrase.substring(1, scrolledPhrase.length()) + firstChar;
 	    }
 	    else if(phraseType == twinkling)

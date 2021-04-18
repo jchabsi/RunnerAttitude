@@ -12,19 +12,7 @@
     		font="@Fonts.MinutesFont"
     		justification="Graphics.TEXT_JUSTIFY_LEFT"
     		color="Graphics.COLOR_BLUE" />
-    		     
-    <label id="SecondsDisplay"
-    		x="0" y="0"
-			font="@Fonts.SecondsFont"
-			justification="Graphics.TEXT_JUSTIFY_RIGHT"
-       		color="Graphics.COLOR_BLUE" />
        		
-	<label id="MotivationalDisplay"
-			x="0" y="0"
-			font="Gfx.FONT_SMALL" 
-			justification="Graphics.TEXT_JUSTIFY_CENTER" 
-			color="Graphics.COLOR_GREEN" />
-			
 	<label id="DateDisplay" 
 			text="00/00/00" 
 			x="center" y="bottom" 

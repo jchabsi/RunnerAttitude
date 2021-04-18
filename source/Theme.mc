@@ -34,7 +34,8 @@ class Theme {
 		SnowRun,
 		ClassicRunner,
 		ForestTrain,
-		SunsetRun
+		SunsetRun,
+		StarryNightRun
 	}	
 	
 	function initialize() {		
@@ -321,6 +322,27 @@ class Theme {
 				trackLine = 0xFFFFAA;
 				trackProgress = 0xFFFF00;
 				background = 0xFF5500;			
+				break;
+				
+			case StarryNightRun:
+				time = 0xFFFFFF;
+				mins = 0xAAAAAA;
+				seconds = 0xAAAAAA;
+				phrase = 0xFFFFFF;
+				date = 0xAAAAAA;
+				iconCalories = 0xFFFFFF;
+				iconSteps = 0xFFFFFF;
+				iconHeart = 0xFFFFFF;
+				iconNotif = 0xFFFFFF;	
+				metricsText = 0xAAAAAA;
+				iconBtOff = 0xAAAAAA;
+				iconBtOn = 0xFFFFFF;
+				batteryOk = 0xFFFFFF;
+				batteryLow = 0xFFAA00;
+				batteryCritical = 0xFF0055;
+				trackLine = 0xAAAAAA;
+				trackProgress = 0xFFFFFF;
+				background = 0x0000AA;
 				break;
 		}
 	}		

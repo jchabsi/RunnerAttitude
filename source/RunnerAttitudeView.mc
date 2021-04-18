@@ -26,6 +26,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden var iconHeart;
 	
 	hidden var showSeconds;
+	hidden var secX;
+	hidden var secY;
+	
+	private const partialUpdateSupport = WatchUi.WatchFace has :onPartialUpdate;
 	
 
     function initialize() {
@@ -51,28 +55,13 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     // loading resources into memory.
     function onShow() {
     	
-    	//Motivational phrase
-    	//var scrolledPhrase = gPhrase.selectPhrase();
-    	var phraseType = Application.getApp().getProperty("MotivationalPhrase").toNumber();
-    	var motivationalDisplay = View.findDrawableById("MotivationalDisplay");
-    	
-    	if (height > 180)  {    	
-    		motivationalDisplay.locY = height / 1.6;
-    	}
-    	else if (height > 148)  { 
-    		motivationalDisplay.locY = height / 1.52; 
-    	}   		
-    	else {
-    		motivationalDisplay.locY = height / 1.55;
-    	}
-    	
     	//seconds
-    	var viewSeconds = View.findDrawableById("SecondsDisplay");
-    	var secondsX = [1.02, 1.03, 1.05, 1.07, 1.13];
+    	var secondsX = [1.15, 1.15, 1.17, 1.19, 1.21];
     	var secondsY = [2.11, 2.12, 2.1, 2.1, 2.06];
-    	viewSeconds.locX = width / calcXY(secondsX, width);
-    	viewSeconds.locY = height / calcXY(secondsY, height);
     	
+    	secX = width / calcXY(secondsX, width);
+    	secY = height / calcXY(secondsY, height);
+
     	//Date
     	var dateDisplay = View.findDrawableById("DateDisplay");
     	if (height > 180) {
@@ -155,7 +144,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
         // Update the view
         setTime(dc);        
         setDateDisplay();        
-		setPhrase();
+		//setPhrase();
 		setStepCountDisplay();
 		setCaloriesDisplay();
 		setNotificationCountDisplay();
@@ -163,6 +152,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 				
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);	
+        drawSeconds(dc, false);
+        setPhrase(dc, false);
         
         //Draw Icons
         iconSteps.setColor(gTheme.iconSteps);
@@ -177,6 +168,11 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		iconHeart.setColor(gTheme.iconHeart);
 		iconHeart.draw(dc);        
         
+    }
+    function onPartialUpdate(dc) { 
+		
+		drawSeconds(dc, true);
+		setPhrase(dc, true);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -221,33 +217,93 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
         viewMinutes.setText(sMin);
         
         //Seconds
-        var viewSeconds = View.findDrawableById("SecondsDisplay");
-        viewSeconds.setColor(gTheme.seconds);
-        var secondsText;
-        if(showSeconds == true && !Application.getApp().isSleeping()) {
-        	secondsText = clockTime.sec.format("%02d");
-        }
-        else {
-        	secondsText = "";
-        }
-        viewSeconds.setText(secondsText);
+        var seconds = clockTime.sec.format("%02d");
         
     }
     
-    private function setPhrase() {
+    private function drawSeconds(dc, isPartial) {
+    	if (!showSeconds) {
+    		return;
+    	}
+    	var clockTime = System.getClockTime();
+		var seconds = clockTime.sec.format("%02d");
+    	
+    	if (isPartial) {
+	    	dc.setClip(
+				secX,
+				secY + 10,
+				30,
+				20
+			);
+			
+			dc.setColor(gTheme.seconds, gTheme.background/*Graphics.COLOR_DK_BLUE*/);	
+	
+			dc.clear();
+		}
+		else {
+			dc.setColor(gTheme.seconds,  Graphics.COLOR_TRANSPARENT);				
+		}
+		if(Application.getApp().isSleeping() && !partialUpdateSupport) {
+        	seconds = "";
+        }
+        
+		dc.drawText(
+			secX,
+			secY,
+			secondsFont,
+			seconds,
+			Graphics.TEXT_JUSTIFY_LEFT
+		);
+	}
+    
+    private function setPhrase(dc, isPartial) {
 
-    	var motivationalDisplay = View.findDrawableById("MotivationalDisplay");    	
+	    var phY;
+	    var phX;
+	    if (height > 180)  {    	
+    		phY = height / 1.6;
+    	}
+    	else if (height > 148)  { 
+    		phY = height / 1.52; 
+    	}   		
+    	else {
+    		phY = height / 1.55;
+    	} 	
     	var scrolledPhrase = gPhrase.setMotivationalPhrase();
     	var just = gPhrase.getJustification(); 
-    	motivationalDisplay.setJustification(just);
+    	
     	if (just == Graphics.TEXT_JUSTIFY_LEFT) {
-    		motivationalDisplay.locX = width / 10;
+    		phX = width / 10;
     	}
     	else {
-    		motivationalDisplay.locX = width / 2;
+    		phX = width / 2;
     	}
-    	motivationalDisplay.setColor(gTheme.phrase);  	
-	    motivationalDisplay.setText(scrolledPhrase);
+    	
+    	if (isPartial) {
+    		var dims = dc.getTextDimensions(scrolledPhrase, Graphics.FONT_SMALL); 
+	    	dc.setClip(
+				0,
+				phY,
+				width,
+				dims[1]
+			);
+			
+			dc.setColor(gTheme.phrase, gTheme.background/*Graphics.COLOR_DK_BLUE*/);	
+	
+			dc.clear();
+		}
+		else {    	
+    		dc.setColor(gTheme.phrase,  Graphics.COLOR_TRANSPARENT);
+    	}
+    	dc.drawText(
+			phX,
+			phY,
+			Graphics.FONT_SMALL,
+			scrolledPhrase,
+			just
+		);
+    	
+	    
     }
     
     private function setDateDisplay() {        
