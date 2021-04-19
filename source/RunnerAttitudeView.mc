@@ -139,10 +139,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     }
 
     // Update the view
-    function onUpdate(dc) {        
-
+    function onUpdate(dc) {   
+    	
         // Update the view
-        setTime(dc);        
+        //setTime(dc);        
         setDateDisplay();        
 		//setPhrase();
 		setStepCountDisplay();
@@ -152,6 +152,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 				
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);	
+        setTime(dc); 
         drawSeconds(dc, false);
         setPhrase(dc, false);
         
@@ -166,14 +167,13 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		iconBT.setColor(setBTIconColor());
 		iconBT.draw(dc);
 		iconHeart.setColor(gTheme.iconHeart);
-		iconHeart.draw(dc);        
-        
+		iconHeart.draw(dc);  
+				        
     }
-    function onPartialUpdate(dc) { 
-		
-		drawSeconds(dc, true);
-		setPhrase(dc, true);
-    }
+    //function onPartialUpdate(dc) { 
+    //	drawSeconds(dc, true);
+	//	setPhrase(dc, true);
+    //}
 
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from
@@ -184,11 +184,13 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
     	Application.getApp().setSleep(false);
+    	//WatchUi.requestUpdate();
     }
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
     	Application.getApp().setSleep(true);
+    	//WatchUi.requestUpdate();
     }
     
     private function setTime(dc) {
@@ -201,20 +203,34 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		var x = halfDCWidth - (totalWidth / 2);	
 			
     	//Hours
-        var viewTime = View.findDrawableById("TimeLabel");
-        viewTime.locX = x;
+        //var viewTime = View.findDrawableById("TimeLabel");
+        //viewTime.locX = x;
         
-        viewTime.setColor(gTheme.time);
-        viewTime.setText(sHour);
+        //viewTime.setColor(gTheme.time);
+        //viewTime.setText(sHour);
+        dc.setColor(gTheme.time, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+			x,
+			height / 2.45,
+			hoursFont,
+			sHour,
+			Graphics.TEXT_JUSTIFY_LEFT);
         
         x += dc.getTextWidthInPixels(sHour, hoursFont);        
                 
         //Minutes        
-        var viewMinutes = View.findDrawableById("MinutesDisplay");
-        viewMinutes.locX = x;
+        //var viewMinutes = View.findDrawableById("MinutesDisplay");
+        //viewMinutes.locX = x;
         
-        viewMinutes.setColor(gTheme.mins);
-        viewMinutes.setText(sMin);
+        //viewMinutes.setColor(gTheme.mins);
+        //viewMinutes.setText(sMin);
+        dc.setColor(gTheme.mins, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+			x,
+			height / 2.45,
+			minutesFont,
+			sMin,
+			Graphics.TEXT_JUSTIFY_LEFT);
         
         //Seconds
         var seconds = clockTime.sec.format("%02d");
@@ -229,23 +245,24 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		var seconds = clockTime.sec.format("%02d");
     	
     	if (isPartial) {
+    		var dims = dc.getTextDimensions(seconds, secondsFont); 
 	    	dc.setClip(
 				secX,
 				secY + 10,
-				30,
-				20
+				dims[0],
+				dims[1]
 			);
 			
 			dc.setColor(gTheme.seconds, gTheme.background/*Graphics.COLOR_DK_BLUE*/);	
-	
 			dc.clear();
 		}
 		else {
 			dc.setColor(gTheme.seconds,  Graphics.COLOR_TRANSPARENT);				
 		}
-		if(Application.getApp().isSleeping() && !partialUpdateSupport) {
-        	seconds = "";
+		if(Application.getApp().isSleeping()/* && !partialUpdateSupport*/) {
+			seconds = "";
         }
+        System.println("AA");
         
 		dc.drawText(
 			secX,

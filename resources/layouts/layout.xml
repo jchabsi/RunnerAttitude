@@ -1,7 +1,7 @@
 <layout id="WatchFace">
     <drawable class="Background" />
  
-    <label id="TimeLabel"
+    <!--<label id="TimeLabel"
     		x="center" y="center"
     		font="@Fonts.HoursFont"
     		justification="Graphics.TEXT_JUSTIFY_LEFT"
@@ -11,7 +11,7 @@
     		x="center" y="center"
     		font="@Fonts.MinutesFont"
     		justification="Graphics.TEXT_JUSTIFY_LEFT"
-    		color="Graphics.COLOR_BLUE" />
+    		color="Graphics.COLOR_BLUE" />-->
        		
 	<label id="DateDisplay" 
 			text="00/00/00" 
