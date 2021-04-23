@@ -49,6 +49,7 @@
 			
 	<drawable class="ProgressBar" />
 	<drawable class="Battery" />
+	<drawable id="Time" class="LaHora" />
 
 			
 </layout>

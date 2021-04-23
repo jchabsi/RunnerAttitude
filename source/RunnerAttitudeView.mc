@@ -9,14 +9,12 @@ using Toybox.Time.Gregorian as Date;
 using Toybox.ActivityMonitor as Mon;
 
 class RunnerAttitudeView extends WatchUi.WatchFace {
-
+	
 	hidden var height;
 	hidden var width;
 	hidden var motivationalDisplay;
 	hidden var iconsFont;
-	hidden var hoursFont;
-	hidden var minutesFont;
-	hidden var secondsFont;
+	
 	hidden var tinyFont;
 	
 	hidden var iconSteps;
@@ -25,11 +23,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden var iconNotif;
 	hidden var iconHeart;
 	
-	hidden var showSeconds;
-	hidden var secX;
-	hidden var secY;
+	private var mTime;
 	
-	private const partialUpdateSupport = WatchUi.WatchFace has :onPartialUpdate;
+	
+	static const partialUpdateSupport = WatchUi.WatchFace has :onPartialUpdate;
 	
 
     function initialize() {
@@ -39,29 +36,21 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     // Load your resources here
     function onLayout(dc) {
     	iconsFont = WatchUi.loadResource(Rez.Fonts.IconsFont);
-    	hoursFont = WatchUi.loadResource(Rez.Fonts.HoursFont);
-		minutesFont = WatchUi.loadResource(Rez.Fonts.MinutesFont);
-		secondsFont = WatchUi.loadResource(Rez.Fonts.SecondsFont);
 		tinyFont = WatchUi.loadResource(Rez.Fonts.TinyFont);
 
         setLayout(Rez.Layouts.WatchFace(dc));
         
         width = dc.getWidth();
         height = dc.getHeight();
+        mTime = View.findDrawableById("Time");
+        
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
-    	
-    	//seconds
-    	var secondsX = [1.15, 1.15, 1.17, 1.19, 1.21];
-    	var secondsY = [2.11, 2.12, 2.1, 2.1, 2.06];
-    	
-    	secX = width / calcXY(secondsX, width);
-    	secY = height / calcXY(secondsY, height);
-
+    	    	
     	//Date
     	var dateDisplay = View.findDrawableById("DateDisplay");
     	if (height > 180) {
@@ -141,10 +130,12 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     // Update the view
     function onUpdate(dc) {   
     	
-        // Update the view
-        //setTime(dc);        
-        setDateDisplay();        
-		//setPhrase();
+		if (dc has :clearClip) {
+			dc.clearClip();
+		}
+    	
+        // Update the view            
+        setDateDisplay();   		
 		setStepCountDisplay();
 		setCaloriesDisplay();
 		setNotificationCountDisplay();
@@ -152,8 +143,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 				
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);	
-        setTime(dc); 
-        drawSeconds(dc, false);
         setPhrase(dc, false);
         
         //Draw Icons
@@ -170,10 +159,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		iconHeart.draw(dc);  
 				        
     }
-    //function onPartialUpdate(dc) { 
-    //	drawSeconds(dc, true);
-	//	setPhrase(dc, true);
-    //}
+    function onPartialUpdate(dc) { 
+    	mTime.drawSeconds(dc, true);
+		setPhrase(dc, true);
+    }
 
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from
@@ -184,94 +173,15 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
     	Application.getApp().setSleep(false);
-    	//WatchUi.requestUpdate();
+    	WatchUi.requestUpdate();
     }
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
     	Application.getApp().setSleep(true);
-    	//WatchUi.requestUpdate();
+    	WatchUi.requestUpdate();
     }
     
-    private function setTime(dc) {
-    	var clockTime = System.getClockTime();
-		var halfDCWidth = width / 2;
-
-		var sHour = clockTime.hour.format("%02d");
-		var sMin = clockTime.min.format("%02d");
-		var totalWidth = dc.getTextWidthInPixels(sHour + sMin, hoursFont);
-		var x = halfDCWidth - (totalWidth / 2);	
-			
-    	//Hours
-        //var viewTime = View.findDrawableById("TimeLabel");
-        //viewTime.locX = x;
-        
-        //viewTime.setColor(gTheme.time);
-        //viewTime.setText(sHour);
-        dc.setColor(gTheme.time, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(
-			x,
-			height / 2.45,
-			hoursFont,
-			sHour,
-			Graphics.TEXT_JUSTIFY_LEFT);
-        
-        x += dc.getTextWidthInPixels(sHour, hoursFont);        
-                
-        //Minutes        
-        //var viewMinutes = View.findDrawableById("MinutesDisplay");
-        //viewMinutes.locX = x;
-        
-        //viewMinutes.setColor(gTheme.mins);
-        //viewMinutes.setText(sMin);
-        dc.setColor(gTheme.mins, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(
-			x,
-			height / 2.45,
-			minutesFont,
-			sMin,
-			Graphics.TEXT_JUSTIFY_LEFT);
-        
-        //Seconds
-        var seconds = clockTime.sec.format("%02d");
-        
-    }
-    
-    private function drawSeconds(dc, isPartial) {
-    	if (!showSeconds) {
-    		return;
-    	}
-    	var clockTime = System.getClockTime();
-		var seconds = clockTime.sec.format("%02d");
-    	
-    	if (isPartial) {
-    		var dims = dc.getTextDimensions(seconds, secondsFont); 
-	    	dc.setClip(
-				secX,
-				secY + 10,
-				dims[0],
-				dims[1]
-			);
-			
-			dc.setColor(gTheme.seconds, gTheme.background/*Graphics.COLOR_DK_BLUE*/);	
-			dc.clear();
-		}
-		else {
-			dc.setColor(gTheme.seconds,  Graphics.COLOR_TRANSPARENT);				
-		}
-		if(Application.getApp().isSleeping()/* && !partialUpdateSupport*/) {
-			seconds = "";
-        }
-        System.println("AA");
-        
-		dc.drawText(
-			secX,
-			secY,
-			secondsFont,
-			seconds,
-			Graphics.TEXT_JUSTIFY_LEFT
-		);
-	}
     
     private function setPhrase(dc, isPartial) {
 
@@ -300,9 +210,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     		var dims = dc.getTextDimensions(scrolledPhrase, Graphics.FONT_SMALL); 
 	    	dc.setClip(
 				0,
-				phY,
+				phY + 2,
 				width,
-				dims[1]
+				dims[1] - 2
 			);
 			
 			dc.setColor(gTheme.phrase, gTheme.background/*Graphics.COLOR_DK_BLUE*/);	
@@ -423,11 +333,4 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	
     	return color;
     }
-    
-    function setSecondsConfig() {
-    	showSeconds = Application.getApp().getProperty("ShowSeconds");
-    }
-    		
-    	 
-
 }
