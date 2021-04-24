@@ -23,6 +23,10 @@
     <string id="Scrolling">Frase con desplazamiento</string>
     <string id="Fixed">Pequeña frase fija</string>
     <string id="Twinkling">Frase titilante</string>
+    <string id="Personalized">Personalizada</string>
+    
+    <string id="CustomText">Si has elegido el tipo de frase personalizada debes ingresarla aquí</string>
+    <string id="InsertYourPhrase">Debes ingresar una frase para mostrar aquí</string>
     
     <string id="PhraseRenewalTime">Tiempo de renovación de frases</string>
     

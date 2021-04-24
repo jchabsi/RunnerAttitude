@@ -19,10 +19,15 @@
     <string id="StarryNightRun">Running under the stars</string>
     
     <string id="MotivationalPhrase">Motivational phrase type</string>
-    
+        
     <string id="Scrolling">Phrase with scrolling</string>
     <string id="Fixed">Small fixed phrase</string>
     <string id="Twinkling">Twinkling phrase</string>
+    <string id="Personalized">Custom phrase</string>
+    
+    <string id="CustomText">If you have selected 'custom phrase' please type it here</string>
+    <string id="InsertYourPhrase">You should enter a phrase or word to display here</string>
+    
     
     <string id="PhraseRenewalTime">Phrase Renewal Time</string>
     
@@ -91,6 +96,7 @@
 	<string id="RunnerGirl">Girl avatar</string>
 	<string id="RunnerBoy">Boy avatar</string>
 	<string id="RunnerDisabled">Hide runner avatar</string>
+	
 	
 
 </strings>

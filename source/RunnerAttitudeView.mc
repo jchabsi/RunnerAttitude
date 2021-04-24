@@ -7,6 +7,7 @@ using Toybox.Math;
 
 using Toybox.Time.Gregorian as Date;
 using Toybox.ActivityMonitor as Mon;
+using Toybox.Activity;
 
 class RunnerAttitudeView extends WatchUi.WatchFace {
 	
@@ -87,7 +88,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	//Heart rate    	
     	var heartrateDisplay = View.findDrawableById("HeartrateDisplay"); 
     	var heartX = [30, 20, 15, 11, 8];	
-    	var hrX = [12, 10.3, 9.2, 7.5, 6.5];
+    	var hrX = [12, 10.4, 9.1, 7.5, 6.5];
     	var heartY = [2.4, 2.35, 2.3, 2.35, 2.25];
     	var hrY = [2, 1.95, 1.9, 1.95, 1.95]; 
  
@@ -294,33 +295,26 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     }
     
     private function setHeartrateDisplay() {
-    	var heartRate = "";
-    	
-    	if(Mon has :INVALID_HR_SAMPLE) {
-    		heartRate = retrieveHeartrateText();
-    	}
-    	else {
-    		heartRate = "--";
-    	}
+    	var value = "--";
+    	var activityInfo = Activity.getActivityInfo();
+		var heartRate = activityInfo.currentHeartRate;
+		if (heartRate != null) {
+			value = heartRate.format("%d");
+		} else if (ActivityMonitor has :getHeartRateHistory) {
+			heartRate = ActivityMonitor.getHeartRateHistory(1, /* newestFirst */ true).next();
+			if ((heartRate != null) && (heartRate.heartRate != ActivityMonitor.INVALID_HR_SAMPLE)) {
+				value = heartRate.heartRate.format("%d");
+			}			
+		}   	
     	
 		var heartrateDisplay = View.findDrawableById("HeartrateDisplay");      
 		heartrateDisplay.setColor(gTheme.metricsText);
-		heartrateDisplay.setText(heartRate);
+		heartrateDisplay.setText(value);
+		
+		//TEST
+		heartrateDisplay.setText("65");
     }
     
-    private function retrieveHeartrateText() {
-    	var heartrateIterator = ActivityMonitor.getHeartRateHistory(null, false);
-		var currentHeartrate = heartrateIterator.next().heartRate;
-
-		if(currentHeartrate == Mon.INVALID_HR_SAMPLE) {
-			currentHeartrate = "--";
-			return currentHeartrate;
-		}		
-
-		return currentHeartrate.format("%d");
-		//TEST
-		//return "120";
-    }   
     
     private function setBTIconColor() {
     	var color;

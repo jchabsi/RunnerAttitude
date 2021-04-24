@@ -23,7 +23,13 @@
         	<listEntry value="0">@Strings.Twinkling</listEntry>
         	<listEntry value="1">@Strings.Scrolling</listEntry>
             <listEntry value="2">@Strings.Fixed</listEntry>
+            <listEntry value="3">@Strings.Personalized</listEntry>
+            
         </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.CustomText" title="@Strings.CustomText">
+        <settingConfig type="alphaNumeric" maxLength="150"/>
     </setting>
     
     

@@ -21,7 +21,7 @@ class ProgressBar extends WatchUi.Drawable {
 	hidden var trophyIcon;
 	
 	//FOR TESTING
-	//var test;	
+	var test;	
 
     function initialize() {
     	runnerGirl = WatchUi.loadResource(Rez.Drawables.RunnerGirl);
@@ -39,7 +39,7 @@ class ProgressBar extends WatchUi.Drawable {
     }
 
     function draw(dc) {
-        // Set the background color then call to clear the screen
+        
         var width = dc.getWidth();
         var height = dc.getHeight();
         
@@ -51,7 +51,7 @@ class ProgressBar extends WatchUi.Drawable {
     	var goal = Mon.getInfo().stepGoal;
         
         var x = (width / 4.6).toLong();
-        var y = (height / 6.3).toLong();
+        var y = (height / 6.4).toLong();
        
         var xw = ((width / 1.26) - x).toLong();
         var yh = ((height / 6) - y).toLong();
@@ -59,12 +59,10 @@ class ProgressBar extends WatchUi.Drawable {
         if (steps < goal) {	        
 	                
 	        dc.setColor(gTheme.trackLine, Graphics.COLOR_TRANSPARENT);
-	    	dc.fillRectangle(x, y, xw, yh);
-	    	
+	    	dc.fillRectangle(x, y, xw, yh);	    	
 	    	
 	    	// If goal --> xw 
-	    	// steps -->  ?
-	    	
+	    	// steps -->  ?	    	
 	    	var stepsx = x + ((steps * xw) / goal);
 	    	var stepsxw = stepsx - x;  
 	    	dc.setColor(gTheme.trackProgress, Graphics.COLOR_TRANSPARENT);

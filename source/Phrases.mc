@@ -22,7 +22,8 @@ class Phrases {
 	hidden enum {
 		twinkling,
 		scrolled,
-		fixed
+		fixed,
+		personalized
 	}
 	var phraseType;
 	hidden var twinklingPhrase = new[15];
@@ -103,7 +104,7 @@ class Phrases {
 	    	phrasesList[24] = WatchUi.loadResource(Rez.Strings.Phrase25);
 	    	phrasesList[25] = WatchUi.loadResource(Rez.Strings.Phrase26);
 	    }
-	    else {
+	    else if (phraseType == fixed) {
 	    	phrasesList = new [numberOfWords];
 	    	rndMax = numberOfWords;
 	    	phrasesList[0] = WatchUi.loadResource(Rez.Strings.Fixed1);
@@ -130,12 +131,34 @@ class Phrases {
 	    	phrasesList[21] = WatchUi.loadResource(Rez.Strings.Fixed22);
 	    	phrasesList[22] = WatchUi.loadResource(Rez.Strings.Fixed23);
 	    }
+	    else {
+	    	phrasesList = new [1];
+	    	rndMax = 1;
+	    	phrasesList[0] = Application.getApp().getProperty("CustomText");
+	    	
+	    	if (phrasesList[0].length() == 0) {
+	    		phrasesList[0] = WatchUi.loadResource(Rez.Strings.InsertYourPhrase);
+	    	} 	
+	    	
+	    }
 	}
 		
 	function selectPhrase() {
-    	Math.srand(System.getTimer());
-		var rndInd = Math.rand() % (rndMax - 1);
-		scrolledPhrase = phrasesList[rndInd];
+		var rndInd;
+		//If we have a list we choose a random phrase,
+    	if (rndMax > 1) {
+	    	Math.srand(System.getTimer());
+			rndInd = Math.rand() % (rndMax - 1);
+			scrolledPhrase = phrasesList[rndInd];
+		} else {
+			rndInd = 0;
+			scrolledPhrase = phrasesList[rndInd];
+			if (scrolledPhrase.length() < 16) {
+				phraseType = fixed;  
+			} else {
+				phraseType = twinkling;
+			}			
+		}			
 		
 		if (phraseType == fixed) {
 			var tempPhrase = scrolledPhrase;
