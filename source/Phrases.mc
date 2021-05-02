@@ -232,7 +232,7 @@ class Phrases {
     		timeBase = new Time.Moment(Time.now().value());
     	}
     	    	
-    	if (phraseType == scrolled && !Application.getApp().isSleeping()) {
+    	if (phraseType == scrolled) { 
     		var firstChar = scrolledPhrase.substring(1,2);
 	    	scrolledPhrase = scrolledPhrase.substring(1, scrolledPhrase.length()) + firstChar;
 	    }
