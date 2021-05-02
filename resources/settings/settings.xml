@@ -15,6 +15,8 @@
             <listEntry value="10">@Strings.ForestTrain</listEntry>
             <listEntry value="11">@Strings.SunsetRun</listEntry>
             <listEntry value="12">@Strings.StarryNightRun</listEntry>
+            <listEntry value="13">@Strings.Ultraviolet</listEntry>
+            <listEntry value="14">@Strings.FinishLine</listEntry>
         </settingConfig>
     </setting>
     

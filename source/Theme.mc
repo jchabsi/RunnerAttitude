@@ -35,7 +35,9 @@ class Theme {
 		ClassicRunner,
 		ForestTrain,
 		SunsetRun,
-		StarryNightRun
+		StarryNightRun,
+		Ultraviolet,
+		FinishLine
 	}	
 	
 	function initialize() {		
@@ -343,6 +345,48 @@ class Theme {
 				trackLine = 0xAAAAAA;
 				trackProgress = 0xFFFFFF;
 				background = 0x0000AA;
+				break;
+			
+			case Ultraviolet:
+				time = 0xFFFFFF;
+				mins = 0xAAAAAA;
+				seconds = 0xAAAAAA;
+				phrase = 0xFFFFFF;
+				date = 0xAAAAAA;
+				iconCalories = 0xFFFFFF;
+				iconSteps = 0xFFFFFF;
+				iconHeart = 0xFFFFFF;
+				iconNotif = 0xFFFFFF;	
+				metricsText = 0xAAAAAA;
+				iconBtOff = 0xAAAAAA;
+				iconBtOn = 0xFFFFFF;
+				batteryOk = 0xFFFFFF;
+				batteryLow = 0xFFAA00;
+				batteryCritical = 0xFF0055;
+				trackLine = 0xAAAAAA;
+				trackProgress = 0xFFFFFF;
+				background = 0x5500AA;
+				break;
+			
+			case FinishLine:
+				time = 0x55FFFF;
+				mins = 0x55FFFF;
+				seconds = 0xAAFFFF;
+				phrase = 0xAAFFFF;
+				date = 0xAAFFFF;
+				iconCalories = 0xFFFFFF;
+				iconSteps = 0xFFFFFF;
+				iconHeart = 0xFFFFFF;
+				iconNotif = 0xFFFFFF;	
+				metricsText = 0xAAFFFF;
+				iconBtOff = 0xAAAAAA;
+				iconBtOn = 0xFFFFFF;
+				batteryOk = 0xFFFFFF;
+				batteryLow = 0xFFAA00;
+				batteryCritical = 0xFF0055;
+				trackLine = 0xFFFFFF;
+				trackProgress = 0x55FFFF;
+				background = 0xAA0000;
 				break;
 		}
 	}		
