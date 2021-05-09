@@ -40,7 +40,8 @@ class RunnerAttitudeApp extends Application.AppBase {
         gPhrase.selectPhrase(); 
         gPhrase.setPhraseRenewalTime(); 
         LaHora.setSecondsConfig();
-        ProgressBar.setRunnerAvatar();   
+        ProgressBar.setRunnerAvatar();  
+        runnerAttitudeView.setAltitudeConfig(); 
         
         WatchUi.requestUpdate();
     }

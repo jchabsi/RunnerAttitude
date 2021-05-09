@@ -99,6 +99,8 @@
 	<string id="RunnerBoy">Boy avatar</string>
 	<string id="RunnerDisabled">Hide runner avatar</string>
 	
+	<string id="Altitude">Altitude</string>
+	<string id="FloorsClimbed">Floors Climbed</string>
+	<string id="MetersClimbed">Vertical Meters</string>
 	
-
 </strings>

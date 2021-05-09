@@ -99,5 +99,10 @@
 	<string id="RunnerBoy">Avatar masculino</string>
 	<string id="RunnerDisabled">No mostrar el avatar</string>
 	
+	<string id="Altitude">Altitud</string>
+	<string id="FloorsClimbed">Pisos Subidos</string>
+	<string id="MetersClimbed">Metros Verticsles</string>
+	
+	
 
 </strings>

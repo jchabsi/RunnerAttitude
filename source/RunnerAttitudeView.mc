@@ -29,6 +29,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	
 	
 	static const partialUpdateSupport = WatchUi.WatchFace has :onPartialUpdate;
+	hidden var altitudeMode;
 	
 
     function initialize() {
@@ -284,12 +285,21 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     
     private function setFloorsClimbedDisplay(info) {
     	var floorsClimbed;
-    	if (info has :metersClimbed ){ 
-    		floorsClimbed = info.metersClimbed.toLong().toString();	
-    	}
-    	else {
-    		floorsClimbed = "--";
-    	}
+    	if (altitudeMode == 0) {
+	    	if (info has :metersClimbed ){ 
+	    		floorsClimbed = info.metersClimbed.toLong().toString();	
+	    	}
+	    	else {
+	    		floorsClimbed = "--";
+	    	}
+	    } else {
+	    	if (info has :floorsClimbed ){ 
+	    		floorsClimbed = info.floorsClimbed.toLong().toString();	
+	    	}
+	    	else {
+	    		floorsClimbed = "--";
+	    	}
+	    }
     	
     	//var floorsClimbedGoal = Mon.getInfo().floorsClimbedGoal.toString();
 		var floorsClimbedDisplay = View.findDrawableById("FloorsClimbedDisplay");      
@@ -371,5 +381,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	}
     	
     	return color;
+    }
+    
+    function setAltitudeConfig() {
+		altitudeMode = Application.getApp().getProperty("Altitude");
     }
 }
