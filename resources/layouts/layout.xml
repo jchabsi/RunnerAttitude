@@ -46,6 +46,13 @@
 			font="@Fonts.NormalFont" 
 			justification="Gfx.TEXT_JUSTIFY_CENTER" 
 			color="Gfx.COLOR_GREEN" />
+	
+	<label id="FloorsClimbedDisplay" 
+			text="000" 
+			x="center" y="top" 
+			font="@Fonts.NormalFont" 
+			justification="Gfx.TEXT_JUSTIFY_LEFT" 
+			color="Gfx.COLOR_GREEN" />
 			
 	<drawable class="ProgressBar" />
 	<drawable class="Battery" />

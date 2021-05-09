@@ -12,6 +12,7 @@ class Theme {
 	var iconSteps;
 	var iconHeart;
 	var iconNotif;	
+	var iconfloorsClimbed;
 	var metricsText;
 	var iconBtOff;
 	var iconBtOn;
@@ -61,7 +62,8 @@ class Theme {
 				iconCalories = 0xFFAA55;
 				iconSteps = 0xAA5555;
 				iconHeart = 0xFF0055;
-				iconNotif = 0xAAAAFF;	
+				iconNotif = 0xAAAAFF;
+				iconfloorsClimbed = 0x555500;
 				metricsText = Gfx.COLOR_LT_GRAY;
 				iconBtOff = Gfx.COLOR_DK_GRAY;
 				iconBtOn = Gfx.COLOR_BLUE;
@@ -83,7 +85,8 @@ class Theme {
 				iconCalories = 0x0055AA;
 				iconSteps = 0x0055AA;
 				iconHeart = 0x0055AA;
-				iconNotif = 0x0055AA;	
+				iconNotif = 0x0055AA;
+				iconfloorsClimbed = 0x0055AA;	
 				metricsText = Gfx.COLOR_BLUE;
 				iconBtOff = Gfx.COLOR_DK_GRAY;
 				iconBtOn = Gfx.COLOR_DK_BLUE;
@@ -104,7 +107,8 @@ class Theme {
 				iconCalories = 0x0055FF;
 				iconSteps = 0x0055FF;
 				iconHeart = 0x0055FF;
-				iconNotif = 0x0055FF;	
+				iconNotif = 0x0055FF;
+				iconfloorsClimbed = 0x0055FF;		
 				metricsText = 0xAAAAFF;
 				iconBtOff = 0x0055FF;
 				iconBtOn = 0x00AAFF;
@@ -123,11 +127,12 @@ class Theme {
 				phrase = 0xAAAAAA;
 				date = 0xAAAAAA;
 				iconCalories = 0x00AA55;
-				iconSteps = 0x55AA55;
-				iconHeart = 0x55AA55;
-				iconNotif = 0x55AA55;	
+				iconSteps = 0x00AA55;
+				iconHeart = 0x00AA55;
+				iconNotif = 0x00AA55;	
+				iconfloorsClimbed = 0x00AA55;
 				metricsText = 0x00FF00;
-				iconBtOff = 0x55AA55;
+				iconBtOff = 0x00AA55;
 				iconBtOn = 0x00AAAA;
 				batteryOk = 0x55AA55;
 				batteryLow = 0xAAAA00;
@@ -146,7 +151,8 @@ class Theme {
 				iconCalories = 0xFF5500;
 				iconSteps = 0x00AA55;
 				iconHeart = 0xFF0055;
-				iconNotif = 0x55AAFF;	
+				iconNotif = 0x55AAFF;
+				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0xFFFFFF;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0x00AAFF;
@@ -168,6 +174,7 @@ class Theme {
 				iconSteps = 0x55AAFF;
 				iconHeart = 0x55AAFF;
 				iconNotif = 0x55AAFF;	
+				iconfloorsClimbed = 0x55AAFF;
 				metricsText = 0xFFFFFF;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0x55AAFF;
@@ -188,7 +195,8 @@ class Theme {
 				iconCalories = 0xFF55AA;
 				iconSteps = 0xFF55AA;
 				iconHeart = 0xFF55AA;
-				iconNotif = 0xFF55AA;	
+				iconNotif = 0xFF55AA;
+				iconfloorsClimbed = 0xFF55AA;
 				metricsText = 0xFFFFFF;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0xFF55AA;
@@ -209,7 +217,8 @@ class Theme {
 				iconCalories = 0xFF5500;
 				iconSteps = 0x00AA55;
 				iconHeart = 0xFF0055;
-				iconNotif = 0x55AAFF;	
+				iconNotif = 0x55AAFF;
+				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0x000000;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0x0055FF;
@@ -230,7 +239,8 @@ class Theme {
 				iconCalories = 0x000000;
 				iconSteps = 0x000000;
 				iconHeart = 0x000000;
-				iconNotif = 0x000000;	
+				iconNotif = 0x000000;
+				iconfloorsClimbed = 0x000000;	
 				metricsText = 0x000000;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0x000000;
@@ -248,31 +258,11 @@ class Theme {
 				seconds = 0xAAAAAA;
 				phrase = 0xAAAAAA;
 				date = 0xAAAAAA;
-				iconCalories = 0x000000;
+				iconCalories = 0xFFFFFF;
 				iconSteps = 0xFFFFFF;
 				iconHeart = 0xFFFFFF;
 				iconNotif = 0xFFFFFF;	
-				metricsText = 0xFFFFFF;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0xFFFFFF;
-				batteryOk = 0xFFFFFF;
-				batteryLow = 0xFF5500;
-				batteryCritical = 0xAA0000;
-				trackLine = 0xAAAAAA;
-				trackProgress = 0xFFFFFF;
-				background = 0x000000;			
-				break;
-				
-			case ClassicRunner:			
-				time = 0xFFFFFF;
-				mins = 0xAAAAAA;
-				seconds = 0xAAAAAA;
-				phrase = 0xAAAAAA;
-				date = 0xAAAAAA;
-				iconCalories = 0x000000;
-				iconSteps = 0xFFFFFF;
-				iconHeart = 0xFFFFFF;
-				iconNotif = 0xFFFFFF;	
+				iconfloorsClimbed = 0xFFFFFF;
 				metricsText = 0xFFFFFF;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0xFFFFFF;
@@ -293,7 +283,8 @@ class Theme {
 				iconCalories = 0xFFFF00;
 				iconSteps = 0xFFAA00;
 				iconHeart = 0xFF55AA;
-				iconNotif = 0xAA55FF;	
+				iconNotif = 0xAA55FF;
+				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0xFFFFFF;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0x00AAFF;
@@ -315,6 +306,7 @@ class Theme {
 				iconSteps = 0xFFFFAA;
 				iconHeart = 0xFFFFAA;
 				iconNotif = 0xFFFFAA;	
+				iconfloorsClimbed = 0xFFFFAA;
 				metricsText = 0xFFFFFF;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0xAAAAFF;
@@ -335,7 +327,8 @@ class Theme {
 				iconCalories = 0xFFFFFF;
 				iconSteps = 0xFFFFFF;
 				iconHeart = 0xFFFFFF;
-				iconNotif = 0xFFFFFF;	
+				iconNotif = 0xFFFFFF;
+				iconfloorsClimbed = 0xFFFFFF;	
 				metricsText = 0xAAAAAA;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0xFFFFFF;
@@ -356,7 +349,8 @@ class Theme {
 				iconCalories = 0xFFFFFF;
 				iconSteps = 0xFFFFFF;
 				iconHeart = 0xFFFFFF;
-				iconNotif = 0xFFFFFF;	
+				iconNotif = 0xFFFFFF;
+				iconfloorsClimbed = 0xFFFFFF;	
 				metricsText = 0xAAAAAA;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0xFFFFFF;
@@ -377,7 +371,8 @@ class Theme {
 				iconCalories = 0xFFFFFF;
 				iconSteps = 0xFFFFFF;
 				iconHeart = 0xFFFFFF;
-				iconNotif = 0xFFFFFF;	
+				iconNotif = 0xFFFFFF;
+				iconfloorsClimbed = 0xFFFFFF;	
 				metricsText = 0xAAFFFF;
 				iconBtOff = 0xAAAAAA;
 				iconBtOn = 0xFFFFFF;

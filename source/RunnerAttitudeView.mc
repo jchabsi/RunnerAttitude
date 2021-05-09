@@ -23,6 +23,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden var iconBT;
 	hidden var iconNotif;
 	hidden var iconHeart;
+	hidden var iconFloorsClimbed;
 	
 	private var mTime;
 	
@@ -69,21 +70,32 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	
     	//Steps
     	var stepCountDisplay = View.findDrawableById("StepCountDisplay"); 
+    	//stepCountDisplay.locX = width / 3.2;
+    	//stepCountDisplay.locY = height / 1.3;
     	stepCountDisplay.locX = width / 3.2;
-    	stepCountDisplay.locY = height / 1.3;
-    	iconSteps = new MyTextView("0", gTheme.iconSteps, iconsFont, width / 4.8, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );  
+    	stepCountDisplay.locY = height / 5.5;
+    	//iconSteps = new MyTextView("0", gTheme.iconSteps, iconsFont, width / 4.8, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
+    	iconSteps = new MyTextView("0", gTheme.iconSteps, iconsFont, width / 4.8, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );  
     	
+    	//floors
+    	var floorsClimbedDisplay = View.findDrawableById("FloorsClimbedDisplay"); 
+    	floorsClimbedDisplay.locX = width / 3.1;
+    	floorsClimbedDisplay.locY = height / 1.3;
+    	iconFloorsClimbed = new MyTextView(";", gTheme.iconCalories, iconsFont, width / 4.8, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );  
+    	    	
     	//Calories
     	var caloriesDisplay = View.findDrawableById("CaloriesDisplay"); 	
     	caloriesDisplay.locX = width / 1.5;
     	caloriesDisplay.locY = height / 1.3; 
-    	iconCalories = new MyTextView("6", gTheme.iconCalories, iconsFont, width / 1.75, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
+    	iconCalories = new MyTextView("6", gTheme.iconfloorsClimbed, iconsFont, width / 1.75, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Notifications
     	var notificationDisplay = View.findDrawableById("NotificationDisplay"); 	
-    	notificationDisplay.locX = width / 2.45;
+    	//notificationDisplay.locX = width / 2.45;
+    	notificationDisplay.locX = width / 1.35;
     	notificationDisplay.locY = height / 5.5;
-    	iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 3.7, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
+    	//iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 3.7, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
+    	iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 1.6, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Heart rate    	
     	var heartrateDisplay = View.findDrawableById("HeartrateDisplay"); 
@@ -98,7 +110,20 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	iconHeart = new MyTextView("3", gTheme.iconHeart, iconsFont, width / calcXY(heartX, width), height / calcXY(heartY, height), Graphics.TEXT_JUSTIFY_LEFT);
     	
     	//Blue thooth
-    	iconBT = new MyTextView("8", setBTIconColor(), iconsFont, width / 1.6, height / 5.55, Graphics.TEXT_JUSTIFY_LEFT );    	        
+    	//iconBT = new MyTextView("8", setBTIconColor(), iconsFont, width / 1.6, height / 5.55, Graphics.TEXT_JUSTIFY_LEFT );
+    	var bty = 0;
+    	if (height > 180) {
+    		bty = height / 3.7;
+    	}
+    	else if (height <= 148) {
+    		bty = height / 1.16;    		
+    	}
+    	else {
+    		bty = height / 1.14;
+    	}
+    	var btx = [1.15, 1.15, 1.17, 1.19, 1.22];	
+    	iconBT = new MyTextView("8", setBTIconColor(), iconsFont, width / calcXY(btx, width), bty, Graphics.TEXT_JUSTIFY_LEFT ); 
+    	   	        
     	    	
     }
     
@@ -135,12 +160,14 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 			dc.clearClip();
 		}
     	
-        // Update the view            
+        // Update the view  
+        var info = Mon.getInfo();          
         setDateDisplay();   		
-		setStepCountDisplay();
-		setCaloriesDisplay();
+		setStepCountDisplay(info);
+		setCaloriesDisplay(info);
 		setNotificationCountDisplay();
-		setHeartrateDisplay();			
+		setHeartrateDisplay();	
+		setFloorsClimbedDisplay(info);		
 				
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);	
@@ -158,6 +185,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		iconBT.draw(dc);
 		iconHeart.setColor(gTheme.iconHeart);
 		iconHeart.draw(dc);  
+		
+		iconFloorsClimbed.setColor(gTheme.iconfloorsClimbed);
+		iconFloorsClimbed.draw(dc);
 				        
     }
     function onPartialUpdate(dc) { 
@@ -243,20 +273,35 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		dateDisplay.setText(dateString);	    	
     }    
     
-    private function setStepCountDisplay() {
-    	var stepCount = Mon.getInfo().steps.toString();		
+    private function setStepCountDisplay(info) {
+    	var stepCount = info.steps.toString();		
 		var stepCountDisplay = View.findDrawableById("StepCountDisplay");      
 		stepCountDisplay.setColor(gTheme.metricsText);
 		stepCountDisplay.setText(stepCount);
 		//TEST
-		//stepCountDisplay.setText("7848");
+		//stepCountDisplay.setText("12848");
     }
     
-    private function setCaloriesDisplay() {
-    	var info;
-    	var calories;
+    private function setFloorsClimbedDisplay(info) {
+    	var floorsClimbed;
+    	if (info has :metersClimbed ){ 
+    		floorsClimbed = info.metersClimbed.toLong().toString();	
+    	}
+    	else {
+    		floorsClimbed = "--";
+    	}
     	
-    	info = Mon.getInfo();
+    	//var floorsClimbedGoal = Mon.getInfo().floorsClimbedGoal.toString();
+		var floorsClimbedDisplay = View.findDrawableById("FloorsClimbedDisplay");      
+		floorsClimbedDisplay.setColor(gTheme.metricsText);
+		floorsClimbedDisplay.setText(floorsClimbed);
+		//TEST
+		//floorsClimbedDisplay.setText("15");
+    }
+    
+    private function setCaloriesDisplay(info) {
+    	
+    	var calories;
     	
     	if (info has :calories ){ //&& info.calories != +null) {
     		calories = info.calories.toString();
@@ -291,7 +336,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		notificationCountDisplay.setText(formattedNotificationAmount);
 		
 		//TEST
-		//notificationCountDisplay.setText("4");
+		//notificationCountDisplay.setText("10+");
     }
     
     private function setHeartrateDisplay() {
