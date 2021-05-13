@@ -19,23 +19,31 @@ class Phrases {
 	hidden var phrasesList;		
 	hidden var scrolledPhrase;
 	hidden var phraseTime = 300;
+	hidden var phraseSpeed;
 	hidden enum {
 		twinkling,
 		scrolled,
 		fixed,
 		personalized
 	}
+	hidden enum {
+		speed1X = 1,
+		speed2X = 2,
+		speed3X = 3
+	}
 	var phraseType;
 	hidden var twinklingPhrase = new[15];
 	hidden var twinklingCount;
 	hidden var groupCount;
 	hidden var timeBase;
+	hidden var speedCount = 4;
 	
 	
 	function initialize() {		
 		
         setPhrasesList();   
         setPhraseRenewalTime(); 
+        setPhraseSpeed();
         timeBase = new Time.Moment(Time.now().value()); 
         
 	}		
@@ -233,18 +241,32 @@ class Phrases {
     	}
     	    	
     	if (phraseType == scrolled) { 
-    		var firstChar = scrolledPhrase.substring(1,2);
-	    	scrolledPhrase = scrolledPhrase.substring(1, scrolledPhrase.length()) + firstChar;
+    		var firstChar;
+    		if (phraseSpeed == speed1X) {
+	    		firstChar = scrolledPhrase.substring(1,2);
+		    	scrolledPhrase = scrolledPhrase.substring(1, scrolledPhrase.length()) + firstChar;
+		    } else if (phraseSpeed == speed2X) {
+		    	firstChar = scrolledPhrase.substring(1,3);
+		    	scrolledPhrase = scrolledPhrase.substring(2, scrolledPhrase.length()) + firstChar;
+		    } else {
+		    	firstChar = scrolledPhrase.substring(1,4);
+		    	scrolledPhrase = scrolledPhrase.substring(3, scrolledPhrase.length()) + firstChar;
+		    }	    	
 	    }
 	    else if(phraseType == twinkling)
 	    {
-	    	scrolledPhrase = twinklingPhrase[twinklingCount];
-	    	if (twinklingCount == groupCount -1) {
-	    		twinklingCount = 0;
-	    	} 
-	    	else {
-	    	   	twinklingCount++;
-	    	}
+	    	speedCount --;
+	    	if (speedCount == phraseSpeed) {
+	    	
+		    	scrolledPhrase = twinklingPhrase[twinklingCount];
+		    	if (twinklingCount == groupCount -1) {
+		    		twinklingCount = 0;
+		    	} 
+		    	else {
+		    	   	twinklingCount++;
+		    	}
+		    	speedCount = 4;
+		    }
 	    }
 	  	
     	return scrolledPhrase;
@@ -259,6 +281,11 @@ class Phrases {
     	phraseTime = Application.getApp().getProperty("PhraseRenewalTime").toNumber();
     }
 	
+	function setPhraseSpeed()
+    {
+    	phraseSpeed = Application.getApp().getProperty("PhraseSpeed").toNumber();
+    	speedCount = 4;
+    }
 	function getJustification()
 	{
 		if (phraseType == scrolled){

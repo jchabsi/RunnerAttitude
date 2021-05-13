@@ -54,9 +54,7 @@ class Theme {
 		
 		switch (selectedTheme) {
 			case RunnerAttitude:
-				time = 0xFFFFFF;
-				mins = 0xAAAAAA;
-				seconds = 0xAAAAAA;
+				setClockColors(0xFFFFFF, 0xAAAAAA, 0xAAAAAA);
 				phrase = 0x00AAAA;
 				date = 0x00AAAA;
 				iconCalories = 0xFFAA55;
@@ -65,87 +63,52 @@ class Theme {
 				iconNotif = 0xAAAAFF;
 				iconfloorsClimbed = 0x555500;
 				metricsText = Gfx.COLOR_LT_GRAY;
-				iconBtOff = Gfx.COLOR_DK_GRAY;
-				iconBtOn = Gfx.COLOR_BLUE;
-				batteryOk = 0x55AA00;
-				batteryLow = Gfx.COLOR_ORANGE;
-				batteryCritical = Gfx.COLOR_DK_RED;
-				trackLine = 0x00AA55;
-				trackProgress = 0x00FFAA;
+				setColor4BTIcon(Gfx.COLOR_DK_GRAY, Gfx.COLOR_BLUE);
+				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setTrackLine( 0x00AA55, 0x00FFAA);
 				background = Gfx.COLOR_BLACK;
 				break;
 				
 		
 			case NightRunner:
-				time = 0x0055AA;
-				time = 0x55AAFF;
-				seconds = 0x0055AA;
+				setClockColors(0x0055AA, 0x55AAFF, 0x0055AA);
 				phrase = Gfx.COLOR_DK_GRAY;
 				date = Gfx.COLOR_DK_GRAY;
-				iconCalories = 0x0055AA;
-				iconSteps = 0x0055AA;
-				iconHeart = 0x0055AA;
-				iconNotif = 0x0055AA;
-				iconfloorsClimbed = 0x0055AA;	
+				setColor4AllIcons(0x0055AA);
 				metricsText = Gfx.COLOR_BLUE;
-				iconBtOff = Gfx.COLOR_DK_GRAY;
-				iconBtOn = Gfx.COLOR_DK_BLUE;
-				batteryOk = 0x0055AA;
-				batteryLow = Gfx.COLOR_ORANGE;
-				batteryCritical = Gfx.COLOR_DK_RED;
-				trackLine = Gfx.COLOR_BLUE;
-				trackProgress = 0x00AAAA;
+				setColor4BTIcon(Gfx.COLOR_DK_GRAY, Gfx.COLOR_DK_BLUE);
+				setColor4BatteryIcon(0x0055AA, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setTrackLine( Gfx.COLOR_BLUE, 0x00AAAA);
 				background = Gfx.COLOR_BLACK;				
 				break;
 				
 			case Twilight:
-				time = 0xFFAA55;
-				mins = 0xFFAA55;
+				setClockColors(0xFFAA55, 0xFFAA55, 0xAAAAFF);
 				seconds = 0xAAAAFF;
 				phrase = 0xFFAA00;
 				date = 0xFFAAAA;
-				iconCalories = 0x0055FF;
-				iconSteps = 0x0055FF;
-				iconHeart = 0x0055FF;
-				iconNotif = 0x0055FF;
-				iconfloorsClimbed = 0x0055FF;		
+				setColor4AllIcons(0x0055FF);
 				metricsText = 0xAAAAFF;
-				iconBtOff = 0x0055FF;
-				iconBtOn = 0x00AAFF;
-				batteryOk = 0x0055FF;
-				batteryLow = 0xFF5500;
-				batteryCritical = 0xFF5555;
-				trackLine = 0xFFAAAA;
-				trackProgress = 0xFFAA55;
+				setColor4BTIcon(0x0055FF, 0x00AAFF);
+				setColor4BatteryIcon(0x0055FF, 0xFF5500, 0xFF5555);
+				setTrackLine(0xFFAAAA, 0xFFAA55);
 				background = 0x000055;
 				break;
 				
 			case MountainTrails:
-				time = 0x55AA00;
-				mins = 0xAAAA55;
-				seconds = 0x00AA00;
+				setClockColors(0x55AA00, 0xAAAA55, 0x00AA00);
 				phrase = 0xAAAAAA;
 				date = 0xAAAAAA;
-				iconCalories = 0x00AA55;
-				iconSteps = 0x00AA55;
-				iconHeart = 0x00AA55;
-				iconNotif = 0x00AA55;	
-				iconfloorsClimbed = 0x00AA55;
+				setColor4AllIcons(0x00AA55);
 				metricsText = 0x00FF00;
-				iconBtOff = 0x00AA55;
-				iconBtOn = 0x00AAAA;
-				batteryOk = 0x55AA55;
-				batteryLow = 0xAAAA00;
-				batteryCritical = 0xAA5500;
-				trackLine = 0xAAAA55;
-				trackProgress = 0x55FF55;
+				setColor4BTIcon(0x00AA55, 0x00AAAA);
+				setColor4BatteryIcon(0x55AA55, 0xAAAA00, 0xAA5500);
+				setTrackLine(0xAAAA55, 0x55FF55);
 				background = 0x555500;
 				break;
 				
 			case CityRunner:
-				time = 0xFFFFFF;
-				mins = 0x00FFFF;
-				seconds = 0xAAAAAA;
+				setClockColors(0xFFFFFF, 0x00FFFF, 0xAAAAAA);
 				phrase = 0xAAAAAA;
 				date = 0xFFAA55;
 				iconCalories = 0xFF5500;
@@ -154,64 +117,38 @@ class Theme {
 				iconNotif = 0x55AAFF;
 				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0xFFFFFF;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0x00AAFF;
-				batteryOk = 0x00FF00;
-				batteryLow = 0xFFFF00;
-				batteryCritical = 0xAA5500;
-				trackLine = 0xFF5500;
-				trackProgress = 0xFFFFFF;
+				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
+				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xAA5500);
+				setTrackLine(0xFF5500, 0xFFFFFF);
 				background = 0x555555;
 				break;
 				
 			case TrackTraining:
-				time = 0x00FFFF;
-				mins = 0x55FFFF;
-				seconds = 0x55AAFF;
+				setClockColors(0x00FFFF, 0x55FFFF, 0x55AAFF);
 				phrase = 0xAAAAAA;
 				date = 0x55AAFF;
-				iconCalories = 0x55AAFF;
-				iconSteps = 0x55AAFF;
-				iconHeart = 0x55AAFF;
-				iconNotif = 0x55AAFF;	
-				iconfloorsClimbed = 0x55AAFF;
+				setColor4AllIcons(0x55AAFF);
 				metricsText = 0xFFFFFF;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0x55AAFF;
-				batteryOk = 0x55AAFF;
-				batteryLow = 0xFFAA00;
-				batteryCritical = 0xFF0000;
-				trackLine = 0x55AAFF;
-				trackProgress = 0x00FFFF;
+				setColor4BTIcon(0xAAAAAA, 0x55AAFF);
+				setColor4BatteryIcon(0x55AAFF, 0xFFAA00, 0xFF0000);
+				setTrackLine(0x55AAFF, 0x00FFFF);
 				background = 0x0000AA;
 				break;
 				
 			case RunningGirl:
-				time = 0xFFFFFF;
-				mins = 0xFFFFFF;
-				seconds = 0xFFFFFF;
+				setClockColors(0xFFFFFF, 0xFFFFFF, 0xFFFFFF);
 				phrase = 0xFFAAFF;
 				date = 0xFFAAFF;
-				iconCalories = 0xFF55AA;
-				iconSteps = 0xFF55AA;
-				iconHeart = 0xFF55AA;
-				iconNotif = 0xFF55AA;
-				iconfloorsClimbed = 0xFF55AA;
+				setColor4AllIcons(0xFF55AA);
 				metricsText = 0xFFFFFF;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0xFF55AA;
-				batteryOk = 0xFF55AA;
-				batteryLow = 0xFFAA00;
-				batteryCritical = 0xFF0000;
-				trackLine = 0xFF55AA;
-				trackProgress = 0xFFAAFF;
+				setColor4BTIcon(0xAAAAAA, 0xFF55AA);
+				setColor4BatteryIcon(0xFF55AA, 0xFFAA00, 0xFF0000);
+				setTrackLine(0xFF55AA, 0xFFAAFF);
 				background = 0xAA0055;
 				break;
 			
-			case ShinnyDay:			
-				time = 0x000055;
-				mins = 0x000055;
-				seconds = 0x000055;
+			case ShinnyDay:	
+				setClockColors(0x000055, 0x000055, 0x000055);		
 				phrase = 0x0055AA;
 				date = 0x0055AA;
 				iconCalories = 0xFF5500;
@@ -220,64 +157,38 @@ class Theme {
 				iconNotif = 0x55AAFF;
 				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0x000000;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0x0055FF;
-				batteryOk = 0x55AA00;
-				batteryLow = Gfx.COLOR_ORANGE;
-				batteryCritical = Gfx.COLOR_DK_RED;
-				trackLine = 0xFF5500;
-				trackProgress = 0x0055AA;
+				setColor4BTIcon(0xAAAAAA, 0x0055FF);
+				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setTrackLine(0xFF5500, 0x0055AA);
 				background = 0xFFFFFF;			
 				break;
 				
-			case SnowRun:			
-				time = 0x000000;
-				mins = 0x000000;
-				seconds = 0x000000;
+			case SnowRun:
+				setClockColors(0x000000, 0x000000, 0x000000);			
 				phrase = 0x555555;
 				date = 0x555555;
-				iconCalories = 0x000000;
-				iconSteps = 0x000000;
-				iconHeart = 0x000000;
-				iconNotif = 0x000000;
-				iconfloorsClimbed = 0x000000;	
+				setColor4AllIcons(0x000000);
 				metricsText = 0x000000;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0x000000;
-				batteryOk = 0x000000;
-				batteryLow = 0xFF5500;
-				batteryCritical = 0xAA0000;
-				trackLine = 0x555555;
-				trackProgress = 0x000000;
+				setColor4BTIcon(0xAAAAAA, 0x000000);
+				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000);
+				setTrackLine(0x555555, 0x000000);
 				background = 0xFFFFFF;			
 				break;
 			
-			case ClassicRunner:			
-				time = 0xFFFFFF;
-				mins = 0xAAAAAA;
-				seconds = 0xAAAAAA;
+			case ClassicRunner:	
+				setClockColors(0xFFFFFF, 0xAAAAAA, 0xAAAAAA);		
 				phrase = 0xAAAAAA;
 				date = 0xAAAAAA;
-				iconCalories = 0xFFFFFF;
-				iconSteps = 0xFFFFFF;
-				iconHeart = 0xFFFFFF;
-				iconNotif = 0xFFFFFF;	
-				iconfloorsClimbed = 0xFFFFFF;
+				setColor4AllIcons(0xFFFFFF);
 				metricsText = 0xFFFFFF;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0xFFFFFF;
-				batteryOk = 0xFFFFFF;
-				batteryLow = 0xFF5500;
-				batteryCritical = 0xAA0000;
-				trackLine = 0xAAAAAA;
-				trackProgress = 0xFFFFFF;
+				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
+				setColor4BatteryIcon(0xFFFFFF, 0xFF5500, 0xAA0000);
+				setTrackLine(0xFFFFFF, 0x55FFFF);
 				background = 0x000000;			
 				break;
 				
-			case ForestTrain:			
-				time = 0xAAAA55;
-				mins = 0xAAAA55;
-				seconds = 0xAAAA55;
+			case ForestTrain:
+				setClockColors(0xAAAA55, 0xAAAA55, 0xAAAA55);			
 				phrase = 0xAAAA55;
 				date = 0xAAAA55;
 				iconCalories = 0xFFFF00;
@@ -286,104 +197,88 @@ class Theme {
 				iconNotif = 0xAA55FF;
 				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0xFFFFFF;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0x00AAFF;
-				batteryOk = 0x00FF00;
-				batteryLow = 0xFFFF00;
-				batteryCritical = 0xFF5555;
-				trackLine = 0xAA5555;
-				trackProgress = 0xAAAA55;
+				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
+				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xFF5555);
+				setTrackLine(0xAA5555, 0xAAAA55);
 				background = 0x005500;			
 				break;
 			
 			case SunsetRun:
-				time = 0xFFFF00;
-				mins = 0xFFFFAA;
-				seconds = 0xFFFFAA;
+				setClockColors(0xFFFF00, 0xFFFFAA, 0xFFFFAA);
 				phrase = 0xFFFF55;
 				date = 0xFFFF55;
-				iconCalories = 0xFFFFAA;
-				iconSteps = 0xFFFFAA;
-				iconHeart = 0xFFFFAA;
-				iconNotif = 0xFFFFAA;	
-				iconfloorsClimbed = 0xFFFFAA;
+				setColor4AllIcons(0xFFFFAA);
 				metricsText = 0xFFFFFF;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0xAAAAFF;
-				batteryOk = 0xAAAA55;
-				batteryLow = 0xFFFF00;
-				batteryCritical = 0xAA0000;
-				trackLine = 0xFFFFAA;
-				trackProgress = 0xFFFF00;
+				setColor4BTIcon(0xAAAAAA, 0xAAAAFF);
+				setColor4BatteryIcon(0xAAAA55, 0xFFFF00, 0xAA0000);
+				setTrackLine(0xFFFFAA, 0xFFFF00);
 				background = 0xFF5500;			
 				break;
 				
 			case StarryNightRun:
-				time = 0xFFFFFF;
-				mins = 0xAAAAAA;
-				seconds = 0xAAAAAA;
+				setClockColors(0xFFFFFF, 0xAAAAAA, 0xAAAAAA);
 				phrase = 0xFFFFFF;
 				date = 0xAAAAAA;
-				iconCalories = 0xFFFFFF;
-				iconSteps = 0xFFFFFF;
-				iconHeart = 0xFFFFFF;
-				iconNotif = 0xFFFFFF;
-				iconfloorsClimbed = 0xFFFFFF;	
+				setColor4AllIcons(0xFFFFFF);
 				metricsText = 0xAAAAAA;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0xFFFFFF;
-				batteryOk = 0xFFFFFF;
-				batteryLow = 0xFFAA00;
-				batteryCritical = 0xFF0055;
-				trackLine = 0xAAAAAA;
-				trackProgress = 0xFFFFFF;
+				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
+				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
+				setTrackLine(0xFFFFFF, 0x55FFFF);
 				background = 0x0000AA;
 				break;
 			
 			case Ultraviolet:
-				time = 0xFFFFFF;
-				mins = 0xAAAAAA;
-				seconds = 0xAAAAAA;
+				setClockColors(0xFFFFFF, 0xAAAAAA, 0xAAAAAA);
 				phrase = 0xFFFFFF;
 				date = 0xAAAAAA;
-				iconCalories = 0xFFFFFF;
-				iconSteps = 0xFFFFFF;
-				iconHeart = 0xFFFFFF;
-				iconNotif = 0xFFFFFF;
-				iconfloorsClimbed = 0xFFFFFF;	
+				setColor4AllIcons(0xFFFFFF);
 				metricsText = 0xAAAAAA;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0xFFFFFF;
-				batteryOk = 0xFFFFFF;
-				batteryLow = 0xFFAA00;
-				batteryCritical = 0xFF0055;
-				trackLine = 0xAAAAAA;
-				trackProgress = 0xFFFFFF;
+				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
+				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
+				setTrackLine(0xFFFFFF, 0x55FFFF);
 				background = 0x5500AA;
 				break;
 			
 			case FinishLine:
-				time = 0x55FFFF;
-				mins = 0x55FFFF;
-				seconds = 0xAAFFFF;
+				setClockColors(0x55FFFF, 0x55FFFF, 0xAAFFFF);
 				phrase = 0xAAFFFF;
 				date = 0xAAFFFF;
-				iconCalories = 0xFFFFFF;
-				iconSteps = 0xFFFFFF;
-				iconHeart = 0xFFFFFF;
-				iconNotif = 0xFFFFFF;
-				iconfloorsClimbed = 0xFFFFFF;	
+				setColor4AllIcons(0xFFFFFF);	
 				metricsText = 0xAAFFFF;
-				iconBtOff = 0xAAAAAA;
-				iconBtOn = 0xFFFFFF;
-				batteryOk = 0xFFFFFF;
-				batteryLow = 0xFFAA00;
-				batteryCritical = 0xFF0055;
-				trackLine = 0xFFFFFF;
-				trackProgress = 0x55FFFF;
+				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
+				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
+				setTrackLine(0xFFFFFF, 0x55FFFF);
+				
 				background = 0xAA0000;
 				break;
 		}
-	}		
+	}
+	
+	private function setClockColors(t, m, s) {
+		time = t;
+		mins = m;
+		seconds = s;
+	}
+	
+	private function setColor4AllIcons(color) {
+		iconCalories = color;
+		iconSteps = color;
+		iconHeart = color;
+		iconNotif = color;
+		iconfloorsClimbed = color;	
+	}	
+	private function setColor4BTIcon(off, on) {
+		iconBtOff = off;
+		iconBtOn = on;
+	}
+	private function setColor4BatteryIcon(ok, low, critical) {
+		batteryOk = ok;
+		batteryLow = low;
+		batteryCritical = critical;
+	}
+	private function setTrackLine(tl, tp) {
+		trackLine = tl;
+		trackProgress = tp;
+	}
 	
 }

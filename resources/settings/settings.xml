@@ -46,6 +46,14 @@
         </settingConfig>
     </setting>
     
+    <setting propertyKey="@Properties.PhraseSpeed" title="@Strings.PhraseSpeed">
+        <settingConfig type="list">
+        	<listEntry value="1">@Strings.Speed1X</listEntry>
+            <listEntry value="2">@Strings.Speed2X</listEntry>
+            <listEntry value="3">@Strings.Speed3X</listEntry>
+        </settingConfig>
+    </setting>
+    
     <setting propertyKey="@Properties.ShowSeconds" title="@Strings.ShowSeconds">
         <settingConfig type="boolean"/>
     </setting>

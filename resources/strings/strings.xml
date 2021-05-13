@@ -103,4 +103,9 @@
 	<string id="FloorsClimbed">Floors Climbed</string>
 	<string id="MetersClimbed">Vertical Meters</string>
 	
+	<string id="PhraseSpeed">Phrase Speed</string>
+	<string id="Speed1X">1X</string>
+	<string id="Speed2X">2X</string>
+	<string id="Speed3X">3X</string>
+	
 </strings>
