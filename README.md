@@ -33,6 +33,10 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.7.1
+- Runner Attitude and Ultraviolet themes were updated
+- Minor correction on English catalog
+
 Version 1.7
 - Allows to select the scrolling or twinkling phrase speed
 
