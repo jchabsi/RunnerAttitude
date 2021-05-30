@@ -57,11 +57,11 @@ class Theme {
 				setClockColors(0xFFFFFF, 0xAAAAAA, 0xAAAAAA);
 				phrase = 0x00AAAA;
 				date = 0x00AAAA;
-				iconCalories = 0xFFAA55;
-				iconSteps = 0xAA5555;
+				iconCalories = 0xFFAA00;
+				iconSteps = 0xFFFF55;
 				iconHeart = 0xFF0055;
 				iconNotif = 0xAAAAFF;
-				iconfloorsClimbed = 0x555500;
+				iconfloorsClimbed = 0xAA5555;
 				metricsText = Gfx.COLOR_LT_GRAY;
 				setColor4BTIcon(Gfx.COLOR_DK_GRAY, Gfx.COLOR_BLUE);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
