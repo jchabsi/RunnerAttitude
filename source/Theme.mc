@@ -235,7 +235,7 @@ class Theme {
 				metricsText = 0xAAAAAA;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
 				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
-				setTrackLine(0xFFFFFF, 0x55FFFF);
+				setTrackLine(0xAA55FF, 0xFFFFFF);
 				background = 0x5500AA;
 				break;
 			
