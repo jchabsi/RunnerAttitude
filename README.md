@@ -33,6 +33,11 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.8
+- Added ability to show 12/24hr time according to system settings
+- Allows to set if the phrase continues moving or not on Low Power Mode
+- Two new themes: Quirk Runner and Running is Color!
+
 Version 1.7.1
 - Runner Attitude and Ultraviolet themes were updated
 - Minor correction on English catalog

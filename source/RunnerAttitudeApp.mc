@@ -43,6 +43,7 @@ class RunnerAttitudeApp extends Application.AppBase {
         LaHora.setSecondsConfig();
         ProgressBar.setRunnerAvatar();  
         runnerAttitudeView.setAltitudeConfig(); 
+        runnerAttitudeView.setPhraseOnSleepMode();
         
         WatchUi.requestUpdate();
     }

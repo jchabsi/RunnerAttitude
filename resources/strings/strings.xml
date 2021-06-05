@@ -19,6 +19,8 @@
     <string id="StarryNightRun">Running under the stars</string>
     <string id="Ultraviolet">Ultraviolet</string>
     <string id="FinishLine">Finish Line</string>
+    <string id="QuirkyRunner">Quirky Runner</string>
+    <string id="RunningIsColor">Running is Color!</string>
     
     <string id="MotivationalPhrase">Motivational phrase type</string>
         
@@ -92,6 +94,7 @@
 	<string id="Fixed23">Enjoy today</string>
 	
 	<string id="ShowSeconds">Show seconds</string>
+	<string id="PhraseOnSleepMode">Allow phrase to continue moving on Low Power Mode</string>
 	
 	<string id="RunnerAvatar">Choose progress runner avatar</string>
 	<string id="GenderSettings">Gender from watch settings</string>

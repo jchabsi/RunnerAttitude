@@ -17,6 +17,8 @@
             <listEntry value="12">@Strings.StarryNightRun</listEntry>
             <listEntry value="13">@Strings.Ultraviolet</listEntry>
             <listEntry value="14">@Strings.FinishLine</listEntry>
+            <listEntry value="15">@Strings.QuirkyRunner</listEntry>
+            <listEntry value="16">@Strings.RunningIsColor</listEntry>
         </settingConfig>
     </setting>
     
@@ -52,6 +54,10 @@
             <listEntry value="2">@Strings.Speed2X</listEntry>
             <listEntry value="3">@Strings.Speed3X</listEntry>
         </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.PhraseOnSleepMode" title="PhraseOnSleepMode">
+    	<settingConfig type="boolean"/>
     </setting>
     
     <setting propertyKey="@Properties.ShowSeconds" title="@Strings.ShowSeconds">

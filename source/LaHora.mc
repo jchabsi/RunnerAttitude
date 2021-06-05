@@ -42,9 +42,22 @@ class LaHora extends WatchUi.Drawable {
 	
     private function drawTime(dc) {
     	var clockTime = System.getClockTime();
+    	
+    	var nHour = clockTime.hour;
+		if (!System.getDeviceSettings().is24Hour) {
+			if(nHour >= 12) {
+				nHour -= 12;
+			} 
+			else {
+				if (nHour == 0) {
+					nHour = 12;
+				}
+			}
+		}				
+    	
 		var halfDCWidth = width / 2;
 
-		var sHour = clockTime.hour.format("%02d");
+		var sHour = nHour.format("%02d");
 		var sMin = clockTime.min.format("%02d");
 		storedSecs = clockTime.sec.format("%02d");
 		var totalWidth = dc.getTextWidthInPixels(sHour + sMin, hoursFont);

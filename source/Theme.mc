@@ -38,7 +38,9 @@ class Theme {
 		SunsetRun,
 		StarryNightRun,
 		Ultraviolet,
-		FinishLine
+		FinishLine,
+		QuirkyRunner,
+		RunningIsColor
 	}	
 	
 	function initialize() {		
@@ -250,6 +252,34 @@ class Theme {
 				setTrackLine(0xFFFFFF, 0x55FFFF);
 				
 				background = 0xAA0000;
+				break;
+			
+			case QuirkyRunner:
+				setClockColors(0x00FFAA, 0xAAFFFF, 0xAAFFFF);
+				phrase = 0xAAFFAA;
+				date = 0xAAFFAA;
+				setColor4AllIcons(0xFFAA55);
+				metricsText = 0xFFFFFF;
+				setColor4BTIcon(0xAAAAAA, 0xFFAA55);
+				setColor4BatteryIcon(0x00FFAA, 0xFFFFAA, 0xFF5555);
+				setTrackLine( 0xAAFFFF, 0x00FFAA);
+				background = 0x0055AA;
+				break;
+				
+			case RunningIsColor:
+				setClockColors(0xFF0055, 0x00FFFF, 0xFFFFFF);
+				phrase = 0x00FFAA;
+				date = 0xFFAAAA;
+				iconCalories = 0xFFFF00;
+				iconSteps = 0xFF5500;
+				iconHeart = 0xFF0000;
+				iconNotif = 0xAA00AA;
+				iconfloorsClimbed = 0x00FF00;
+				metricsText = 0xFFFFFFA;
+				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
+				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setTrackLine( 0xAAAAAA, 0xFFFF00);
+				background = Gfx.COLOR_BLACK;
 				break;
 		}
 	}

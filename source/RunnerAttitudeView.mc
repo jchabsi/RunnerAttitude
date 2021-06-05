@@ -27,6 +27,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	
 	private var mTime;
 	
+	private var phraseOnSleepMode;
+	
 	
 	static const partialUpdateSupport = WatchUi.WatchFace has :onPartialUpdate;
 	hidden var altitudeMode;
@@ -193,7 +195,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     }
     function onPartialUpdate(dc) { 
     	mTime.drawSeconds(dc, true);
-		setPhrase(dc, true);
+		setPhrase(dc, phraseOnSleepMode);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -385,5 +387,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     
     function setAltitudeConfig() {
 		altitudeMode = Application.getApp().getProperty("Altitude");
+    }
+    function setPhraseOnSleepMode() {
+    	phraseOnSleepMode = Application.getApp().getProperty("PhraseOnSleepMode");
     }
 }

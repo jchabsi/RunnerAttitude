@@ -19,6 +19,8 @@
     <string id="StarryNightRun">Corriendo bajo las estrellas</string>
     <string id="Ultraviolet">Ultravioleta</string>
     <string id="FinishLine">Línea de llegada</string>
+    <string id="QuirkyRunner">Corredor Extravagante</string>
+    <string id="RunningIsColor">El Running es Color!</string>
     
     <string id="MotivationalPhrase">Tipo de Frase Motivacional</string>
     
@@ -91,6 +93,7 @@
 	<string id="Fixed23">Disfruta el hoy</string>
 	
 	<string id="ShowSeconds">Mostrar Segundos</string>
+	<string id="PhraseOnSleepMode">La frase sigue corriendo cuando el reloj está en modo de Bajo Consumo</string>
 	
 	<string id="RunnerAvatar">Mostrar avatar de progreso</string>
 	
