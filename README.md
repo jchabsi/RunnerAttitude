@@ -33,6 +33,9 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.8.1
+- Fix for 12 hour time
+
 Version 1.8
 - Added ability to show 12/24hr time according to system settings
 - Allows to set if the phrase continues moving or not on Low Power Mode

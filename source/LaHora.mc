@@ -45,13 +45,11 @@ class LaHora extends WatchUi.Drawable {
     	
     	var nHour = clockTime.hour;
 		if (!System.getDeviceSettings().is24Hour) {
-			if(nHour >= 12) {
+			if(nHour > 12) {
 				nHour -= 12;
 			} 
-			else {
-				if (nHour == 0) {
-					nHour = 12;
-				}
+			else if (nHour == 0) {
+				nHour = 12;				
 			}
 		}				
     	
