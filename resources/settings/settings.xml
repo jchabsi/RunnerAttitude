@@ -19,6 +19,7 @@
             <listEntry value="14">@Strings.FinishLine</listEntry>
             <listEntry value="15">@Strings.QuirkyRunner</listEntry>
             <listEntry value="16">@Strings.RunningIsColor</listEntry>
+            <listEntry value="17">@Strings.RunningIsColor2</listEntry>
         </settingConfig>
     </setting>
     

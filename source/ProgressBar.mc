@@ -35,7 +35,7 @@ class ProgressBar extends WatchUi.Drawable {
         Drawable.initialize(dictionary);
                         
         //FOR TESTING
-        //test = 0;
+        test = 3200;
     }
 
     function draw(dc) {
@@ -46,7 +46,7 @@ class ProgressBar extends WatchUi.Drawable {
         //FOR PROD
         var steps = Mon.getInfo().steps;
         //FOR TEST
-        //var steps = test;
+        steps = test;
         
     	var goal = Mon.getInfo().stepGoal;
         

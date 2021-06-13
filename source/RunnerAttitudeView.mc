@@ -282,7 +282,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		stepCountDisplay.setColor(gTheme.metricsText);
 		stepCountDisplay.setText(stepCount);
 		//TEST
-		//stepCountDisplay.setText("12848");
+		stepCountDisplay.setText("12848");
     }
     
     private function setFloorsClimbedDisplay(info) {
@@ -308,7 +308,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		floorsClimbedDisplay.setColor(gTheme.metricsText);
 		floorsClimbedDisplay.setText(floorsClimbed);
 		//TEST
-		//floorsClimbedDisplay.setText("15");
+		floorsClimbedDisplay.setText("17");
     }
     
     private function setCaloriesDisplay(info) {
@@ -327,7 +327,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		caloriesDisplay.setColor(gTheme.metricsText);
 		caloriesDisplay.setText(calories);
 		//TEST
-		//caloriesDisplay.setText("1255");
+		caloriesDisplay.setText("1255");
 						
     }
     
@@ -348,7 +348,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		notificationCountDisplay.setText(formattedNotificationAmount);
 		
 		//TEST
-		//notificationCountDisplay.setText("10+");
+		notificationCountDisplay.setText("4");
     }
     
     private function setHeartrateDisplay() {
@@ -369,7 +369,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		heartrateDisplay.setText(value);
 		
 		//TEST
-		//heartrateDisplay.setText("65");
+		heartrateDisplay.setText("65");
     }
     
     

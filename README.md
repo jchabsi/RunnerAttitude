@@ -33,6 +33,11 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.8.2
+- Themes improvements for better vision and style
+- New Theme 'Running is Color 2!'
+- Small code clean up
+
 Version 1.8.1
 - Fix for 12 hour time
 

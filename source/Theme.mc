@@ -40,7 +40,8 @@ class Theme {
 		Ultraviolet,
 		FinishLine,
 		QuirkyRunner,
-		RunningIsColor
+		RunningIsColor,
+		RunningIsColor2
 	}	
 	
 	function initialize() {		
@@ -60,11 +61,11 @@ class Theme {
 				phrase = 0x00AAAA;
 				date = 0x00AAAA;
 				iconCalories = 0xFFAA00;
-				iconSteps = 0xFFFF55;
+				iconSteps = 0xAA55AA;
 				iconHeart = 0xFF0055;
 				iconNotif = 0xAAAAFF;
 				iconfloorsClimbed = 0xAA5555;
-				metricsText = Gfx.COLOR_LT_GRAY;
+				metricsText = 0xFFFFFF;
 				setColor4BTIcon(Gfx.COLOR_DK_GRAY, Gfx.COLOR_BLUE);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
 				setTrackLine( 0x00AA55, 0x00FFAA);
@@ -73,27 +74,26 @@ class Theme {
 				
 		
 			case NightRunner:
-				setClockColors(0x0055AA, 0x55AAFF, 0x0055AA);
-				phrase = Gfx.COLOR_DK_GRAY;
-				date = Gfx.COLOR_DK_GRAY;
+				setClockColors(0x0055AA, 0x55AAFF, 0x55AAFF);
+				phrase = 0xAAAAAA;
+				date = 0xAAAAAA;
 				setColor4AllIcons(0x0055AA);
 				metricsText = Gfx.COLOR_BLUE;
-				setColor4BTIcon(Gfx.COLOR_DK_GRAY, Gfx.COLOR_DK_BLUE);
+				setColor4BTIcon(Gfx.COLOR_DK_GRAY, 0x0055AA);
 				setColor4BatteryIcon(0x0055AA, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
-				setTrackLine( Gfx.COLOR_BLUE, 0x00AAAA);
+				setTrackLine(0x0055AA, Gfx.COLOR_BLUE);
 				background = Gfx.COLOR_BLACK;				
 				break;
 				
 			case Twilight:
-				setClockColors(0xFFAA55, 0xFFAA55, 0xAAAAFF);
-				seconds = 0xAAAAFF;
+				setClockColors(0xFF5500, 0xFFAA00, 0xAAAAFF);
 				phrase = 0xFFAA00;
-				date = 0xFFAAAA;
+				date = 0xFFAA55;
 				setColor4AllIcons(0x0055FF);
 				metricsText = 0xAAAAFF;
 				setColor4BTIcon(0x0055FF, 0x00AAFF);
 				setColor4BatteryIcon(0x0055FF, 0xFF5500, 0xFF5555);
-				setTrackLine(0xFFAAAA, 0xFFAA55);
+				setTrackLine(0xFFAA55, 0xFF5500);
 				background = 0x000055;
 				break;
 				
@@ -110,24 +110,24 @@ class Theme {
 				break;
 				
 			case CityRunner:
-				setClockColors(0xFFFFFF, 0x00FFFF, 0xAAAAAA);
-				phrase = 0xAAAAAA;
+				setClockColors(0xFFFFFF, 0x55FFFF, 0xAAAAAA);
+				phrase = 0x00FFFF;
 				date = 0xFFAA55;
 				iconCalories = 0xFF5500;
 				iconSteps = 0x00AA55;
 				iconHeart = 0xFF0055;
-				iconNotif = 0x55AAFF;
+				iconNotif = 0x00FFAA;
 				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xAA5500);
-				setTrackLine(0xFF5500, 0xFFFFFF);
+				setTrackLine(0xAAAAAA, 0xFF5500);
 				background = 0x555555;
 				break;
 				
 			case TrackTraining:
-				setClockColors(0x00FFFF, 0x55FFFF, 0x55AAFF);
-				phrase = 0xAAAAAA;
+				setClockColors(0x00FFFF, 0x00FFFF, 0x55AAFF);
+				phrase = 0x55FFFF;
 				date = 0x55AAFF;
 				setColor4AllIcons(0x55AAFF);
 				metricsText = 0xFFFFFF;
@@ -161,7 +161,7 @@ class Theme {
 				metricsText = 0x000000;
 				setColor4BTIcon(0xAAAAAA, 0x0055FF);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
-				setTrackLine(0xFF5500, 0x0055AA);
+				setTrackLine(0x0055AA, 0xFF5500);
 				background = 0xFFFFFF;			
 				break;
 				
@@ -179,18 +179,18 @@ class Theme {
 			
 			case ClassicRunner:	
 				setClockColors(0xFFFFFF, 0xAAAAAA, 0xAAAAAA);		
-				phrase = 0xAAAAAA;
+				phrase = 0xFFFFFF;
 				date = 0xAAAAAA;
 				setColor4AllIcons(0xFFFFFF);
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
 				setColor4BatteryIcon(0xFFFFFF, 0xFF5500, 0xAA0000);
-				setTrackLine(0xFFFFFF, 0x55FFFF);
+				setTrackLine(0xAAAAAA, 0xFFFFFF);
 				background = 0x000000;			
 				break;
 				
 			case ForestTrain:
-				setClockColors(0xAAAA55, 0xAAAA55, 0xAAAA55);			
+				setClockColors(0xAAAA00, 0xAAAA55, 0xAAAA55);			
 				phrase = 0xAAAA55;
 				date = 0xAAAA55;
 				iconCalories = 0xFFFF00;
@@ -206,7 +206,7 @@ class Theme {
 				break;
 			
 			case SunsetRun:
-				setClockColors(0xFFFF00, 0xFFFFAA, 0xFFFFAA);
+				setClockColors(0xFFFF00, 0xFFFF55, 0xFFFFAA);
 				phrase = 0xFFFF55;
 				date = 0xFFFF55;
 				setColor4AllIcons(0xFFFFAA);
@@ -214,7 +214,7 @@ class Theme {
 				setColor4BTIcon(0xAAAAAA, 0xAAAAFF);
 				setColor4BatteryIcon(0xAAAA55, 0xFFFF00, 0xAA0000);
 				setTrackLine(0xFFFFAA, 0xFFFF00);
-				background = 0xFF5500;			
+				background = 0xFF5555;			
 				break;
 				
 			case StarryNightRun:
@@ -222,10 +222,10 @@ class Theme {
 				phrase = 0xFFFFFF;
 				date = 0xAAAAAA;
 				setColor4AllIcons(0xFFFFFF);
-				metricsText = 0xAAAAAA;
+				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
 				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
-				setTrackLine(0xFFFFFF, 0x55FFFF);
+				setTrackLine(0xAAAAAA, 0xFFFFFF);
 				background = 0x0000AA;
 				break;
 			
@@ -234,7 +234,7 @@ class Theme {
 				phrase = 0xFFFFFF;
 				date = 0xAAAAAA;
 				setColor4AllIcons(0xFFFFFF);
-				metricsText = 0xAAAAAA;
+				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
 				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
 				setTrackLine(0xAA55FF, 0xFFFFFF);
@@ -279,6 +279,22 @@ class Theme {
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
 				setTrackLine( 0xAAAAAA, 0xFFFF00);
+				background = Gfx.COLOR_BLACK;
+				break;
+				
+			case RunningIsColor2:
+				setClockColors(0xFF5500, 0x0055FF, 0xFFFFFF);
+				phrase = 0x00AAFF;
+				date = 0xFFAA55;
+				iconCalories = 0xFFFF00;
+				iconSteps = 0xFF5500;
+				iconHeart = 0xFF0000;
+				iconNotif = 0xAA00AA;
+				iconfloorsClimbed = 0x00FF00;
+				metricsText = 0xFFFFFFA;
+				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
+				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setTrackLine( 0xAAAAAA, 0x00AA00);
 				background = Gfx.COLOR_BLACK;
 				break;
 		}
