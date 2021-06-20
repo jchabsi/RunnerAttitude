@@ -35,7 +35,7 @@ What’s New
 
 Version 1.9.0
 - 25 new motivational / inspirational phrases
-- 4 New color ehemes
+- 4 New color themes
 - minor bug fixed
 
 Version 1.8.3
