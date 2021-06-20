@@ -22,6 +22,10 @@
     <string id="QuirkyRunner">Quirky Runner</string>
     <string id="RunningIsColor">Running is Color!</string>
     <string id="RunningIsColor2">Running is Color 2!</string>
+    <string id="MuddySneakers">Muddy Sneakers</string>
+    <string id="PurpleSky">Purple Sky</string>
+    <string id="NorthernLights">Northern Lights</string>
+    <string id="WatchBacklight">Old Watch with Back-light</string>    
     
     <string id="MotivationalPhrase">Motivational phrase type</string>
         
@@ -69,6 +73,32 @@
 	<string id="Phrase24">Don't set limits, explore them! </string>
 	<string id="Phrase25">Compete against yourself and admire the others</string>
 	<string id="Phrase26">Run and free up your mind</string>
+	
+	<string id="Phrase27">Celebrate Your Small Wins</string>
+	<string id="Phrase28">You can either experience the pain of discipline or the pain of regret. The choice is yours</string>
+	<string id="Phrase29">Impossible is just an opinion</string>
+	<string id="Phrase30">“Your passion is waiting for your courage to catch up</string>
+	<string id="Phrase31">Magic is believing in yourself. If you can make that happen, you can make anything happen</string>
+	<string id="Phrase32">Don’t be pushed around by the fears in your mind. Be led by the dreams in your heart</string>
+	<string id="Phrase33">Work hard in silence, let your success be the noise</string>
+	<string id="Phrase34">Don’t limit your challenges. Challenge your limits</string>
+	<string id="Phrase35">Go the extra mile. It’s never crowded there</string>
+	<string id="Phrase36">We can do anything we want to if we stick to it long enough</string>
+	<string id="Phrase37">You’re so much stronger than your excuses</string>
+	<string id="Phrase38">Don’t tell everyone your plans, instead show them your results</string>
+	<string id="Phrase39">Do what you can, with what you have, where you are</string>
+	<string id="Phrase40">If you can dream it, you can do it</string>
+	<string id="Phrase41">You can do anything you set your mind to</string>
+	<string id="Phrase42">You never know what you can do until you try</string>
+	<string id="Phrase43">A winner is a dreamer who never gives up</string>
+	<string id="Phrase44">The question isn’t who is going to let me; it’s who is going to stop me</string>
+	<string id="Phrase45">Don’t watch the clock; do what it does. Keep going</string>
+	<string id="Phrase46">Words can inspire, thoughts can provoke, but only action truly brings you closer to your dreams</string>
+	<string id="Phrase47">Don’t stop when you are tired. Stop when you are done</string>
+	<string id="Phrase48">Motivation may be what starts you off, but it’s habit that keeps you going back for more</string>
+	<string id="Phrase49">It might not be easy but it’ll be worth it</string>
+	<string id="Phrase50">You will never always be motivated, so you must learn to be disciplined</string>
+		
 	
 	<string id="Fixed1">Runner Attitude</string>
 	<string id="Fixed2">Run frequently</string>

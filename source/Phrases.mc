@@ -13,7 +13,7 @@ class Phrases {
 	
 	hidden const sp = " ";
 	hidden const sl = " - ";
-	hidden const numberOfPhrases = 26;
+	hidden const numberOfPhrases = 50;
 	hidden const numberOfWords = 23;
 	private var rndMax = 0;
 	hidden var phrasesList;		
@@ -81,6 +81,30 @@ class Phrases {
 	    	phrasesList[23] = sp + WatchUi.loadResource(Rez.Strings.Phrase24) + sl;
 	    	phrasesList[24] = sp + WatchUi.loadResource(Rez.Strings.Phrase25) + sl;
 	    	phrasesList[25] = sp + WatchUi.loadResource(Rez.Strings.Phrase26) + sl;
+	    	phrasesList[26] = sp + WatchUi.loadResource(Rez.Strings.Phrase27) + sl;
+	    	phrasesList[27] = sp + WatchUi.loadResource(Rez.Strings.Phrase28) + sl;
+	    	phrasesList[28] = sp + WatchUi.loadResource(Rez.Strings.Phrase29) + sl;
+	    	phrasesList[29] = sp + WatchUi.loadResource(Rez.Strings.Phrase30) + sl;
+	    	phrasesList[30] = sp + WatchUi.loadResource(Rez.Strings.Phrase31) + sl;
+	    	phrasesList[31] = sp + WatchUi.loadResource(Rez.Strings.Phrase32) + sl;
+	    	phrasesList[32] = sp + WatchUi.loadResource(Rez.Strings.Phrase33) + sl;
+	    	phrasesList[33] = sp + WatchUi.loadResource(Rez.Strings.Phrase34) + sl;
+	    	phrasesList[34] = sp + WatchUi.loadResource(Rez.Strings.Phrase35) + sl;
+	    	phrasesList[35] = sp + WatchUi.loadResource(Rez.Strings.Phrase36) + sl;
+	    	phrasesList[36] = sp + WatchUi.loadResource(Rez.Strings.Phrase37) + sl;
+	    	phrasesList[37] = sp + WatchUi.loadResource(Rez.Strings.Phrase38) + sl;
+	    	phrasesList[38] = sp + WatchUi.loadResource(Rez.Strings.Phrase39) + sl;
+	    	phrasesList[39] = sp + WatchUi.loadResource(Rez.Strings.Phrase40) + sl;
+	    	phrasesList[40] = sp + WatchUi.loadResource(Rez.Strings.Phrase41) + sl;
+	    	phrasesList[41] = sp + WatchUi.loadResource(Rez.Strings.Phrase42) + sl;
+	    	phrasesList[42] = sp + WatchUi.loadResource(Rez.Strings.Phrase43) + sl;
+	    	phrasesList[43] = sp + WatchUi.loadResource(Rez.Strings.Phrase44) + sl;
+	    	phrasesList[44] = sp + WatchUi.loadResource(Rez.Strings.Phrase45) + sl;
+	    	phrasesList[45] = sp + WatchUi.loadResource(Rez.Strings.Phrase46) + sl;
+	    	phrasesList[46] = sp + WatchUi.loadResource(Rez.Strings.Phrase47) + sl;
+	    	phrasesList[47] = sp + WatchUi.loadResource(Rez.Strings.Phrase48) + sl;
+	    	phrasesList[48] = sp + WatchUi.loadResource(Rez.Strings.Phrase49) + sl;
+	    	phrasesList[49] = sp + WatchUi.loadResource(Rez.Strings.Phrase50) + sl;
 	    }
 	    else if (phraseType == twinkling) {
 	    	phrasesList = new [numberOfPhrases];
@@ -111,6 +135,32 @@ class Phrases {
 	    	phrasesList[23] = WatchUi.loadResource(Rez.Strings.Phrase24);
 	    	phrasesList[24] = WatchUi.loadResource(Rez.Strings.Phrase25);
 	    	phrasesList[25] = WatchUi.loadResource(Rez.Strings.Phrase26);
+	    	phrasesList[26] = WatchUi.loadResource(Rez.Strings.Phrase27);
+	    	phrasesList[27] = WatchUi.loadResource(Rez.Strings.Phrase28);
+	    	phrasesList[28] = WatchUi.loadResource(Rez.Strings.Phrase29);
+	    	phrasesList[29] = WatchUi.loadResource(Rez.Strings.Phrase30);
+	    	
+	    	phrasesList[30] = WatchUi.loadResource(Rez.Strings.Phrase31);
+	    	phrasesList[31] = WatchUi.loadResource(Rez.Strings.Phrase32);
+	    	phrasesList[32] = WatchUi.loadResource(Rez.Strings.Phrase33);
+	    	phrasesList[33] = WatchUi.loadResource(Rez.Strings.Phrase34);
+	    	phrasesList[34] = WatchUi.loadResource(Rez.Strings.Phrase35);
+	    	phrasesList[35] = WatchUi.loadResource(Rez.Strings.Phrase36);
+	    	phrasesList[36] = WatchUi.loadResource(Rez.Strings.Phrase37);
+	    	phrasesList[37] = WatchUi.loadResource(Rez.Strings.Phrase38);
+	    	phrasesList[38] = WatchUi.loadResource(Rez.Strings.Phrase39);
+	    	phrasesList[39] = WatchUi.loadResource(Rez.Strings.Phrase40);
+	    	
+	    	phrasesList[40] = WatchUi.loadResource(Rez.Strings.Phrase41);
+	    	phrasesList[41] = WatchUi.loadResource(Rez.Strings.Phrase42);
+	    	phrasesList[42] = WatchUi.loadResource(Rez.Strings.Phrase43);
+	    	phrasesList[43] = WatchUi.loadResource(Rez.Strings.Phrase44);
+	    	phrasesList[44] = WatchUi.loadResource(Rez.Strings.Phrase45);
+	    	phrasesList[45] = WatchUi.loadResource(Rez.Strings.Phrase46);
+	    	phrasesList[46] = WatchUi.loadResource(Rez.Strings.Phrase47);
+	    	phrasesList[47] = WatchUi.loadResource(Rez.Strings.Phrase48);
+	    	phrasesList[48] = WatchUi.loadResource(Rez.Strings.Phrase49);
+	    	phrasesList[49] = WatchUi.loadResource(Rez.Strings.Phrase50);
 	    }
 	    else if (phraseType == fixed) {
 	    	phrasesList = new [numberOfWords];

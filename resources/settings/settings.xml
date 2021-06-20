@@ -20,6 +20,11 @@
             <listEntry value="15">@Strings.QuirkyRunner</listEntry>
             <listEntry value="16">@Strings.RunningIsColor</listEntry>
             <listEntry value="17">@Strings.RunningIsColor2</listEntry>
+            <listEntry value="18">@Strings.MuddySneakers</listEntry>   
+            <listEntry value="19">@Strings.PurpleSky</listEntry>
+            <listEntry value="20">@Strings.NorthernLights</listEntry>
+            <listEntry value="21">@Strings.WatchBacklight</listEntry>             
+                    
         </settingConfig>
     </setting>
     
@@ -57,7 +62,7 @@
         </settingConfig>
     </setting>
     
-    <setting propertyKey="@Properties.PhraseOnSleepMode" title="PhraseOnSleepMode">
+    <setting propertyKey="@Properties.PhraseOnSleepMode" title="@Strings.PhraseOnSleepMode">
     	<settingConfig type="boolean"/>
     </setting>
     

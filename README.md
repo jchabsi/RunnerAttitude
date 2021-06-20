@@ -33,6 +33,11 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.9.0
+- 25 new motivational / inspirational phrases
+- 4 New color ehemes
+- minor bug fixed
+
 Version 1.8.3
 - Themes improvements for better vision and style
 - New Theme 'Running is Color 2!'
@@ -54,41 +59,32 @@ Version 1.7
 - Allows to select the scrolling or twinkling phrase speed
 
 Version 1.6
-
 - Layout Revamp
 - Ability to display altitude (Meters or floors)
 
 Version 1.5.3
-
 - Fixes issue with phrase scrolling in low power mode
 
 Version 1.5.2
-
 - 2 new themes: Ultraviolet and Finish Line
 
 Version 1.5.1
-
 - fixes a HR bug
 
 Version 1.5.0
-
 - You can set your custom motivational phrase
 - Heart Rate improvements
 - Progress bar was made a little bit thicker
 
 Version 1.4.2
-
 The following issues were fixed:
-
 - Continuos seconds display even on sleep mode (for devices that support partial update)
 - Continuos phrase scroll or twinkle even on sleep mode (for devices that support partial update)
 
 Version 1.4.1
-
 - Disabling partial update (Temporary until I correct a bug)
 
 Version 1.4.0
-
 - Continuos seconds display even on sleep mode (for devices that support partial update)
 - Continuos phrase scroll or twinkle even on sleep mode (for devices that support partial update)
 - New theme (Running under the stars)
@@ -96,23 +92,19 @@ Version 1.4.0
 - Code optimizations
 
 Version 1.3.0
-
 - Spanish translation!
 - Minor English corrections
 - New Theme: Sunset Run
 
 Version 1.2.0
-
 - A trophy is displayed when the step goal is reached
 - Bugfix: Progress bar stops drawing when goal step is reached
 - Added 3 new Themes!
 
 Version 1.1.1
-
 - Removed option "Stop Animations" Because on Sleep Mode animations are always stopped. Now when the watch enters on sleep mode seconds are hidden and the phrase is frozen.
 
 Version 1.1.0
-
 - Added the twinkling mode to display phrases faster
 - Fixed the ability for renewing a phrase after the configured time period
 - Themes tweaks for better visualization
@@ -120,7 +112,6 @@ Version 1.1.0
 - Code optimizations and performance improvements
 
 Version 1.0
-
 - Inttial Release
 
 Acknowledgement

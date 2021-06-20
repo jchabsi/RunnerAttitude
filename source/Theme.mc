@@ -41,7 +41,11 @@ class Theme {
 		FinishLine,
 		QuirkyRunner,
 		RunningIsColor,
-		RunningIsColor2
+		RunningIsColor2,
+		MuddySneakers,
+		PurpleSky,
+		NorthernLights,
+		WatchBacklight
 	}	
 	
 	function initialize() {		
@@ -285,7 +289,7 @@ class Theme {
 			case RunningIsColor2:
 				setClockColors(0xFF5500, 0x0055FF, 0xFFFFFF);
 				phrase = 0x00AAFF;
-				date = 0xFFAA55;
+				date = 0xFFFF55;
 				iconCalories = 0xFFFF00;
 				iconSteps = 0xFF5500;
 				iconHeart = 0xFF0000;
@@ -297,6 +301,56 @@ class Theme {
 				setTrackLine( 0xAAAAAA, 0x00AA00);
 				background = Gfx.COLOR_BLACK;
 				break;
+			
+			case MuddySneakers:
+				setClockColors(0x550000, 0x550000, 0x550000);		
+				phrase = 0x550000;
+				date = 0x550000;
+				setColor4AllIcons(0x550000);
+				metricsText = 0x550000;
+				setColor4BTIcon(0xAAAAAA, 0x550000);
+				setColor4BatteryIcon(0x550000, 0xFF5500, 0xAA0000);
+				setTrackLine(0xAAAAAA, 0x550000);
+				background = 0xAAFFFF;			
+				break;
+				
+			case PurpleSky:
+				setClockColors(0xAAFFFF, 0xAAFFFF, 0xAAFFFF);		
+				phrase = 0xFFAAAA;
+				date = 0xFFAAAA;
+				setColor4AllIcons(0xAAAAFF);
+				metricsText = 0xAAFFFF;
+				setColor4BTIcon(0xAAAAAA, 0xAAAAFF);
+				setColor4BatteryIcon(0xAAAAFF, 0xFFAA00, 0xFF0000);
+				setTrackLine(0xAAAAAA, 0xFFAAAA);
+				background = 0x550055;			
+				break;
+			
+			case NorthernLights:
+				setClockColors(0x00FFAA, 0xAAFFFF, 0xAAFFFF);		
+				phrase = 0xAAFFFF;
+				date = 0xFFAAAA;
+				setColor4AllIcons(0x00FFAA);
+				metricsText = 0xAAFFFF;
+				setColor4BTIcon(0xAAAAAA, 0x00FFAA);
+				setColor4BatteryIcon(0x00FFAA, 0xFFAA00, 0xFF0000);
+				setTrackLine(0xAAAAAA, 0xFFAAAA);
+				background = 0x000055;			
+				break;
+				
+			case WatchBacklight:
+				setClockColors(0x000000, 0x000000, 0x000000);		
+				phrase = 0x000000;
+				date = 0x000000;
+				setColor4AllIcons(0x000000);
+				metricsText = 0x000000;
+				setColor4BTIcon(0xAAAAAA, 0x000000);
+				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000);
+				setTrackLine(0x555555, 0x000000);
+				background = 0x00FFAA;			
+				break;
+				
+			
 		}
 	}
 	

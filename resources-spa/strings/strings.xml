@@ -22,6 +22,11 @@
     <string id="QuirkyRunner">Corredor Extravagante</string>
     <string id="RunningIsColor">El Running es Color!</string>
     <string id="RunningIsColor2">El Running es Color 2!</string>
+    <string id="MuddySneakers">Zapatillas Embarradas</string>
+    <string id="PurpleSky">Cielo Púrpura</string>
+    <string id="NorthernLights">Aurora Boreal</string>
+    <string id="WatchBacklight">Viejo reloj con luz</string>
+    
     
     <string id="MotivationalPhrase">Tipo de Frase Motivacional</string>
     
@@ -68,6 +73,31 @@
 	<string id="Phrase24">¡No pongas límites, explóralos! </string>
 	<string id="Phrase25">Compite contra ti mismo y admira a los demás.</string>
 	<string id="Phrase26">Corre para liberar tu mente.</string>
+	
+    <string id ="Phrase27">Celebra tus pequeñas victorias</string>
+	<string id ="Phrase28">Puedes experimentar el dolor de la disciplina o el dolor del arrepentimiento. La elección es tuya</string>
+	<string id ="Phrase29">Imposible es solo una opinión</string>
+	<string id ="Phrase30">Tu pasión está esperando que tu coraje se ponga al día</string>
+	<string id ="Phrase31">La magia está en creer en ti mismo. Si puedes hacer que eso suceda, puedes hacer que suceda cualquier cosa</string>
+	<string id ="Phrase32">No te deje intimidar por los miedos de tu mente. Déjate guiar por los sueños de tu corazón</string>
+	<string id ="Phrase33">Trabaja duro en silencio, deja que tu éxito sea el ruido</string>
+	<string id ="Phrase34">No limites tus desafíos. Desafía tus límites</string>
+	<string id ="Phrase35">Ve por la milla extra. Allí nunca hay mucha gente</string>
+	<string id ="Phrase36">Podemos hacer lo que queramos si nos atenemos a ello el tiempo suficiente</string>
+	<string id ="Phrase37">Eres mucho más fuerte que tus excusas</string>
+	<string id ="Phrase38">No le cuentes a todos tus planes, en su lugar muéstrales tus resultados</string>
+	<string id ="Phrase39">Haz lo que puedas, con lo que tienes, donde estés</string>
+	<string id ="Phrase40">Si puedes soñarlo, puedes hacerlo</string>
+	<string id ="Phrase41">Puedes hacer cualquier cosa que te propongas</string>
+	<string id ="Phrase42">Nunca se sabe lo que puedes hacer hasta que lo intentas</string>
+	<string id ="Phrase43">Un ganador es un soñador que nunca se rinde</string>
+	<string id ="Phrase44">La pregunta no es quién me va a dejar; es quien me va a detener</string>
+	<string id ="Phrase45">No mires el reloj; haz lo que el hace hace. Sigue avanzando!</string>
+	<string id ="Phrase46">Las palabras pueden inspirar, los pensamientos pueden provocar, pero solo la acción te acerca realmente a tus sueños </string>
+	<string id ="Phrase47">No te detengas cuando estés cansado. Detente cuando hayas terminado </string>
+	<string id ="Phrase48">La motivación puede ser lo que te impulse, pero es el hábito lo que hace que vuelvas por más</string>
+	<string id ="Phrase49">Puede que no sea fácil, pero valdrá la pena </string>
+	<string id ="Phrase50">No siempre estarás motivado, por lo que debes aprender a ser disciplinado</string>
 	
 	<string id="Fixed1">Runner Attitude</string>
 	<string id="Fixed2">Corre seguido</string>
