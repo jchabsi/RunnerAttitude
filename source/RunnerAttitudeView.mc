@@ -288,10 +288,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 				dist = info.steps.toString();
 			break;
 			case DistanceInKilometers:
-				dist = (info.distance / 100.00).format("%.02f").toString();
+				dist = (info.distance / 100000.00).format("%.02f").toString();
 				break;
 			case DistanceInMiles:
-				dist = ((info.distance / 100.00) * 0.621371).format("%.02f").toString();
+				dist = ((info.distance / 100000.00) * 0.621371).format("%.02f").toString();
 				break;
 			default:
 				dist = info.steps.toString();
