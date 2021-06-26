@@ -33,6 +33,10 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.10.2
+- Added options to show steps and kms or miles at the same time
+- icons position adjusted to fit according to the modification and esthetic look
+
 Version 1.10.1
 - Fixed distance unit conversions
 

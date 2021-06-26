@@ -142,7 +142,10 @@
 	<string id="DistanceConfig">Show total distance in</string>
 	<string id="DistanceInSteps">Steps</string>
 	<string id="DistanceInKilometers">Kilometers</string>
-	<string id="DistanceInMiles">Miles</string>	
+	<string id="DistanceInMiles">Miles</string>
+	<string id="DistanceInStepsKilometers">Steps and Kilometers</string>	
+	<string id="DistanceInStepsMiles">Steps and Miles</string>	
+	
 	
 	<string id="Altitude">Show total ascended altitude in:</string>
 	<string id="FloorsClimbed">Floors Climbed</string>

@@ -35,7 +35,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden enum {
 		DistanceInSteps,
 		DistanceInKilometers,
-		DistanceInMiles
+		DistanceInMiles,
+		DistanceInStepsKilometers,
+		DistanceInStepsMiles
 	}	
 	
 
@@ -86,23 +88,21 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	
     	//floors
     	var floorsClimbedDisplay = View.findDrawableById("FloorsClimbedDisplay"); 
-    	floorsClimbedDisplay.locX = width / 3.1;
+    	floorsClimbedDisplay.locX = width / 2.65;
     	floorsClimbedDisplay.locY = height / 1.3;
-    	iconFloorsClimbed = new MyTextView(";", gTheme.iconCalories, iconsFont, width / 4.8, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );  
+    	iconFloorsClimbed = new MyTextView(";", gTheme.iconfloorsClimbed, iconsFont, width / 3.7, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );  
     	    	
     	//Calories
     	var caloriesDisplay = View.findDrawableById("CaloriesDisplay"); 	
-    	caloriesDisplay.locX = width / 1.5;
+    	caloriesDisplay.locX = width / 1.45;    	
     	caloriesDisplay.locY = height / 1.3; 
-    	iconCalories = new MyTextView("6", gTheme.iconfloorsClimbed, iconsFont, width / 1.75, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
+    	iconCalories = new MyTextView("6", gTheme.iconCalories, iconsFont, width / 1.70, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Notifications
     	var notificationDisplay = View.findDrawableById("NotificationDisplay"); 	
-    	//notificationDisplay.locX = width / 2.45;
-    	notificationDisplay.locX = width / 1.35;
+    	notificationDisplay.locX = width / 1.33;
     	notificationDisplay.locY = height / 5.5;
-    	//iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 3.7, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
-    	iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 1.6, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
+    	iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 1.55, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Heart rate    	
     	var heartrateDisplay = View.findDrawableById("HeartrateDisplay"); 
@@ -293,6 +293,12 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 			case DistanceInMiles:
 				dist = ((info.distance / 100000.00) * 0.621371).format("%.02f").toString();
 				break;
+			case DistanceInStepsKilometers:
+				dist = info.steps.toString() + "-" + (info.distance / 100000.00).format("%.01f").toString();
+				break;
+			case DistanceInStepsMiles:
+				dist = info.steps.toString() + "-" + ((info.distance / 100000.00) * 0.621371).format("%.01f").toString();
+				break;				
 			default:
 				dist = info.steps.toString();
 				break;
@@ -300,7 +306,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		stepCountDisplay.setColor(gTheme.metricsText);
 		stepCountDisplay.setText(dist);
 		//TEST
-		//stepCountDisplay.setText("5674");		
+		//stepCountDisplay.setText("99999");		
     }
     
     private function setFloorsClimbedDisplay(info) {

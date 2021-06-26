@@ -89,6 +89,8 @@
         	<listEntry value="0">@Strings.DistanceInSteps</listEntry>
             <listEntry value="1">@Strings.DistanceInKilometers</listEntry>
             <listEntry value="2">@Strings.DistanceInMiles</listEntry>
+            <listEntry value="3">@Strings.DistanceInStepsKilometers</listEntry>
+            <listEntry value="4">@Strings.DistanceInStepsMiles</listEntry>
         </settingConfig>
     </setting>
     

@@ -141,7 +141,9 @@
 	<string id="DistanceConfig">Mostrar distancia total en:</string>
 	<string id="DistanceInSteps">Pasos</string>
 	<string id="DistanceInKilometers">Lilómetros</string>
-	<string id="DistanceInMiles">Millas</string>	
+	<string id="DistanceInMiles">Millas</string>
+	<string id="DistanceInStepsKilometers">Pasos y Kilómetros</string>	
+	<string id="DistanceInStepsMiles">Pasos y Millass</string>
 	
 	<string id="Altitude">Mostrar distancia ascendida en:</string>
 	<string id="FloorsClimbed">Pisos Subidos</string>
