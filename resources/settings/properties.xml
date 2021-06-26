@@ -8,6 +8,7 @@
     <property id="PhraseOnSleepMode" type="boolean">true</property>
     <property id="RunnerAvatar" type="number">0</property>
     <property id="ShowSeconds" type="boolean">true</property>
+    <property id="DistanceConfig" type="number">0</property>
     <property id="Altitude" type="number">0</property>
 
 </properties>

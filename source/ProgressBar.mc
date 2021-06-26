@@ -21,7 +21,7 @@ class ProgressBar extends WatchUi.Drawable {
 	hidden var trophyIcon;
 	
 	//FOR TESTING
-	var test;	
+	//var test;	
 
     function initialize() {
     	runnerGirl = WatchUi.loadResource(Rez.Drawables.RunnerGirl);
@@ -35,7 +35,9 @@ class ProgressBar extends WatchUi.Drawable {
         Drawable.initialize(dictionary);
                         
         //FOR TESTING
+        //test = 1200;
         //test = 3200;
+        //test = 10000;
     }
 
     function draw(dc) {
@@ -85,16 +87,20 @@ class ProgressBar extends WatchUi.Drawable {
 				else {
 					genderBitmap = runnerBoy;
 				}
-						    	    	 
+				if(gTheme.background4Runner != gTheme.background) {				
+					dc.setColor(gTheme.background4Runner, Graphics.COLOR_TRANSPARENT);
+					dc.fillRoundedRectangle(stepsx - 6, y - 31, 20, 31, 5);
+				}	    	    	 
 		    	dc.drawBitmap(stepsx - 5, y - 30, genderBitmap);
 		    	
 		    	//FOR TESTING		    	
-		    	//test = test + 200;
-		 
+		    	//test = test + 200;		 
 		    } 
 		    		
     	}
     	else {
+    		dc.setColor(gTheme.background4Runner, Graphics.COLOR_TRANSPARENT);
+			dc.fillRoundedRectangle((width / 2) - 17, (height / 6.3) - 35, 34, 34, 5);	    	    	 
 	    	dc.drawBitmap((width / 2) - 16, (height / 6.3) - 34, trophyIcon);
 	    	dc.setColor(gTheme.trackProgress, Graphics.COLOR_TRANSPARENT);
 	    	dc.fillRectangle(x, y, xw, yh);			   

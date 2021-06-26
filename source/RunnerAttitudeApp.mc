@@ -42,6 +42,7 @@ class RunnerAttitudeApp extends Application.AppBase {
         gPhrase.setPhraseSpeed();
         LaHora.setSecondsConfig();
         ProgressBar.setRunnerAvatar();  
+        runnerAttitudeView.setDistanceComfig();
         runnerAttitudeView.setAltitudeConfig(); 
         runnerAttitudeView.setPhraseOnSleepMode();
         

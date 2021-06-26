@@ -25,7 +25,13 @@
     <string id="MuddySneakers">Muddy Sneakers</string>
     <string id="PurpleSky">Purple Sky</string>
     <string id="NorthernLights">Northern Lights</string>
-    <string id="WatchBacklight">Old Watch with Back-light</string>    
+    <string id="WatchBacklight">Old Watch with Back-light</string> 
+    <string id="FluoTrainingTShirt">Flourescent Training T-shirt</string> 
+    <string id="LilacSneakers">Her lilac running sneakers</string> 
+    <string id="AmberDisplay">Finish line Amber display</string> 
+    <string id="GreenDisplay">Finish line Green Display</string> 
+    <string id="FinisherMedal">Finisher Medal</string>
+     
     
     <string id="MotivationalPhrase">Motivational phrase type</string>
         
@@ -133,7 +139,12 @@
 	<string id="RunnerBoy">Boy avatar</string>
 	<string id="RunnerDisabled">Hide runner avatar</string>
 	
-	<string id="Altitude">Altitude</string>
+	<string id="DistanceConfig">Show total distance in</string>
+	<string id="DistanceInSteps">Steps</string>
+	<string id="DistanceInKilometers">Kilometers</string>
+	<string id="DistanceInMiles">Miles</string>	
+	
+	<string id="Altitude">Show total ascended altitude in:</string>
 	<string id="FloorsClimbed">Floors Climbed</string>
 	<string id="MetersClimbed">Vertical Meters</string>
 	

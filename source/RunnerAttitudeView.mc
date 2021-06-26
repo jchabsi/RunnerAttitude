@@ -16,8 +16,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden var motivationalDisplay;
 	hidden var iconsFont;
 	
-	hidden var tinyFont;
-	
 	hidden var iconSteps;
 	hidden var iconCalories;
 	hidden var iconBT;
@@ -29,9 +27,16 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	
 	private var phraseOnSleepMode;
 	
-	
 	static const partialUpdateSupport = WatchUi.WatchFace has :onPartialUpdate;
 	hidden var altitudeMode;
+	
+	private var distanceConfig;	
+	
+	hidden enum {
+		DistanceInSteps,
+		DistanceInKilometers,
+		DistanceInMiles
+	}	
 	
 
     function initialize() {
@@ -41,7 +46,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     // Load your resources here
     function onLayout(dc) {
     	iconsFont = WatchUi.loadResource(Rez.Fonts.IconsFont);
-		tinyFont = WatchUi.loadResource(Rez.Fonts.TinyFont);
 
         setLayout(Rez.Layouts.WatchFace(dc));
         
@@ -277,12 +281,26 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     }    
     
     private function setStepCountDisplay(info) {
-    	var stepCount = info.steps.toString();		
-		var stepCountDisplay = View.findDrawableById("StepCountDisplay");      
+    	var dist;		
+		var stepCountDisplay = View.findDrawableById("StepCountDisplay");   
+		switch (distanceConfig) {
+			case DistanceInSteps:
+				dist = info.steps.toString();
+			break;
+			case DistanceInKilometers:
+				dist = (info.distance / 100.00).format("%.02f").toString();
+				break;
+			case DistanceInMiles:
+				dist = ((info.distance / 100.00) * 0.621371).format("%.02f").toString();
+				break;
+			default:
+				dist = info.steps.toString();
+				break;
+		}   
 		stepCountDisplay.setColor(gTheme.metricsText);
-		stepCountDisplay.setText(stepCount);
+		stepCountDisplay.setText(dist);
 		//TEST
-		//stepCountDisplay.setText("12848");
+		//stepCountDisplay.setText("5674");		
     }
     
     private function setFloorsClimbedDisplay(info) {
@@ -390,5 +408,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     }
     function setPhraseOnSleepMode() {
     	phraseOnSleepMode = Application.getApp().getProperty("PhraseOnSleepMode");
+    }
+    function setDistanceComfig() {
+    	distanceConfig = Application.getApp().getProperty("DistanceConfig");    	
     }
 }

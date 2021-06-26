@@ -26,7 +26,12 @@
     <string id="PurpleSky">Cielo Púrpura</string>
     <string id="NorthernLights">Aurora Boreal</string>
     <string id="WatchBacklight">Viejo reloj con luz</string>
-    
+    <string id="FluoTrainingTShirt">Mi remera Flourescente</string> 
+    <string id="LilacSneakers">Sus zapatillas lila</string> 
+    <string id="AmberDisplay">Cartel de llegada ambar</string> 
+    <string id="GreenDisplay">Cartel de llegada verde</string>
+    <string id="FinisherMedal">Medalla de finisher</string>
+        
     
     <string id="MotivationalPhrase">Tipo de Frase Motivacional</string>
     
@@ -123,7 +128,7 @@
 	<string id="Fixed22">Mantente enfocado</string>
 	<string id="Fixed23">Disfruta el hoy</string>
 	
-	<string id="ShowSeconds">Mostrar Segundos</string>
+	<string id="ShowSeconds">Mostrar segundos</string>
 	<string id="PhraseOnSleepMode">La frase sigue corriendo cuando el reloj está en modo de Bajo Consumo</string>
 	
 	<string id="RunnerAvatar">Mostrar avatar de progreso</string>
@@ -133,7 +138,12 @@
 	<string id="RunnerBoy">Avatar masculino</string>
 	<string id="RunnerDisabled">No mostrar el avatar</string>
 	
-	<string id="Altitude">Altitud</string>
+	<string id="DistanceConfig">Mostrar distancia total en:</string>
+	<string id="DistanceInSteps">Pasos</string>
+	<string id="DistanceInKilometers">Lilómetros</string>
+	<string id="DistanceInMiles">Millas</string>	
+	
+	<string id="Altitude">Mostrar distancia ascendida en:</string>
 	<string id="FloorsClimbed">Pisos Subidos</string>
 	<string id="MetersClimbed">Metros Verticsles</string>
 	

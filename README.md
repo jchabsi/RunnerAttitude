@@ -33,6 +33,13 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.10.0
+- In addition to steps added option to show distance in kilometers and miles
+- Added a dark surrounding rectangle to show runner and trophy in light themes where images are not very distinguishable
+- 5 new themes!
+- Minor code refactoring
+- Improved catalog texts
+
 Version 1.9.0
 - 25 new motivational / inspirational phrases
 - 4 New color themes

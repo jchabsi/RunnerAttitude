@@ -23,7 +23,12 @@
             <listEntry value="18">@Strings.MuddySneakers</listEntry>   
             <listEntry value="19">@Strings.PurpleSky</listEntry>
             <listEntry value="20">@Strings.NorthernLights</listEntry>
-            <listEntry value="21">@Strings.WatchBacklight</listEntry>             
+            <listEntry value="21">@Strings.WatchBacklight</listEntry>  
+            <listEntry value="22">@Strings.FluoTrainingTShirt</listEntry>
+            <listEntry value="23">@Strings.LilacSneakers</listEntry> 
+            <listEntry value="24">@Strings.AmberDisplay</listEntry>  
+            <listEntry value="25">@Strings.GreenDisplay</listEntry>
+            <listEntry value="26">@Strings.FinisherMedal</listEntry>         
                     
         </settingConfig>
     </setting>
@@ -76,6 +81,14 @@
             <listEntry value="1">@Strings.RunnerGirl</listEntry>
             <listEntry value="2">@Strings.RunnerBoy</listEntry>
             <listEntry value="3">@Strings.RunnerDisabled</listEntry>            
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.DistanceConfig" title="@Strings.DistanceConfig">
+        <settingConfig type="list">
+        	<listEntry value="0">@Strings.DistanceInSteps</listEntry>
+            <listEntry value="1">@Strings.DistanceInKilometers</listEntry>
+            <listEntry value="2">@Strings.DistanceInMiles</listEntry>
         </settingConfig>
     </setting>
     

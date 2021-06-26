@@ -22,6 +22,7 @@ class Theme {
 	var trackLine;
 	var trackProgress;
 	var background;	
+	var background4Runner;
 	
 	hidden enum {
 		RunnerAttitude,
@@ -45,7 +46,12 @@ class Theme {
 		MuddySneakers,
 		PurpleSky,
 		NorthernLights,
-		WatchBacklight
+		WatchBacklight,
+		FluoTrainingTShirt, 
+ 		LilacSneakers, 
+    	AmberDisplay,
+    	GreenDisplay,
+    	FinisherMedal
 	}	
 	
 	function initialize() {		
@@ -72,8 +78,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(Gfx.COLOR_DK_GRAY, Gfx.COLOR_BLUE);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
-				setTrackLine( 0x00AA55, 0x00FFAA);
 				background = Gfx.COLOR_BLACK;
+				setTrackLine( 0x00AA55, 0x00FFAA, background);
 				break;
 				
 		
@@ -85,8 +91,8 @@ class Theme {
 				metricsText = Gfx.COLOR_BLUE;
 				setColor4BTIcon(Gfx.COLOR_DK_GRAY, 0x0055AA);
 				setColor4BatteryIcon(0x0055AA, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
-				setTrackLine(0x0055AA, Gfx.COLOR_BLUE);
-				background = Gfx.COLOR_BLACK;				
+				background = Gfx.COLOR_BLACK;
+				setTrackLine(0x0055AA, Gfx.COLOR_BLUE, background);				
 				break;
 				
 			case Twilight:
@@ -97,8 +103,8 @@ class Theme {
 				metricsText = 0xAAAAFF;
 				setColor4BTIcon(0x0055FF, 0x00AAFF);
 				setColor4BatteryIcon(0x0055FF, 0xFF5500, 0xFF5555);
-				setTrackLine(0xFFAA55, 0xFF5500);
 				background = 0x000055;
+				setTrackLine(0xFFAA55, 0xFF5500, background);
 				break;
 				
 			case MountainTrails:
@@ -109,8 +115,8 @@ class Theme {
 				metricsText = 0x00FF00;
 				setColor4BTIcon(0x00AA55, 0x00AAAA);
 				setColor4BatteryIcon(0x55AA55, 0xAAAA00, 0xAA5500);
-				setTrackLine(0xAAAA55, 0x55FF55);
 				background = 0x555500;
+				setTrackLine(0xAAAA55, 0x55FF55, background);
 				break;
 				
 			case CityRunner:
@@ -125,8 +131,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xAA5500);
-				setTrackLine(0xAAAAAA, 0xFF5500);
 				background = 0x555555;
+				setTrackLine(0xAAAAAA, 0xFF5500, background);
 				break;
 				
 			case TrackTraining:
@@ -137,8 +143,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0x55AAFF);
 				setColor4BatteryIcon(0x55AAFF, 0xFFAA00, 0xFF0000);
-				setTrackLine(0x55AAFF, 0x00FFFF);
 				background = 0x0000AA;
+				setTrackLine(0x55AAFF, 0x00FFFF, background);
 				break;
 				
 			case RunningGirl:
@@ -149,8 +155,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFF55AA);
 				setColor4BatteryIcon(0xFF55AA, 0xFFAA00, 0xFF0000);
-				setTrackLine(0xFF55AA, 0xFFAAFF);
 				background = 0xAA0055;
+				setTrackLine(0xFF55AA, 0xFFAAFF, background);
 				break;
 			
 			case ShinnyDay:	
@@ -165,8 +171,8 @@ class Theme {
 				metricsText = 0x000000;
 				setColor4BTIcon(0xAAAAAA, 0x0055FF);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
-				setTrackLine(0x0055AA, 0xFF5500);
-				background = 0xFFFFFF;			
+				background = 0xFFFFFF;
+				setTrackLine(0xFF5500, 0x0055AA, 0x0055AA);	
 				break;
 				
 			case SnowRun:
@@ -177,8 +183,8 @@ class Theme {
 				metricsText = 0x000000;
 				setColor4BTIcon(0xAAAAAA, 0x000000);
 				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000);
-				setTrackLine(0x555555, 0x000000);
-				background = 0xFFFFFF;			
+				background = 0xFFFFFF;
+				setTrackLine(0x555555, 0x000000, 0x000000);			
 				break;
 			
 			case ClassicRunner:	
@@ -189,8 +195,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
 				setColor4BatteryIcon(0xFFFFFF, 0xFF5500, 0xAA0000);
-				setTrackLine(0xAAAAAA, 0xFFFFFF);
-				background = 0x000000;			
+				background = 0x000000;
+				setTrackLine(0xAAAAAA, 0xFFFFFF, background);						
 				break;
 				
 			case ForestTrain:
@@ -205,8 +211,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xFF5555);
-				setTrackLine(0xAA5555, 0xAAAA55);
-				background = 0x005500;			
+				background = 0x005500;
+				setTrackLine(0xAA5555, 0xAAAA55, background);		
 				break;
 			
 			case SunsetRun:
@@ -217,8 +223,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xAAAAFF);
 				setColor4BatteryIcon(0xAAAA55, 0xFFFF00, 0xAA0000);
-				setTrackLine(0xFFFFAA, 0xFFFF00);
-				background = 0xFF5555;			
+				background = 0xFF5555;
+				setTrackLine(0xFFFFAA, 0xFFFF00, background);			
 				break;
 				
 			case StarryNightRun:
@@ -229,8 +235,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
 				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
-				setTrackLine(0xAAAAAA, 0xFFFFFF);
 				background = 0x0000AA;
+				setTrackLine(0xAAAAAA, 0xFFFFFF, background);
 				break;
 			
 			case Ultraviolet:
@@ -241,8 +247,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
 				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
-				setTrackLine(0xAA55FF, 0xFFFFFF);
 				background = 0x5500AA;
+				setTrackLine(0xAA55FF, 0xFFFFFF,background);
 				break;
 			
 			case FinishLine:
@@ -253,9 +259,8 @@ class Theme {
 				metricsText = 0xAAFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
 				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
-				setTrackLine(0xFFFFFF, 0x55FFFF);
-				
 				background = 0xAA0000;
+				setTrackLine(0xFFFFFF, 0x55FFFF, background);
 				break;
 			
 			case QuirkyRunner:
@@ -266,8 +271,8 @@ class Theme {
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFAA55);
 				setColor4BatteryIcon(0x00FFAA, 0xFFFFAA, 0xFF5555);
-				setTrackLine( 0xAAFFFF, 0x00FFAA);
 				background = 0x0055AA;
+				setTrackLine( 0xAAFFFF, 0x00FFAA, background);
 				break;
 				
 			case RunningIsColor:
@@ -282,8 +287,8 @@ class Theme {
 				metricsText = 0xFFFFFFA;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
-				setTrackLine( 0xAAAAAA, 0xFFFF00);
 				background = Gfx.COLOR_BLACK;
+				setTrackLine( 0xAAAAAA, 0xFFFF00, background);				
 				break;
 				
 			case RunningIsColor2:
@@ -298,8 +303,8 @@ class Theme {
 				metricsText = 0xFFFFFFA;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
-				setTrackLine( 0xAAAAAA, 0x00AA00);
 				background = Gfx.COLOR_BLACK;
+				setTrackLine( 0xAAAAAA, 0x00AA00, background);
 				break;
 			
 			case MuddySneakers:
@@ -310,8 +315,8 @@ class Theme {
 				metricsText = 0x550000;
 				setColor4BTIcon(0xAAAAAA, 0x550000);
 				setColor4BatteryIcon(0x550000, 0xFF5500, 0xAA0000);
-				setTrackLine(0xAAAAAA, 0x550000);
-				background = 0xAAFFFF;			
+				background = 0xAAFFFF;
+				setTrackLine(0xAAAAAA, 0x550000, 0x550000);			
 				break;
 				
 			case PurpleSky:
@@ -322,8 +327,8 @@ class Theme {
 				metricsText = 0xAAFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xAAAAFF);
 				setColor4BatteryIcon(0xAAAAFF, 0xFFAA00, 0xFF0000);
-				setTrackLine(0xAAAAAA, 0xFFAAAA);
-				background = 0x550055;			
+				background = 0x550055;
+				setTrackLine(0xAAAAAA, 0xFFAAAA, background);			
 				break;
 			
 			case NorthernLights:
@@ -332,10 +337,10 @@ class Theme {
 				date = 0xFFAAAA;
 				setColor4AllIcons(0x00FFAA);
 				metricsText = 0xAAFFFF;
-				setColor4BTIcon(0xAAAAAA, 0x00FFAA);
+				setColor4BTIcon(0x555555, 0x00FFAA);
 				setColor4BatteryIcon(0x00FFAA, 0xFFAA00, 0xFF0000);
-				setTrackLine(0xAAAAAA, 0xFFAAAA);
-				background = 0x000055;			
+				background = 0x000055;
+				setTrackLine(0xAAAAAA, 0xFFAAAA, background);		
 				break;
 				
 			case WatchBacklight:
@@ -344,13 +349,72 @@ class Theme {
 				date = 0x000000;
 				setColor4AllIcons(0x000000);
 				metricsText = 0x000000;
-				setColor4BTIcon(0xAAAAAA, 0x000000);
+				setColor4BTIcon(0x555555, 0x000000);
 				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000);
-				setTrackLine(0x555555, 0x000000);
-				background = 0x00FFAA;			
+				background = 0x00FFAA;
+				setTrackLine(0x555555, 0x000000, 0x000000);		
 				break;
 				
-			
+			case FluoTrainingTShirt:
+				setClockColors(0x000000, 0x000000, 0x000000);		
+				phrase = 0x000000;
+				date = 0x000000;
+				setColor4AllIcons(0x000000);
+				metricsText = 0x000000;
+				setColor4BTIcon(0x555555, 0x000000);
+				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000);
+				background = 0x00FF00;
+				setTrackLine(0x555555, 0x000000, 0x000000);			
+				break;
+				
+ 			case LilacSneakers:
+ 				setClockColors(0x000055, 0x000055, 0x000055);		
+				phrase = 0x000055;
+				date = 0x000055;
+				setColor4AllIcons(0x000055);
+				metricsText = 0x000055;
+				setColor4BTIcon(0x555555, 0x000055);
+				setColor4BatteryIcon(0x000055, 0xFF5500, 0xAA0000);
+				background = 0xAAAAFF;
+				setTrackLine(0x555555, 0x000055, 0x000055);			
+ 				break;
+ 				
+    		case AmberDisplay:
+    			setClockColors(0xFFAA00, 0xFFAA00, 0xFFAA00);		
+				phrase = 0xFFAA00;
+				date = 0xFFAA00;
+				setColor4AllIcons(0xFFAA00);
+				metricsText = 0xFFAA00;
+				setColor4BTIcon(0xAAAAAA, 0xFFAA00);
+				setColor4BatteryIcon(0xFFAA00, 0xFF5500, 0xAA0000);
+				background = 0x000000;
+				setTrackLine(0xAAAAAA, 0xFFAA00, background);						
+				break;
+				
+    		case GreenDisplay:
+    			setClockColors(0x00AA00, 0x00AA00, 0x00AA00);		
+				phrase = 0x00AA00;
+				date = 0x00AA00;
+				setColor4AllIcons(0x00AA00);
+				metricsText = 0x00AA00;
+				setColor4BTIcon(0xAAAAAA, 0x00AA00);
+				setColor4BatteryIcon(0x00AA00, 0xFF5500, 0xAA0000);
+				background = 0x000000;
+				setTrackLine(0xAAAAAA, 0x00AA00, background);						
+				break;
+				
+			case FinisherMedal:				
+    			setClockColors(0xAAAA55, 0xAAAA55, 0xAAAA55);		
+				phrase = 0xAAAA55;
+				date = 0xAAAA55;
+				setColor4AllIcons(0xAAAA55);
+				metricsText = 0xAAAA55;
+				setColor4BTIcon(0xAAAAAA, 0xAAAA55);
+				setColor4BatteryIcon(0xAAAA55, 0xFF5500, 0xAA0000);
+				background = 0x000055;
+				setTrackLine(0xAAAAAA, 0xAAAA55, background);						
+				
+			break;		
 		}
 	}
 	
@@ -376,9 +440,10 @@ class Theme {
 		batteryLow = low;
 		batteryCritical = critical;
 	}
-	private function setTrackLine(tl, tp) {
+	private function setTrackLine(tl, tp, t4r) {
 		trackLine = tl;
 		trackProgress = tp;
+		background4Runner = t4r;
 	}
 	
 }
