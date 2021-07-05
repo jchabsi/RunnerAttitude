@@ -23,7 +23,7 @@ Main features:
 - Vertical Distance (Floors / Meters)
 - Notifications
 - Bluetooth on / off indicator
-- Colorful battery indicator / Batery percentage
+- Colorful battery indicator / Battery percentage
 
 I have tried to support as many devices as possible but some legacy devices lack good resolution and colors thus the look and feel will be different from the screenshots.
 
@@ -34,6 +34,9 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.11.1
+- Fixed HR issue introduced in the previous version
+ 
 Version 1.11.0
 - Added option to show battery percentage
 - Improved battery indicator position and size

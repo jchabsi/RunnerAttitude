@@ -413,7 +413,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		heartrateDisplay.setText(value);
 		
 		//TEST
-		heartrateDisplay.setText("65");
+		//heartrateDisplay.setText("65");
 		//heartrateDisplay.setText("165");
     }
     
