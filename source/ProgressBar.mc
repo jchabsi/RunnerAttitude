@@ -19,6 +19,8 @@ class ProgressBar extends WatchUi.Drawable {
 	hidden var runnerGirl;
 	hidden var runnerBoy;
 	hidden var trophyIcon;
+	hidden var height;
+	hidden var width;
 	
 	//FOR TESTING
 	//var test;	
@@ -42,8 +44,8 @@ class ProgressBar extends WatchUi.Drawable {
 
     function draw(dc) {
         
-        var width = dc.getWidth();
-        var height = dc.getHeight();
+        width = dc.getWidth();
+        height = dc.getHeight();
         
         //FOR PROD
         var steps = Mon.getInfo().steps;
@@ -69,29 +71,10 @@ class ProgressBar extends WatchUi.Drawable {
 	    	var stepsxw = stepsx - x;  
 	    	dc.setColor(gTheme.trackProgress, Graphics.COLOR_TRANSPARENT);
 	    	
-	    	dc.fillRectangle(x, y, stepsxw, yh);	    		    	
-	    	    	
-	    	if (ProgressBar.runnerAvatar != avatarRunnerDisabled) {
-	    		var genderBitmap;
+	    	dc.fillRectangle(x, y, stepsxw, yh);	
 	    	
-		    	if (ProgressBar.runnerAvatar == genderSettings) {
-			    	var profile = UserProfile.getProfile();
-			    	genderBitmap = runnerGirl;
-			    	if (profile.gender == UserProfile.GENDER_MALE) {
-			    		genderBitmap = runnerBoy;
-			    	}
-			    }
-			    else if (ProgressBar.runnerAvatar == avatarRunnerGirl) {
-			    	genderBitmap = runnerGirl;
-				}
-				else {
-					genderBitmap = runnerBoy;
-				}
-				if(gTheme.background4Runner != gTheme.background) {				
-					dc.setColor(gTheme.background4Runner, Graphics.COLOR_TRANSPARENT);
-					dc.fillRoundedRectangle(stepsx - 6, y - 31, 20, 31, 5);
-				}	    	    	 
-		    	dc.drawBitmap(stepsx - 5, y - 30, genderBitmap);
+	    	if (ProgressBar.runnerAvatar != avatarRunnerDisabled) {
+	    		drawAvatar(stepsx, y, dc);		    	
 		    	
 		    	//FOR TESTING		    	
 		    	//test = test + 200;		 
@@ -99,9 +82,8 @@ class ProgressBar extends WatchUi.Drawable {
 		    		
     	}
     	else {
-    		dc.setColor(gTheme.background4Runner, Graphics.COLOR_TRANSPARENT);
-			dc.fillRoundedRectangle((width / 2) - 17, (height / 6.3) - 35, 34, 34, 5);	    	    	 
-	    	dc.drawBitmap((width / 2) - 16, (height / 6.3) - 34, trophyIcon);
+    		drawTrophy(dc);
+				
 	    	dc.setColor(gTheme.trackProgress, Graphics.COLOR_TRANSPARENT);
 	    	dc.fillRectangle(x, y, xw, yh);			   
 		}	    
@@ -109,6 +91,70 @@ class ProgressBar extends WatchUi.Drawable {
     	
     }
     
+    private function drawAvatar(stepsx, y, dc) {
+		var xAvatar;
+    	var yAvatar; 
+    	var xwAvatar;
+    	var ywAvatar;
+    	
+    	if (height < 390){
+    		xAvatar = stepsx - 5;
+    		yAvatar = y - 30;
+    		xwAvatar = 20; 
+    		ywAvatar = 31;
+    	} else {
+    		xAvatar = stepsx - 12;
+    		yAvatar = y - 50;
+    		xwAvatar = 33; 
+    		ywAvatar = 51;
+    	}
+    	var genderBitmap;
+	    	
+    	if (ProgressBar.runnerAvatar == genderSettings) {
+	    	var profile = UserProfile.getProfile();
+	    	genderBitmap = runnerGirl;
+	    	if (profile.gender == UserProfile.GENDER_MALE) {
+	    		genderBitmap = runnerBoy;
+	    	}
+	    }
+	    else if (ProgressBar.runnerAvatar == avatarRunnerGirl) {
+	    	genderBitmap = runnerGirl;
+		}
+		else {
+			genderBitmap = runnerBoy;
+		}
+						
+		if(gTheme.background4Runner != gTheme.background) {				
+			dc.setColor(gTheme.background4Runner, Graphics.COLOR_TRANSPARENT);
+			dc.fillRoundedRectangle(xAvatar - 1, yAvatar - 1, xwAvatar, ywAvatar, 5);
+		}
+    	
+    	dc.drawBitmap(xAvatar, yAvatar, genderBitmap);
+
+    }
+    
+    private function drawTrophy(dc) {
+    	var xTrophy;
+		var yTrophy; 
+		var xwTrophy;
+		var ywTrophy;
+		
+		if (height < 390){
+    		xTrophy = (width / 2) - 16;
+    		yTrophy = (height / 6.3) - 34;
+    		xwTrophy = 34; 
+    		ywTrophy = 34;
+    	} else {
+    		xTrophy = (width / 2) - 26;
+    		yTrophy = (height / 6.3) - 50;
+    		xwTrophy = 53; 
+    		ywTrophy = 50;
+    	}
+		
+		dc.setColor(gTheme.background4Runner, Graphics.COLOR_TRANSPARENT);
+		dc.fillRoundedRectangle(xTrophy - 1, yTrophy - 1, xwTrophy, ywTrophy, 5);
+    	dc.drawBitmap(xTrophy, yTrophy, trophyIcon);
+    }
     static function setRunnerAvatar() {
     	ProgressBar.runnerAvatar = Application.getApp().getProperty("RunnerAvatar").toNumber();
     }

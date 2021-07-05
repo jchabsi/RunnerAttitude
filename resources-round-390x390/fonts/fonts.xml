@@ -1,0 +1,7 @@
+<fonts>
+	<font id="HoursFont" filename="titillium-web-bold-110-tall.fnt" antialias="true"/>
+	<font id="MinutesFont" filename="titillium-web-light-110-tall.fnt" antialias="true"/>
+	<font id="IconsFont" filename="icons-extra-large.fnt" antialias="true"/>
+	<font id="NormalFont" filename="titillium-web-semibold-26.fnt" antialias="true" filter="0123456789+-Goal!.%" />
+	<font id="SecondsFont" filename="titillium-web-semibold-39.fnt" antialias="true" filter="0123456789-"/>
+</fonts>

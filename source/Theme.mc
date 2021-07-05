@@ -23,6 +23,7 @@ class Theme {
 	var trackProgress;
 	var background;	
 	var background4Runner;
+	var batteryText;
 	
 	hidden enum {
 		RunnerAttitude,
@@ -77,7 +78,7 @@ class Theme {
 				iconfloorsClimbed = 0xAA5555;
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(Gfx.COLOR_DK_GRAY, Gfx.COLOR_BLUE);
-				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
 				background = Gfx.COLOR_BLACK;
 				setTrackLine( 0x00AA55, 0x00FFAA, background);
 				break;
@@ -90,7 +91,7 @@ class Theme {
 				setColor4AllIcons(0x0055AA);
 				metricsText = Gfx.COLOR_BLUE;
 				setColor4BTIcon(Gfx.COLOR_DK_GRAY, 0x0055AA);
-				setColor4BatteryIcon(0x0055AA, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setColor4BatteryIcon(0x0055AA, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
 				background = Gfx.COLOR_BLACK;
 				setTrackLine(0x0055AA, Gfx.COLOR_BLUE, background);				
 				break;
@@ -102,7 +103,7 @@ class Theme {
 				setColor4AllIcons(0x0055FF);
 				metricsText = 0xAAAAFF;
 				setColor4BTIcon(0x0055FF, 0x00AAFF);
-				setColor4BatteryIcon(0x0055FF, 0xFF5500, 0xFF5555);
+				setColor4BatteryIcon(0x0055FF, 0xFF5500, 0xFF5555, metricsText);
 				background = 0x000055;
 				setTrackLine(0xFFAA55, 0xFF5500, background);
 				break;
@@ -114,7 +115,7 @@ class Theme {
 				setColor4AllIcons(0x00AA55);
 				metricsText = 0x00FF00;
 				setColor4BTIcon(0x00AA55, 0x00AAAA);
-				setColor4BatteryIcon(0x55AA55, 0xAAAA00, 0xAA5500);
+				setColor4BatteryIcon(0x55AA55, 0xAAAA00, 0xAA5500, metricsText);
 				background = 0x555500;
 				setTrackLine(0xAAAA55, 0x55FF55, background);
 				break;
@@ -130,7 +131,7 @@ class Theme {
 				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
-				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xAA5500);
+				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xAA5500, metricsText);
 				background = 0x555555;
 				setTrackLine(0xAAAAAA, 0xFF5500, background);
 				break;
@@ -142,7 +143,7 @@ class Theme {
 				setColor4AllIcons(0x55AAFF);
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0x55AAFF);
-				setColor4BatteryIcon(0x55AAFF, 0xFFAA00, 0xFF0000);
+				setColor4BatteryIcon(0x55AAFF, 0xFFAA00, 0xFF0000, metricsText);
 				background = 0x0000AA;
 				setTrackLine(0x55AAFF, 0x00FFFF, background);
 				break;
@@ -154,7 +155,7 @@ class Theme {
 				setColor4AllIcons(0xFF55AA);
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFF55AA);
-				setColor4BatteryIcon(0xFF55AA, 0xFFAA00, 0xFF0000);
+				setColor4BatteryIcon(0xFF55AA, 0xFFAA00, 0xFF0000, metricsText);
 				background = 0xAA0055;
 				setTrackLine(0xFF55AA, 0xFFAAFF, background);
 				break;
@@ -170,7 +171,7 @@ class Theme {
 				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0x000000;
 				setColor4BTIcon(0xAAAAAA, 0x0055FF);
-				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
 				background = 0xFFFFFF;
 				setTrackLine(0xFF5500, 0x0055AA, 0x0055AA);	
 				break;
@@ -182,7 +183,7 @@ class Theme {
 				setColor4AllIcons(0x000000);
 				metricsText = 0x000000;
 				setColor4BTIcon(0xAAAAAA, 0x000000);
-				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000);
+				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0xFFFFFF;
 				setTrackLine(0x555555, 0x000000, 0x000000);			
 				break;
@@ -194,7 +195,7 @@ class Theme {
 				setColor4AllIcons(0xFFFFFF);
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
-				setColor4BatteryIcon(0xFFFFFF, 0xFF5500, 0xAA0000);
+				setColor4BatteryIcon(0xFFFFFF, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0x000000;
 				setTrackLine(0xAAAAAA, 0xFFFFFF, background);						
 				break;
@@ -210,7 +211,7 @@ class Theme {
 				iconfloorsClimbed = 0xAA5555;	
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
-				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xFF5555);
+				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xFF5555, metricsText);
 				background = 0x005500;
 				setTrackLine(0xAA5555, 0xAAAA55, background);		
 				break;
@@ -222,7 +223,7 @@ class Theme {
 				setColor4AllIcons(0xFFFFAA);
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xAAAAFF);
-				setColor4BatteryIcon(0xAAAA55, 0xFFFF00, 0xAA0000);
+				setColor4BatteryIcon(0xAAAA55, 0xFFFF00, 0xAA0000, metricsText);
 				background = 0xFF5555;
 				setTrackLine(0xFFFFAA, 0xFFFF00, background);			
 				break;
@@ -234,7 +235,7 @@ class Theme {
 				setColor4AllIcons(0xFFFFFF);
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
-				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
+				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055, 0xAAAAAA);
 				background = 0x0000AA;
 				setTrackLine(0xAAAAAA, 0xFFFFFF, background);
 				break;
@@ -246,7 +247,7 @@ class Theme {
 				setColor4AllIcons(0xFFFFFF);
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
-				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
+				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055, 0xAAAAAA);
 				background = 0x5500AA;
 				setTrackLine(0xAA55FF, 0xFFFFFF,background);
 				break;
@@ -258,7 +259,7 @@ class Theme {
 				setColor4AllIcons(0xFFFFFF);	
 				metricsText = 0xAAFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFFFFF);
-				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055);
+				setColor4BatteryIcon(0xFFFFFF, 0xFFAA00, 0xFF0055, 0xAAAAAA);
 				background = 0xAA0000;
 				setTrackLine(0xFFFFFF, 0x55FFFF, background);
 				break;
@@ -270,7 +271,7 @@ class Theme {
 				setColor4AllIcons(0xFFAA55);
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xFFAA55);
-				setColor4BatteryIcon(0x00FFAA, 0xFFFFAA, 0xFF5555);
+				setColor4BatteryIcon(0x00FFAA, 0xFFFFAA, 0xFF5555, metricsText);
 				background = 0x0055AA;
 				setTrackLine( 0xAAFFFF, 0x00FFAA, background);
 				break;
@@ -286,7 +287,7 @@ class Theme {
 				iconfloorsClimbed = 0x00FF00;
 				metricsText = 0xFFFFFFA;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
-				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
 				background = Gfx.COLOR_BLACK;
 				setTrackLine( 0xAAAAAA, 0xFFFF00, background);				
 				break;
@@ -302,7 +303,7 @@ class Theme {
 				iconfloorsClimbed = 0x00FF00;
 				metricsText = 0xFFFFFFA;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
-				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED);
+				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
 				background = Gfx.COLOR_BLACK;
 				setTrackLine( 0xAAAAAA, 0x00AA00, background);
 				break;
@@ -314,7 +315,7 @@ class Theme {
 				setColor4AllIcons(0x550000);
 				metricsText = 0x550000;
 				setColor4BTIcon(0xAAAAAA, 0x550000);
-				setColor4BatteryIcon(0x550000, 0xFF5500, 0xAA0000);
+				setColor4BatteryIcon(0x550000, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0xAAFFFF;
 				setTrackLine(0xAAAAAA, 0x550000, 0x550000);			
 				break;
@@ -326,7 +327,7 @@ class Theme {
 				setColor4AllIcons(0xAAAAFF);
 				metricsText = 0xAAFFFF;
 				setColor4BTIcon(0xAAAAAA, 0xAAAAFF);
-				setColor4BatteryIcon(0xAAAAFF, 0xFFAA00, 0xFF0000);
+				setColor4BatteryIcon(0xAAAAFF, 0xFFAA00, 0xFF0000, metricsText);
 				background = 0x550055;
 				setTrackLine(0xAAAAAA, 0xFFAAAA, background);			
 				break;
@@ -338,7 +339,7 @@ class Theme {
 				setColor4AllIcons(0x00FFAA);
 				metricsText = 0xAAFFFF;
 				setColor4BTIcon(0x555555, 0x00FFAA);
-				setColor4BatteryIcon(0x00FFAA, 0xFFAA00, 0xFF0000);
+				setColor4BatteryIcon(0x00FFAA, 0xFFAA00, 0xFF0000, 0xAAAAAA);
 				background = 0x000055;
 				setTrackLine(0xAAAAAA, 0xFFAAAA, background);		
 				break;
@@ -350,7 +351,7 @@ class Theme {
 				setColor4AllIcons(0x000000);
 				metricsText = 0x000000;
 				setColor4BTIcon(0x555555, 0x000000);
-				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000);
+				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0x00FFAA;
 				setTrackLine(0x555555, 0x000000, 0x000000);		
 				break;
@@ -362,7 +363,7 @@ class Theme {
 				setColor4AllIcons(0x000000);
 				metricsText = 0x000000;
 				setColor4BTIcon(0x555555, 0x000000);
-				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000);
+				setColor4BatteryIcon(0x000000, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0x00FF00;
 				setTrackLine(0x555555, 0x000000, 0x000000);			
 				break;
@@ -374,7 +375,7 @@ class Theme {
 				setColor4AllIcons(0x000055);
 				metricsText = 0x000055;
 				setColor4BTIcon(0x555555, 0x000055);
-				setColor4BatteryIcon(0x000055, 0xFF5500, 0xAA0000);
+				setColor4BatteryIcon(0x000055, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0xAAAAFF;
 				setTrackLine(0x555555, 0x000055, 0x000055);			
  				break;
@@ -386,7 +387,7 @@ class Theme {
 				setColor4AllIcons(0xFFAA00);
 				metricsText = 0xFFAA00;
 				setColor4BTIcon(0xAAAAAA, 0xFFAA00);
-				setColor4BatteryIcon(0xFFAA00, 0xFF5500, 0xAA0000);
+				setColor4BatteryIcon(0xFFAA00, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0x000000;
 				setTrackLine(0xAAAAAA, 0xFFAA00, background);						
 				break;
@@ -398,7 +399,7 @@ class Theme {
 				setColor4AllIcons(0x00AA00);
 				metricsText = 0x00AA00;
 				setColor4BTIcon(0xAAAAAA, 0x00AA00);
-				setColor4BatteryIcon(0x00AA00, 0xFF5500, 0xAA0000);
+				setColor4BatteryIcon(0x00AA00, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0x000000;
 				setTrackLine(0xAAAAAA, 0x00AA00, background);						
 				break;
@@ -410,7 +411,7 @@ class Theme {
 				setColor4AllIcons(0xAAAA55);
 				metricsText = 0xAAAA55;
 				setColor4BTIcon(0xAAAAAA, 0xAAAA55);
-				setColor4BatteryIcon(0xAAAA55, 0xFF5500, 0xAA0000);
+				setColor4BatteryIcon(0xAAAA55, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0x000055;
 				setTrackLine(0xAAAAAA, 0xAAAA55, background);						
 				
@@ -435,10 +436,11 @@ class Theme {
 		iconBtOff = off;
 		iconBtOn = on;
 	}
-	private function setColor4BatteryIcon(ok, low, critical) {
+	private function setColor4BatteryIcon(ok, low, critical, text) {
 		batteryOk = ok;
 		batteryLow = low;
 		batteryCritical = critical;
+		batteryText = text;
 	}
 	private function setTrackLine(tl, tp, t4r) {
 		trackLine = tl;

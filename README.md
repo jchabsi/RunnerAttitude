@@ -20,9 +20,10 @@ Main features:
 - Heart rate
 - Calories
 - Steps goal
+- Vertical Distance (Floors / Meters)
 - Notifications
 - Bluetooth on / off indicator
-- Colorful battery indicator
+- Colorful battery indicator / Batery percentage
 
 I have tried to support as many devices as possible but some legacy devices lack good resolution and colors thus the look and feel will be different from the screenshots.
 
@@ -32,6 +33,15 @@ I hope you enjoy it!
 
 
 What’s New
+
+Version 1.11.0
+- Added option to show battery percentage
+- Improved battery indicator position and size
+- Seconds indicator minor adjustments
+- Complete revamp for Venu and 390x390 watches with bigger icons and fonts
+- Bigger time font for 280x280 and 260x260 devices
+- Icon alignment improvements
+- Ability to choose date format including day of the week
 
 Version 1.10.2
 - Added options to show steps and kms or miles at the same time

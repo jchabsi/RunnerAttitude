@@ -32,6 +32,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	
 	private var distanceConfig;	
 	
+	private var dateConfig;
+	
 	hidden enum {
 		DistanceInSteps,
 		DistanceInKilometers,
@@ -61,34 +63,37 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
-    	    	
     	//Date
     	var dateDisplay = View.findDrawableById("DateDisplay");
     	if (height > 180) {
-    		dateDisplay.locY = height / 3.7;
+    		dateDisplay.locY = height / 3.7;    		
     	}
     	else if (height <= 148) {
     		dateDisplay.locY = height / 1.16; 
-    		dateDisplay.setFont(Graphics.FONT_TINY);   		
-    	}
+    		dateDisplay.setFont(Graphics.FONT_TINY);    		   		
+    	}    	    	
     	else {
-    		dateDisplay.locY = height / 1.14;
+    		dateDisplay.locY = height / 3.7;
     		dateDisplay.setFont(Graphics.FONT_TINY);
-    	} 		
+    		System.println(height);
+    	}
     	
+    	if (height >= 390)
+    	{    		
+    		//dateDisplay.locY = height / 3.7; 
+    		dateDisplay.setFont(Graphics.FONT_SMALL);
+    	} 
+    	    	
     	
     	//Steps
     	var stepCountDisplay = View.findDrawableById("StepCountDisplay"); 
-    	//stepCountDisplay.locX = width / 3.2;
-    	//stepCountDisplay.locY = height / 1.3;
-    	stepCountDisplay.locX = width / 3.2;
+    	stepCountDisplay.locX = width / 3.96;
     	stepCountDisplay.locY = height / 5.5;
-    	//iconSteps = new MyTextView("0", gTheme.iconSteps, iconsFont, width / 4.8, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
-    	iconSteps = new MyTextView("0", gTheme.iconSteps, iconsFont, width / 4.8, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );  
+    	iconSteps = new MyTextView("0", gTheme.iconSteps, iconsFont, width / 6.8, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );  
     	
     	//floors
     	var floorsClimbedDisplay = View.findDrawableById("FloorsClimbedDisplay"); 
-    	floorsClimbedDisplay.locX = width / 2.65;
+    	floorsClimbedDisplay.locX = width / 2.55;
     	floorsClimbedDisplay.locY = height / 1.3;
     	iconFloorsClimbed = new MyTextView(";", gTheme.iconfloorsClimbed, iconsFont, width / 3.7, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );  
     	    	
@@ -96,20 +101,20 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	var caloriesDisplay = View.findDrawableById("CaloriesDisplay"); 	
     	caloriesDisplay.locX = width / 1.45;    	
     	caloriesDisplay.locY = height / 1.3; 
-    	iconCalories = new MyTextView("6", gTheme.iconCalories, iconsFont, width / 1.70, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
+    	iconCalories = new MyTextView("6", gTheme.iconCalories, iconsFont, width / 1.72, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Notifications
     	var notificationDisplay = View.findDrawableById("NotificationDisplay"); 	
-    	notificationDisplay.locX = width / 1.33;
+    	notificationDisplay.locX = width / 1.23;
     	notificationDisplay.locY = height / 5.5;
-    	iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 1.55, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
+    	iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 1.45, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Heart rate    	
     	var heartrateDisplay = View.findDrawableById("HeartrateDisplay"); 
-    	var heartX = [30, 20, 15, 11, 8];	
-    	var hrX = [12, 10.4, 9.1, 7.5, 6.5];
-    	var heartY = [2.4, 2.35, 2.3, 2.35, 2.25];
-    	var hrY = [2, 1.95, 1.9, 1.95, 1.95]; 
+    	var heartX = [35, 28, 18, 16, 20];	
+    	var hrX = [12, 11.5, 9.7, 9.6, 10];
+    	var heartY = [2.4, 2.35, 2.3, 2.35, 2.45];
+    	var hrY = [2, 1.95, 1.9, 1.95, 2]; 
  
     	heartrateDisplay.locX = width / calcXY(hrX, width);
     	heartrateDisplay.locY = height / calcXY(hrY, height);
@@ -120,15 +125,15 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	//iconBT = new MyTextView("8", setBTIconColor(), iconsFont, width / 1.6, height / 5.55, Graphics.TEXT_JUSTIFY_LEFT );
     	var bty = 0;
     	if (height > 180) {
-    		bty = height / 3.7;
+    		bty = height / 3.5;    		
     	}
     	else if (height <= 148) {
     		bty = height / 1.16;    		
     	}
     	else {
-    		bty = height / 1.14;
+    		bty = height / 1.14;    		
     	}
-    	var btx = [1.15, 1.15, 1.17, 1.19, 1.22];	
+    	var btx = [1.15, 1.15, 1.17, 1.18, 1.18];	
     	iconBT = new MyTextView("8", setBTIconColor(), iconsFont, width / calcXY(btx, width), bty, Graphics.TEXT_JUSTIFY_LEFT ); 
     	   	        
     	    	
@@ -274,7 +279,22 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     private function setDateDisplay() {        
     	var now = Time.now();
 		var date = Date.info(now, Time.FORMAT_LONG);
-		var dateString = Lang.format("$1$ $2$, $3$", [date.month, date.day, date.year]);
+		var dateString;
+		switch (dateConfig) {
+			case 0:
+				dateString = Lang.format("$1$ $2$, $3$", [date.month, date.day, date.year]);
+				break;
+			case 1:
+				dateString = Lang.format("$1$ $2$, $3$", [date.day, date.month, date.year]);
+				break;
+			case 2:
+				dateString = Lang.format("$1$ $2$ $3$", [date.day_of_week, date.day, date.month]);
+				break;
+			case 3:
+				dateString = Lang.format("$1$ $2$, $3$", [date.month, date.day, date.day_of_week]);
+				break;			
+		}		
+		
 		var dateDisplay = View.findDrawableById("DateDisplay");      
 		dateDisplay.setColor(gTheme.date);
 		dateDisplay.setText(dateString);	    	
@@ -306,7 +326,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		stepCountDisplay.setColor(gTheme.metricsText);
 		stepCountDisplay.setText(dist);
 		//TEST
-		//stepCountDisplay.setText("99999");		
+		//stepCountDisplay.setText("99999-999.9");		
     }
     
     private function setFloorsClimbedDisplay(info) {
@@ -372,7 +392,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		notificationCountDisplay.setText(formattedNotificationAmount);
 		
 		//TEST
-		//notificationCountDisplay.setText("4");
+		//notificationCountDisplay.setText("10+");
     }
     
     private function setHeartrateDisplay() {
@@ -393,7 +413,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		heartrateDisplay.setText(value);
 		
 		//TEST
-		//heartrateDisplay.setText("65");
+		heartrateDisplay.setText("65");
+		//heartrateDisplay.setText("165");
     }
     
     
@@ -415,7 +436,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     function setPhraseOnSleepMode() {
     	phraseOnSleepMode = Application.getApp().getProperty("PhraseOnSleepMode");
     }
-    function setDistanceComfig() {
+    function setDistanceConfig() {
     	distanceConfig = Application.getApp().getProperty("DistanceConfig");    	
+    }
+    function setDateConfig() {
+    	dateConfig = Application.getApp().getProperty("DateConfig");    	
     }
 }

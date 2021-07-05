@@ -156,4 +156,12 @@
 	<string id="Speed2X">2X</string>
 	<string id="Speed3X">3X</string>
 	
+	<string id="BatteryPercentage">Show battery percentage</string>
+	
+	<string id="DateConfig">Date format</string>
+	<string id="DateConfig1">Jul 20, 2021</string>
+	<string id="DateConfig2">20 Jul, 2021</string>
+	<string id="DateConfig3">Tue 20 Jul</string>
+	<string id="DateConfig4">Jul 20 Tue</string>
+	
 </strings>

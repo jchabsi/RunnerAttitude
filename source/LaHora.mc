@@ -16,8 +16,9 @@ class LaHora extends WatchUi.Drawable {
 	hidden var width;
 	hidden var height;
 	
-	hidden var secondsX = [1.15, 1.15, 1.17, 1.19, 1.21];
-    hidden var secondsY = [2.11, 2.12, 2.1, 2.1, 2.06];
+	hidden var secondsX = [1.15, 1.15, 1.16, 1.17, 1.18];
+    hidden var secondsY = [2.05, 2.06, 2.07, 2.07, 2.08];
+    hidden var timeY = [2.45, 2.45, 3.75, 3.75, 3.8];
     hidden var storedSecs;
 
 
@@ -60,12 +61,13 @@ class LaHora extends WatchUi.Drawable {
 		storedSecs = clockTime.sec.format("%02d");
 		var totalWidth = dc.getTextWidthInPixels(sHour + sMin, hoursFont);
 		var x = halfDCWidth - (totalWidth / 2);	
+		var y = height / calcXY(timeY, height);
 			
     	//Hour
         dc.setColor(gTheme.time, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
 			x,
-			height / 2.45,
+			y,
 			hoursFont,
 			sHour,
 			Graphics.TEXT_JUSTIFY_LEFT);
@@ -76,7 +78,7 @@ class LaHora extends WatchUi.Drawable {
         dc.setColor(gTheme.mins, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
 			x,
-			height / 2.45,
+			y,
 			minutesFont,
 			sMin,
 			Graphics.TEXT_JUSTIFY_LEFT);

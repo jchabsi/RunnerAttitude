@@ -100,5 +100,18 @@
             <listEntry value="1">@Strings.FloorsClimbed</listEntry>  
         </settingConfig>
     </setting>
+    
+    <setting propertyKey="@Properties.BatteryPercentage" title="@Strings.BatteryPercentage">
+        <settingConfig type="boolean"/>
+    </setting>
+    
+    <setting propertyKey="@Properties.DateConfig" title="@Strings.DateConfig">
+        <settingConfig type="list">
+        	<listEntry value="0">@Strings.DateConfig1</listEntry>
+            <listEntry value="1">@Strings.DateConfig2</listEntry>
+            <listEntry value="2">@Strings.DateConfig3</listEntry>
+            <listEntry value="3">@Strings.DateConfig4</listEntry>  
+        </settingConfig>
+    </setting>
 
 </settings>
