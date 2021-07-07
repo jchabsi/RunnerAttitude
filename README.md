@@ -34,6 +34,9 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.12
+- Italian Translation! By Andrea Zannoni - Thanks a lot!!! 
+
 Version 1.11.1
 - Fixed HR issue introduced in the previous version
  
@@ -141,6 +144,7 @@ Version 1.1.0
 Version 1.0
 - Inttial Release
 
-Acknowledgement
+Acknowledgements
 
-I have learnt many things from the Crystal Watch Face Source code: https://github.com/warmsound/crystal-face and I borrowed some fonts from it :)
+- I have learnt many things from the Crystal Watch Face Source code: https://github.com/warmsound/crystal-face and I borrowed some fonts from it :)
+- Italian Translation by Andrea Zannoni
