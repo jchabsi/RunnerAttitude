@@ -34,7 +34,11 @@ I hope you enjoy it!
 
 What’s New
 
-Version 1.12
+Version 1.13.0
+- Updated to CIQ SDK 4.0.x for new devices support
+- Venu 2 and Venu 2S layouts
+
+Version 1.12.0
 - Italian Translation! By Andrea Zannoni - Thanks a lot!!! 
 
 Version 1.11.1

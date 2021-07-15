@@ -78,9 +78,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     		System.println(height);
     	}
     	
-    	if (height >= 390)
+    	if (height >= 360)
     	{    		
-    		//dateDisplay.locY = height / 3.7; 
     		dateDisplay.setFont(Graphics.FONT_SMALL);
     	} 
     	    	
@@ -122,7 +121,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	iconHeart = new MyTextView("3", gTheme.iconHeart, iconsFont, width / calcXY(heartX, width), height / calcXY(heartY, height), Graphics.TEXT_JUSTIFY_LEFT);
     	
     	//Blue thooth
-    	//iconBT = new MyTextView("8", setBTIconColor(), iconsFont, width / 1.6, height / 5.55, Graphics.TEXT_JUSTIFY_LEFT );
     	var bty = 0;
     	if (height > 180) {
     		bty = height / 3.5;    		

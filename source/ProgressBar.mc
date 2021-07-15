@@ -97,7 +97,7 @@ class ProgressBar extends WatchUi.Drawable {
     	var xwAvatar;
     	var ywAvatar;
     	
-    	if (height < 390){
+    	if (height < 360){
     		xAvatar = stepsx - 5;
     		yAvatar = y - 30;
     		xwAvatar = 20; 
@@ -139,7 +139,7 @@ class ProgressBar extends WatchUi.Drawable {
 		var xwTrophy;
 		var ywTrophy;
 		
-		if (height < 390){
+		if (height < 360){
     		xTrophy = (width / 2) - 16;
     		yTrophy = (height / 6.3) - 34;
     		xwTrophy = 34; 
