@@ -28,7 +28,8 @@
             <listEntry value="23">@Strings.LilacSneakers</listEntry> 
             <listEntry value="24">@Strings.AmberDisplay</listEntry>  
             <listEntry value="25">@Strings.GreenDisplay</listEntry>
-            <listEntry value="26">@Strings.FinisherMedal</listEntry>         
+            <listEntry value="26">@Strings.FinisherMedal</listEntry>
+            <listEntry value="27">@Strings.GoldenTrophy</listEntry>         
                     
         </settingConfig>
     </setting>

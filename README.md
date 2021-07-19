@@ -34,6 +34,11 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.14.0
+- When switching between vertical meters and floors climbed changes the icon
+- New theme: Golden Trophy
+- Code improvements
+
 Version 1.13.0
 - Updated to CIQ SDK 4.0.x for new devices support
 - Venu 2 and Venu 2S layouts

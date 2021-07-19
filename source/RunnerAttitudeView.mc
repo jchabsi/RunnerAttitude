@@ -23,6 +23,17 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden var iconHeart;
 	hidden var iconFloorsClimbed;
 	
+	hidden var iconsChars = { :steps => "0",
+							  :floors => "1",
+							  :height => ";",
+							  :calories => "6",
+							  :notif => "5",
+							  :heart => "3" };
+	
+	hidden enum {
+		MetersClimbed,
+		Floors
+	}
 	private var mTime;
 	
 	private var phraseOnSleepMode;
@@ -88,25 +99,25 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	var stepCountDisplay = View.findDrawableById("StepCountDisplay"); 
     	stepCountDisplay.locX = width / 3.96;
     	stepCountDisplay.locY = height / 5.5;
-    	iconSteps = new MyTextView("0", gTheme.iconSteps, iconsFont, width / 6.8, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );  
+    	iconSteps = new MyTextView(iconsChars[:steps], gTheme.iconSteps, iconsFont, width / 6.8, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );  
     	
     	//floors
     	var floorsClimbedDisplay = View.findDrawableById("FloorsClimbedDisplay"); 
     	floorsClimbedDisplay.locX = width / 2.55;
     	floorsClimbedDisplay.locY = height / 1.3;
-    	iconFloorsClimbed = new MyTextView(";", gTheme.iconfloorsClimbed, iconsFont, width / 3.7, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );  
+    	iconFloorsClimbed = new MyTextView(:height, gTheme.iconfloorsClimbed, iconsFont, width / 3.7, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );  
     	    	
     	//Calories
     	var caloriesDisplay = View.findDrawableById("CaloriesDisplay"); 	
     	caloriesDisplay.locX = width / 1.45;    	
     	caloriesDisplay.locY = height / 1.3; 
-    	iconCalories = new MyTextView("6", gTheme.iconCalories, iconsFont, width / 1.72, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
+    	iconCalories = new MyTextView(iconsChars[:calories], gTheme.iconCalories, iconsFont, width / 1.72, height / 1.3, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Notifications
     	var notificationDisplay = View.findDrawableById("NotificationDisplay"); 	
     	notificationDisplay.locX = width / 1.23;
     	notificationDisplay.locY = height / 5.5;
-    	iconNotif = new MyTextView("5", gTheme.iconNotif, iconsFont, width / 1.45, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
+    	iconNotif = new MyTextView(iconsChars[:notif], gTheme.iconNotif, iconsFont, width / 1.45, height / 5.4, Graphics.TEXT_JUSTIFY_LEFT );
     	
     	//Heart rate    	
     	var heartrateDisplay = View.findDrawableById("HeartrateDisplay"); 
@@ -118,7 +129,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	heartrateDisplay.locX = width / calcXY(hrX, width);
     	heartrateDisplay.locY = height / calcXY(hrY, height);
     	
-    	iconHeart = new MyTextView("3", gTheme.iconHeart, iconsFont, width / calcXY(heartX, width), height / calcXY(heartY, height), Graphics.TEXT_JUSTIFY_LEFT);
+    	iconHeart = new MyTextView(iconsChars[:heart], gTheme.iconHeart, iconsFont, width / calcXY(heartX, width), height / calcXY(heartY, height), Graphics.TEXT_JUSTIFY_LEFT);
     	
     	//Blue thooth
     	var bty = 0;
@@ -196,6 +207,11 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		iconHeart.setColor(gTheme.iconHeart);
 		iconHeart.draw(dc);  
 		
+		if (altitudeMode == MetersClimbed){
+			iconFloorsClimbed.setText(iconsChars[:height]);
+		} else {
+			iconFloorsClimbed.setText(iconsChars[:floors]);
+		}
 		iconFloorsClimbed.setColor(gTheme.iconfloorsClimbed);
 		iconFloorsClimbed.draw(dc);
 				        
@@ -429,7 +445,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     }
     
     function setAltitudeConfig() {
-		altitudeMode = Application.getApp().getProperty("Altitude");
+		altitudeMode = Application.getApp().getProperty("Altitude");		
     }
     function setPhraseOnSleepMode() {
     	phraseOnSleepMode = Application.getApp().getProperty("PhraseOnSleepMode");
