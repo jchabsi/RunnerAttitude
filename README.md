@@ -34,6 +34,10 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.14.10
+- Fixes a bug introduced with the last theme addition
+- Tweaks for the last theme added
+
 Version 1.14.0
 - When switching between vertical meters and floors climbed changes the icon
 - New theme: Golden Trophy

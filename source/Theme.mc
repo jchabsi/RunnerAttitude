@@ -415,7 +415,8 @@ class Theme {
 				setColor4BatteryIcon(0xAAAA55, 0xFF5500, 0xAA0000, 0xAAAAAA);
 				background = 0x000055;
 				setTrackLine(0xAAAAAA, 0xAAAA55, background);						
-			
+				break;
+				
 			case GoldenTrophy:				
     			setClockColors(0x000055, 0x000055, 0x000055);		
 				phrase = 0x000055;
@@ -423,10 +424,10 @@ class Theme {
 				setColor4AllIcons(0x000055);
 				metricsText = 0x000055;
 				setColor4BTIcon(0xAAAAAA, 0x000055);
-				setColor4BatteryIcon(0x000055, 0xFF5500, 0xAA0000, 0xAAAAAA);
+				setColor4BatteryIcon(0x000055, 0xFF5500, 0xAA0000, 0x0055FF);
 				background = 0xAAAA55;
-				setTrackLine(0xAAAAAA, 0x000055, background);
-			break;		
+				setTrackLine(0x0055FF, 0x000055, 0x000055);
+				break;		
 		}
 	}
 	
