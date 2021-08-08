@@ -34,7 +34,14 @@ I hope you enjoy it!
 
 What’s New
 
-Version 1.14.10
+Version 1.15.0
+- Now you can enter up to 3 personalized phrases
+- Show or hide hour leading zero
+- Replaced Date display font by a system font for all devices for avoiding unrecognized special symbols for some languages
+- New theme: Running is color 3!
+- Bug fix that was making the watch face to crash on some devices 
+
+Version 1.14.1
 - Fixes a bug introduced with the last theme addition
 - Tweaks for the last theme added
 

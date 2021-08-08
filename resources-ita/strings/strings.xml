@@ -22,6 +22,7 @@
     <string id="QuirkyRunner">Corridore eccentrico</string>
     <string id="RunningIsColor">La corsa è colore!</string>
     <string id="RunningIsColor2">La corsa è colore 2!</string>
+    <string id="RunningIsColor3">La corsa è colore 3!</string>
     <string id="MuddySneakers">Sneakers fangose</string>
     <string id="PurpleSky">Cielo viola</string>
     <string id="NorthernLights">Aurora boreale</string>
@@ -39,9 +40,13 @@
     <string id="Scrolling">Frase che scorre</string>
     <string id="Fixed">Frase corta fissa</string>
     <string id="Twinkling">Frase intermittente</string>
-    <string id="Personalized">Frase personalizzata</string>
+    <string id="Personalized">Frase personalizzata 1</string>
+    <string id="Personalized2">Frase personalizzata 2</string>
+    <string id="Personalized3">Frase personalizzata 3</string>
     
-    <string id="CustomText">Se hai selezionato "frase personalizzata", digitala qui</string>
+    <string id="CustomText">Se hai selezionato "Frase personalizzata 1", digitala qui</string>
+    <string id="CustomText2">Se hai selezionato "Frase personalizzata 2", digitala qui</string>
+    <string id="CustomText3">Se hai selezionato "Frase personalizzata 3", digitala qui</string>
     <string id="InsertYourPhrase">Qui dovresti inserire una frase o una parola da visualizzare</string>
     
     
@@ -132,6 +137,7 @@
 	<string id="Fixed23">Goditi l'oggi</string>
 	
 	<string id="ShowSeconds">Mostra i secondi</string>
+	<string id="ShowLeadingZero">Mostra zero iniziale</string>
 	<string id="PhraseOnSleepMode">Consenti alla frase di continuare il movimento in modalità di risparmio energetico</string>
 	
 	<string id="RunnerAvatar">Scegli l'avatar del runner nella barra di progresso</string>

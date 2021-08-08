@@ -44,6 +44,7 @@ class Theme {
 		QuirkyRunner,
 		RunningIsColor,
 		RunningIsColor2,
+		RunningIsColor3,
 		MuddySneakers,
 		PurpleSky,
 		NorthernLights,
@@ -307,6 +308,22 @@ class Theme {
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
 				background = Gfx.COLOR_BLACK;
 				setTrackLine( 0xAAAAAA, 0x00AA00, background);
+				break;
+				
+			case RunningIsColor3:
+				setClockColors(0xFFFF00, 0x0055FF, 0xFFFFFF);
+				phrase = 0xFF5500;
+				date = 0x00AAFF;
+				iconCalories = 0xFFFF00;
+				iconSteps = 0xFF5500;
+				iconHeart = 0xFF0000;
+				iconNotif = 0xAA00AA;
+				iconfloorsClimbed = 0x00FF00;
+				metricsText = 0xFFFFFFA;
+				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
+				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
+				background = Gfx.COLOR_BLACK;
+				setTrackLine( 0x0055FF, 0xFFFF00, background);				
 				break;
 			
 			case MuddySneakers:

@@ -24,7 +24,9 @@ class Phrases {
 		twinkling,
 		scrolled,
 		fixed,
-		personalized
+		personalized,
+		personalized2,
+		personalized3
 	}
 	hidden enum {
 		speed1X = 1,
@@ -190,9 +192,16 @@ class Phrases {
 	    	phrasesList[22] = WatchUi.loadResource(Rez.Strings.Fixed23);
 	    }
 	    else {
+	    	var prop = "CustomText";
+	    	if (phraseType == personalized2) {
+	    		prop = "CustomText2";
+	    	} else if (phraseType == personalized3) {
+	    		prop = "CustomText3";
+	    	}
+	    	
 	    	phrasesList = new [1];
 	    	rndMax = 1;
-	    	phrasesList[0] = Application.getApp().getProperty("CustomText");
+	    	phrasesList[0] = Application.getApp().getProperty(prop);
 	    	
 	    	if (phrasesList[0].length() == 0) {
 	    		phrasesList[0] = WatchUi.loadResource(Rez.Strings.InsertYourPhrase);

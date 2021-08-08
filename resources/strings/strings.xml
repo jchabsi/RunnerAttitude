@@ -22,6 +22,7 @@
     <string id="QuirkyRunner">Quirky Runner</string>
     <string id="RunningIsColor">Running is Color!</string>
     <string id="RunningIsColor2">Running is Color 2!</string>
+    <string id="RunningIsColor3">Running is Color 3!</string>
     <string id="MuddySneakers">Muddy Sneakers</string>
     <string id="PurpleSky">Purple Sky</string>
     <string id="NorthernLights">Northern Lights</string>
@@ -39,9 +40,13 @@
     <string id="Scrolling">Phrase with scrolling</string>
     <string id="Fixed">Small fixed phrase</string>
     <string id="Twinkling">Twinkling phrase</string>
-    <string id="Personalized">Custom phrase</string>
+    <string id="Personalized">Custom phrase 1</string>
+    <string id="Personalized2">Custom phrase 2</string>
+    <string id="Personalized3">Custom phrase 3</string>
     
-    <string id="CustomText">If you have selected 'custom phrase' please type it here</string>
+    <string id="CustomText">If you have selected 'Custom phrase 1' please type it here:</string>
+    <string id="CustomText2">If you have selected 'Custom phrase 2' please type it here:</string>
+    <string id="CustomText3">If you have selected 'Custom phrase 3' please type it here:</string>
     <string id="InsertYourPhrase">You should enter a phrase or word to display here</string>
     
     
@@ -132,6 +137,7 @@
 	<string id="Fixed23">Enjoy today</string>
 	
 	<string id="ShowSeconds">Show seconds</string>
+	<string id="ShowLeadingZero">Show Leading Zero</string>
 	<string id="PhraseOnSleepMode">Allow phrase to continue moving on Low Power Mode</string>
 	
 	<string id="RunnerAvatar">Choose progress runner avatar</string>

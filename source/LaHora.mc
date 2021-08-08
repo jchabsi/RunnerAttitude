@@ -12,6 +12,7 @@ class LaHora extends WatchUi.Drawable {
 	hidden var secX;
 	hidden var secY;
 	static var showSeconds;
+	static var showLeadingZero;
 	
 	hidden var width;
 	hidden var height;
@@ -56,7 +57,13 @@ class LaHora extends WatchUi.Drawable {
     	
 		var halfDCWidth = width / 2;
 
-		var sHour = nHour.format("%02d");
+		var sHour;
+		if(showLeadingZero){
+			sHour = nHour.format("%02d");
+		} else {
+			sHour = nHour.format("%d");
+		}
+		
 		var sMin = clockTime.min.format("%02d");
 		storedSecs = clockTime.sec.format("%02d");
 		var totalWidth = dc.getTextWidthInPixels(sHour + sMin, hoursFont);
@@ -153,5 +160,9 @@ class LaHora extends WatchUi.Drawable {
     
     static function setSecondsConfig() {
     	LaHora.showSeconds = Application.getApp().getProperty("ShowSeconds");
+    }
+    
+    static function setLeadingZeroConfig() {
+    	LaHora.showLeadingZero = Application.getApp().getProperty("ShowLeadingZero");
     }
 }

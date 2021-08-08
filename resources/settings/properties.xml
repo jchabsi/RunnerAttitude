@@ -3,11 +3,14 @@
     <property id="ThemeColor" type="number">0</property>
     <property id="MotivationalPhrase" type="number">0</property>
     <property id="CustomText" type="string"></property>
+    <property id="CustomText2" type="string"></property>
+    <property id="CustomText3" type="string"></property>
     <property id="PhraseRenewalTime" type="number">300</property>
     <property id="PhraseSpeed" type="number">2</property>  
     <property id="PhraseOnSleepMode" type="boolean">true</property>
     <property id="RunnerAvatar" type="number">0</property>
     <property id="ShowSeconds" type="boolean">true</property>
+    <property id="ShowLeadingZero" type="boolean">true</property>
     <property id="DistanceConfig" type="number">0</property>
     <property id="Altitude" type="number">0</property>
     <property id="BatteryPercentage" type="boolean">true</property>

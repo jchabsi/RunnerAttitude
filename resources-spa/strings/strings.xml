@@ -22,6 +22,7 @@
     <string id="QuirkyRunner">Corredor Extravagante</string>
     <string id="RunningIsColor">El Running es Color!</string>
     <string id="RunningIsColor2">El Running es Color 2!</string>
+    <string id="RunningIsColor3">El Running es Color 3!</string>
     <string id="MuddySneakers">Zapatillas Embarradas</string>
     <string id="PurpleSky">Cielo Púrpura</string>
     <string id="NorthernLights">Aurora Boreal</string>
@@ -39,9 +40,13 @@
     <string id="Scrolling">Frase con desplazamiento</string>
     <string id="Fixed">Pequeña frase fija</string>
     <string id="Twinkling">Frase titilante</string>
-    <string id="Personalized">Personalizada</string>
+    <string id="Personalized">Personalizada 1</string>
+    <string id="Personalized2">Personalizada 1</string>
+    <string id="Personalized3">Personalizada 1</string>
     
-    <string id="CustomText">Si has elegido el tipo de frase personalizada debes ingresarla aquí</string>
+    <string id="CustomText">Si has elegido Personalizada 1 debes ingresarla aquí</string>
+    <string id="CustomText2">Si has elegido Personalizada 2 debes ingresarla aquí</string>
+    <string id="CustomText3">Si has elegido Personalizada 3 debes ingresarla aquí</string>
     <string id="InsertYourPhrase">Debes ingresar una frase para mostrar aquí</string>
     
     <string id="PhraseRenewalTime">Tiempo de renovación de frases</string>
@@ -130,6 +135,7 @@
 	<string id="Fixed23">Disfruta el hoy</string>
 	
 	<string id="ShowSeconds">Mostrar segundos</string>
+	<string id="ShowLeadingZero">Mostrar cero a la izquierda</string>
 	<string id="PhraseOnSleepMode">La frase sigue corriendo cuando el reloj está en modo de Bajo Consumo</string>
 	
 	<string id="RunnerAvatar">Mostrar avatar de progreso</string>

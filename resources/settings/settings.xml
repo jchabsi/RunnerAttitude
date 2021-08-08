@@ -20,16 +20,17 @@
             <listEntry value="15">@Strings.QuirkyRunner</listEntry>
             <listEntry value="16">@Strings.RunningIsColor</listEntry>
             <listEntry value="17">@Strings.RunningIsColor2</listEntry>
-            <listEntry value="18">@Strings.MuddySneakers</listEntry>   
-            <listEntry value="19">@Strings.PurpleSky</listEntry>
-            <listEntry value="20">@Strings.NorthernLights</listEntry>
-            <listEntry value="21">@Strings.WatchBacklight</listEntry>  
-            <listEntry value="22">@Strings.FluoTrainingTShirt</listEntry>
-            <listEntry value="23">@Strings.LilacSneakers</listEntry> 
-            <listEntry value="24">@Strings.AmberDisplay</listEntry>  
-            <listEntry value="25">@Strings.GreenDisplay</listEntry>
-            <listEntry value="26">@Strings.FinisherMedal</listEntry>
-            <listEntry value="27">@Strings.GoldenTrophy</listEntry>         
+            <listEntry value="18">@Strings.RunningIsColor3</listEntry>
+            <listEntry value="19">@Strings.MuddySneakers</listEntry>   
+            <listEntry value="20">@Strings.PurpleSky</listEntry>
+            <listEntry value="21">@Strings.NorthernLights</listEntry>
+            <listEntry value="22">@Strings.WatchBacklight</listEntry>  
+            <listEntry value="23">@Strings.FluoTrainingTShirt</listEntry>
+            <listEntry value="24">@Strings.LilacSneakers</listEntry> 
+            <listEntry value="25">@Strings.AmberDisplay</listEntry>  
+            <listEntry value="26">@Strings.GreenDisplay</listEntry>
+            <listEntry value="27">@Strings.FinisherMedal</listEntry>
+            <listEntry value="28">@Strings.GoldenTrophy</listEntry>         
                     
         </settingConfig>
     </setting>
@@ -40,11 +41,19 @@
         	<listEntry value="1">@Strings.Scrolling</listEntry>
             <listEntry value="2">@Strings.Fixed</listEntry>
             <listEntry value="3">@Strings.Personalized</listEntry>
+            <listEntry value="4">@Strings.Personalized2</listEntry>
+            <listEntry value="5">@Strings.Personalized3</listEntry>
             
         </settingConfig>
     </setting>
     
     <setting propertyKey="@Properties.CustomText" title="@Strings.CustomText">
+        <settingConfig type="alphaNumeric" maxLength="150"/>
+    </setting>
+	<setting propertyKey="@Properties.CustomText2" title="@Strings.CustomText2">
+        <settingConfig type="alphaNumeric" maxLength="150"/>
+    </setting>
+	<setting propertyKey="@Properties.CustomText3" title="@Strings.CustomText3">
         <settingConfig type="alphaNumeric" maxLength="150"/>
     </setting>
     
@@ -73,6 +82,10 @@
     </setting>
     
     <setting propertyKey="@Properties.ShowSeconds" title="@Strings.ShowSeconds">
+        <settingConfig type="boolean"/>
+    </setting>
+    
+    <setting propertyKey="@Properties.ShowLeadingZero" title="@Strings.ShowLeadingZero">
         <settingConfig type="boolean"/>
     </setting>
     

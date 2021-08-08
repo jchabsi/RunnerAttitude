@@ -87,13 +87,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     		dateDisplay.locY = height / 3.7;
     		dateDisplay.setFont(Graphics.FONT_TINY);
     		System.println(height);
-    	}
-    	
-    	if (height >= 360)
-    	{    		
-    		dateDisplay.setFont(Graphics.FONT_SMALL);
-    	} 
-    	    	
+    	}	
     	
     	//Steps
     	var stepCountDisplay = View.findDrawableById("StepCountDisplay"); 
@@ -373,7 +367,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	
     	var calories;
     	
-    	if (info has :calories ){ //&& info.calories != +null) {
+    	if (info has :calories && info.calories != null) {
     		calories = info.calories.toString();
     	}
     	else {
