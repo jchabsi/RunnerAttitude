@@ -158,11 +158,11 @@ class LaHora extends WatchUi.Drawable {
     	return screenRes[4]; 	
     }
     
-    static function setSecondsConfig() {
+    static function getSecondsConfig() {
     	LaHora.showSeconds = Application.getApp().getProperty("ShowSeconds");
     }
     
-    static function setLeadingZeroConfig() {
+    static function getLeadingZeroConfig() {
     	LaHora.showLeadingZero = Application.getApp().getProperty("ShowLeadingZero");
     }
 }

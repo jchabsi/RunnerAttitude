@@ -35,19 +35,20 @@ class RunnerAttitudeApp extends Application.AppBase {
     // New app settings have been received so trigger a UI update
     function onSettingsChanged() {
     	
-        gTheme.setTheme();        
-        gPhrase.setPhrasesList();
+        gTheme.getTheme();        
+        gPhrase.getPhrasesList();
         gPhrase.selectPhrase(); 
-        gPhrase.setPhraseRenewalTime(); 
-        gPhrase.setPhraseSpeed();
-        LaHora.setSecondsConfig();
-        LaHora.setLeadingZeroConfig();
-        ProgressBar.setRunnerAvatar();  
-        runnerAttitudeView.setDistanceConfig();
-        runnerAttitudeView.setAltitudeConfig(); 
-        runnerAttitudeView.setPhraseOnSleepMode();
-        Battery.setBatteryPercentage();
-        runnerAttitudeView.setDateConfig();
+        gPhrase.getPhraseRenewalTime(); 
+        gPhrase.getPhraseSpeed();
+        LaHora.getSecondsConfig();
+        LaHora.getLeadingZeroConfig();
+        ProgressBar.getRunnerAvatar();  
+        runnerAttitudeView.getDistanceConfig();
+        runnerAttitudeView.getAltitudeConfig(); 
+        runnerAttitudeView.getPhraseOnSleepMode();
+        Battery.getBatteryPercentage();
+        runnerAttitudeView.getDateConfig();
+        runnerAttitudeView.getTemperatureUnits();
         WatchUi.requestUpdate();
     }
     

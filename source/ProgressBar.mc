@@ -155,7 +155,7 @@ class ProgressBar extends WatchUi.Drawable {
 		dc.fillRoundedRectangle(xTrophy - 1, yTrophy - 1, xwTrophy, ywTrophy, 5);
     	dc.drawBitmap(xTrophy, yTrophy, trophyIcon);
     }
-    static function setRunnerAvatar() {
+    static function getRunnerAvatar() {
     	ProgressBar.runnerAvatar = Application.getApp().getProperty("RunnerAvatar").toNumber();
     }
 

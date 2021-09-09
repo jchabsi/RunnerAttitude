@@ -168,5 +168,10 @@
 	<string id="DateConfig2">20 Jul, 2021</string>
 	<string id="DateConfig3">Mar 20 Jul</string>
 	<string id="DateConfig4">Jul 20 Mar∫</string>
+	
+	<string id="TemperatureUnits">Unidades de Temperatura</string>
+	<string id="Celsius">Celsius</string>
+	<string id="Fahrenheit">Fahrenheit</string>
+	<string id="WeatherOff">Clima desactivado</string>
 
 </strings>

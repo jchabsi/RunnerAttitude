@@ -34,6 +34,9 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.16.0
+- Added Garmin Weather support (Only for supported Devices) 
+
 Version 1.15.0
 - Now you can enter up to 3 personalized phrases
 - Show or hide hour leading zero

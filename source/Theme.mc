@@ -24,6 +24,7 @@ class Theme {
 	var background;	
 	var background4Runner;
 	var batteryText;
+	var iconWeather;
 	
 	hidden enum {
 		RunnerAttitude,
@@ -59,10 +60,10 @@ class Theme {
 	
 	function initialize() {		
 		
-        setTheme();        
+        getTheme();        
 	}			
 	
-	function setTheme() {
+	function getTheme() {
 		var selectedTheme = Application.getApp().getProperty("ThemeColor").toNumber();
 		if (selectedTheme == null) {
         	selectedTheme = 0;
@@ -78,6 +79,7 @@ class Theme {
 				iconHeart = 0xFF0055;
 				iconNotif = 0xAAAAFF;
 				iconfloorsClimbed = 0xAA5555;
+				iconWeather = 0xFFAAAA;
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(Gfx.COLOR_DK_GRAY, Gfx.COLOR_BLUE);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
@@ -130,7 +132,8 @@ class Theme {
 				iconSteps = 0x00AA55;
 				iconHeart = 0xFF0055;
 				iconNotif = 0x00FFAA;
-				iconfloorsClimbed = 0xAA5555;	
+				iconfloorsClimbed = 0xAA5555;
+				iconWeather = 0xFFFF00;	
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xAA5500, metricsText);
@@ -170,7 +173,8 @@ class Theme {
 				iconSteps = 0x00AA55;
 				iconHeart = 0xFF0055;
 				iconNotif = 0x55AAFF;
-				iconfloorsClimbed = 0xAA5555;	
+				iconfloorsClimbed = 0xAA5555;
+				iconWeather = 0x0055FF;	
 				metricsText = 0x000000;
 				setColor4BTIcon(0xAAAAAA, 0x0055FF);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
@@ -210,7 +214,8 @@ class Theme {
 				iconSteps = 0xFFAA00;
 				iconHeart = 0xFF55AA;
 				iconNotif = 0xAA55FF;
-				iconfloorsClimbed = 0xAA5555;	
+				iconfloorsClimbed = 0xAA5555;
+				iconWeather = 0x00AAAA;	
 				metricsText = 0xFFFFFF;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x00FF00, 0xFFFF00, 0xFF5555, metricsText);
@@ -287,6 +292,7 @@ class Theme {
 				iconHeart = 0xFF0000;
 				iconNotif = 0xAA00AA;
 				iconfloorsClimbed = 0x00FF00;
+				iconWeather = 0x00AAFF;
 				metricsText = 0xFFFFFFA;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
@@ -303,6 +309,7 @@ class Theme {
 				iconHeart = 0xFF0000;
 				iconNotif = 0xAA00AA;
 				iconfloorsClimbed = 0x00FF00;
+				iconWeather = 0x00AAFF;
 				metricsText = 0xFFFFFFA;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
@@ -319,6 +326,7 @@ class Theme {
 				iconHeart = 0xFF0000;
 				iconNotif = 0xAA00AA;
 				iconfloorsClimbed = 0x00FF00;
+				iconWeather = 0x00AAFF;
 				metricsText = 0xFFFFFFA;
 				setColor4BTIcon(0xAAAAAA, 0x00AAFF);
 				setColor4BatteryIcon(0x55AA00, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED, metricsText);
@@ -460,6 +468,7 @@ class Theme {
 		iconHeart = color;
 		iconNotif = color;
 		iconfloorsClimbed = color;	
+		iconWeather = color;
 	}	
 	private function setColor4BTIcon(off, on) {
 		iconBtOff = off;

@@ -8,6 +8,7 @@ using Toybox.Math;
 using Toybox.Time.Gregorian as Date;
 using Toybox.ActivityMonitor as Mon;
 using Toybox.Activity;
+using Toybox.Weather;
 
 class RunnerAttitudeView extends WatchUi.WatchFace {
 	
@@ -15,13 +16,15 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden var width;
 	hidden var motivationalDisplay;
 	hidden var iconsFont;
-	
+	hidden var weatherIconsFont;
+		
 	hidden var iconSteps;
 	hidden var iconCalories;
 	hidden var iconBT;
 	hidden var iconNotif;
 	hidden var iconHeart;
 	hidden var iconFloorsClimbed;
+	hidden var iconWeather;
 	
 	hidden var iconsChars = { :steps => "0",
 							  :floors => "1",
@@ -30,6 +33,15 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 							  :notif => "5",
 							  :heart => "3" };
 	
+	hidden var iconsCharsWeather = { 	:clear => "H",
+										:lightClouds => "G",
+										:scatteredClouds => "B",
+										:brokenClouds => "I",
+										:showerRain => "E",
+										:rain => "D",
+										:thunderStorm  => "C",
+										:snow => "F",
+										:mist => 'A' };
 	hidden enum {
 		MetersClimbed,
 		Floors
@@ -39,11 +51,11 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	private var phraseOnSleepMode;
 	
 	static const partialUpdateSupport = WatchUi.WatchFace has :onPartialUpdate;
-	hidden var altitudeMode;
 	
-	private var distanceConfig;	
-	
-	private var dateConfig;
+	hidden var altitudeMode;	
+	private var distanceConfig;		
+	private var dateConfig;	
+	private var temperatureUnits;
 	
 	hidden enum {
 		DistanceInSteps,
@@ -51,8 +63,13 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		DistanceInMiles,
 		DistanceInStepsKilometers,
 		DistanceInStepsMiles
-	}	
+	}
 	
+	hidden enum {
+		Celsius,
+		Fahrenheit,
+		WeatherOff
+	}	
 
     function initialize() {
         WatchFace.initialize();
@@ -61,7 +78,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     // Load your resources here
     function onLayout(dc) {
     	iconsFont = WatchUi.loadResource(Rez.Fonts.IconsFont);
-
+    	weatherIconsFont = WatchUi.loadResource(Rez.Fonts.WeatherIconsFont);
+    	
         setLayout(Rez.Layouts.WatchFace(dc));
         
         width = dc.getWidth();
@@ -138,8 +156,21 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	}
     	var btx = [1.15, 1.15, 1.17, 1.18, 1.18];	
     	iconBT = new MyTextView("8", setBTIconColor(), iconsFont, width / calcXY(btx, width), bty, Graphics.TEXT_JUSTIFY_LEFT ); 
-    	   	        
-    	    	
+    	
+    	//Weather
+    	var notificationWeather = View.findDrawableById("WeatherDisplay");
+    	notificationWeather.locX = width / 1.95;
+	    notificationWeather.locY = height / 1.13;
+    	var iconWeatherColor;
+    	if (Toybox has :Weather && temperatureUnits != WeatherOff) {
+    		iconWeatherColor = gTheme.iconWeather;
+    	} 
+    	else {
+    		iconWeatherColor = Graphics.COLOR_TRANSPARENT;
+    	}   	
+    		    	 	
+	    iconWeather = new MyTextView("A", iconWeatherColor, weatherIconsFont, width / 2.6, height / 1.15, Graphics.TEXT_JUSTIFY_LEFT );
+	    	       	    	
     }
     
     function calcXY(screenRes, coord)
@@ -182,7 +213,14 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		setCaloriesDisplay(info);
 		setNotificationCountDisplay();
 		setHeartrateDisplay();	
-		setFloorsClimbedDisplay(info);		
+		setFloorsClimbedDisplay(info);
+		if (Toybox has :Weather && temperatureUnits != WeatherOff) {
+			setWeather();
+		}
+		else {
+			var notificationWeather = View.findDrawableById("WeatherDisplay");
+			notificationWeather.setText("");
+		}
 				
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);	
@@ -208,6 +246,11 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		}
 		iconFloorsClimbed.setColor(gTheme.iconfloorsClimbed);
 		iconFloorsClimbed.draw(dc);
+		
+		if (Toybox has :Weather && temperatureUnits != WeatherOff) {
+			iconWeather.setColor(gTheme.iconWeather);
+        	iconWeather.draw(dc);
+		}
 				        
     }
     function onPartialUpdate(dc) { 
@@ -438,16 +481,209 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	return color;
     }
     
-    function setAltitudeConfig() {
+    private function setWeather() { 
+		var currentWeather = Weather.getCurrentConditions();
+		var notificationWeather = View.findDrawableById("WeatherDisplay");
+		var weatherSymbol = "A";
+		
+		switch (currentWeather.condition)
+		{
+			case Weather.CONDITION_CLEAR:
+				weatherSymbol = iconsCharsWeather[:clear];
+				break;
+			case Weather.CONDITION_PARTLY_CLOUDY:
+				weatherSymbol = iconsCharsWeather[:lightClouds];
+				break;
+			case Weather.CONDITION_MOSTLY_CLOUDY:
+				weatherSymbol = iconsCharsWeather[:brokenClouds];
+				break;
+			case Weather.CONDITION_RAIN:
+				weatherSymbol = iconsCharsWeather[:rain];
+				break;
+			case Weather.CONDITION_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_WINDY:
+				weatherSymbol = iconsCharsWeather[:lightClouds];
+				break;
+			case Weather.CONDITION_THUNDERSTORMS:
+				weatherSymbol = iconsCharsWeather[:thunderStorm];
+				break;
+			case Weather.CONDITION_WINTRY_MIX:
+				weatherSymbol = iconsCharsWeather[:lightClouds];
+				break;
+			case Weather.CONDITION_FOG:
+				weatherSymbol = iconsCharsWeather[:mist];
+				break;
+			case Weather.CONDITION_HAZY:
+				weatherSymbol = iconsCharsWeather[:mist];
+				break;
+			case Weather.CONDITION_HAIL:
+				weatherSymbol = iconsCharsWeather[:thunderStorm];
+				break;
+			case Weather.CONDITION_SCATTERED_SHOWERS:
+				weatherSymbol = iconsCharsWeather[:showerRain];
+				break;
+			case Weather.CONDITION_SCATTERED_THUNDERSTORMS:
+				weatherSymbol = iconsCharsWeather[:thunderStorm];
+				break;
+			case Weather.CONDITION_UNKNOWN_PRECIPITATION:
+				weatherSymbol = iconsCharsWeather[:showerRain];
+				break;
+			case Weather.CONDITION_LIGHT_RAIN:
+				weatherSymbol = iconsCharsWeather[:showerRain];
+				break;
+			case Weather.CONDITION_HEAVY_RAIN:
+				weatherSymbol = iconsCharsWeather[:rain];
+				break;
+			case Weather.CONDITION_LIGHT_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_HEAVY_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_LIGHT_RAIN_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_HEAVY_RAIN_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_CLOUDY:
+				weatherSymbol = iconsCharsWeather[:brokenClouds];
+				break;
+			case Weather.CONDITION_RAIN_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_PARTLY_CLEAR:
+				weatherSymbol = iconsCharsWeather[:lightClouds];
+				break;
+			case Weather.CONDITION_MOSTLY_CLEAR:
+				weatherSymbol = iconsCharsWeather[:clear];
+				break;
+			case Weather.CONDITION_LIGHT_SHOWERS:
+				weatherSymbol = iconsCharsWeather[:showerRain];
+				break;
+			case Weather.CONDITION_SHOWERS:
+				weatherSymbol = iconsCharsWeather[:showerRain];
+				break;
+			case Weather.CONDITION_HEAVY_SHOWERS:
+				weatherSymbol = iconsCharsWeather[:rain];
+				break;
+			case Weather.CONDITION_CHANCE_OF_SHOWERS:
+				weatherSymbol = iconsCharsWeather[:showerRain];
+				break;
+			case Weather.CONDITION_CHANCE_OF_THUNDERSTORMS:
+				weatherSymbol = iconsCharsWeather[:thunderStorm];
+				break;
+			case Weather.CONDITION_MIST:
+				weatherSymbol = iconsCharsWeather[:mist];
+				break;
+			case Weather.CONDITION_DUST:
+				weatherSymbol = iconsCharsWeather[:mist];
+				break;
+			case Weather.CONDITION_DRIZZLE:
+				weatherSymbol = iconsCharsWeather[:showerRain];
+				break;
+			case Weather.CONDITION_TORNADO:
+				weatherSymbol = iconsCharsWeather[:thunderStorm];
+				break;
+			case Weather.CONDITION_SMOKE:
+				weatherSymbol = iconsCharsWeather[:mist];
+				break;
+			case Weather.CONDITION_ICE:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_SAND:
+				weatherSymbol = iconsCharsWeather[:mist];
+				break;
+			case Weather.CONDITION_SQUALL:
+				weatherSymbol = iconsCharsWeather[:showerRain];
+				break;
+			case Weather.CONDITION_SANDSTORM:
+				weatherSymbol = iconsCharsWeather[:mist];
+				break;
+			case Weather.CONDITION_VOLCANIC_ASH:
+				weatherSymbol = iconsCharsWeather[:mist];
+				break;
+			case Weather.CONDITION_HAZE:
+				weatherSymbol = iconsCharsWeather[:mist];
+				break;
+			case Weather.CONDITION_FAIR:
+				weatherSymbol = iconsCharsWeather[:clear];
+				break;
+			case Weather.CONDITION_HURRICANE:
+				weatherSymbol = iconsCharsWeather[:thunderStorm];
+				break;
+			case Weather.CONDITION_TROPICAL_STORM:
+				weatherSymbol = iconsCharsWeather[:thunderStorm];
+				break;
+			case Weather.CONDITION_CHANCE_OF_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_CHANCE_OF_RAIN_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_CLOUDY_CHANCE_OF_RAIN:
+				weatherSymbol = iconsCharsWeather[:rain];
+				break;
+			case Weather.CONDITION_CLOUDY_CHANCE_OF_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_CLOUDY_CHANCE_OF_RAIN_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_FLURRIES:
+				weatherSymbol = iconsCharsWeather[:lightClouds];
+				break;
+			case Weather.CONDITION_FREEZING_RAIN:
+				weatherSymbol = iconsCharsWeather[:rain];
+				break;
+			case Weather.CONDITION_SLEET:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_ICE_SNOW:
+				weatherSymbol = iconsCharsWeather[:snow];
+				break;
+			case Weather.CONDITION_THIN_CLOUDS:
+				weatherSymbol = iconsCharsWeather[:lightClouds];
+				break;
+			case Weather.CONDITION_UNKNOWN:
+				weatherSymbol = iconsCharsWeather[:scatteredClouds];
+				break;					
+		}
+			
+		var clockTime = System.getClockTime();    	
+    	var nHour = clockTime.hour;
+    	//nHour = 5;
+    	var currentTemperature = currentWeather.temperature;
+    	var temperatureSymbol = " C";
+    	if (temperatureUnits == Fahrenheit) {
+    	  	//F = C * 1.8 + 32
+    	  	temperatureSymbol = " F";
+    	  	currentTemperature = (currentTemperature * 1.8 + 32).toLong();    	  	
+    	}
+    	if ((nHour < 7 || nHour > 19) && (weatherSymbol != iconsCharsWeather[:brokenClouds])) {
+    		weatherSymbol = weatherSymbol.toLower();
+    	}
+    	
+		notificationWeather.setColor(gTheme.metricsText); 	
+		notificationWeather.setText(currentTemperature.toString() + temperatureSymbol);
+		iconWeather.setText(weatherSymbol);
+    }
+    
+    function getAltitudeConfig() {
 		altitudeMode = Application.getApp().getProperty("Altitude");		
     }
-    function setPhraseOnSleepMode() {
+    function getPhraseOnSleepMode() {
     	phraseOnSleepMode = Application.getApp().getProperty("PhraseOnSleepMode");
     }
-    function setDistanceConfig() {
+    function getDistanceConfig() {
     	distanceConfig = Application.getApp().getProperty("DistanceConfig");    	
     }
-    function setDateConfig() {
+    function getDateConfig() {
     	dateConfig = Application.getApp().getProperty("DateConfig");    	
+    }
+    function getTemperatureUnits() {
+    	temperatureUnits = Application.getApp().getProperty("TemperatureUnits");
     }
 }
