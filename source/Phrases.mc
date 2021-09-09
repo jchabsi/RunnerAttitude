@@ -43,14 +43,14 @@ class Phrases {
 	
 	function initialize() {		
 		
-        setPhrasesList();   
-        setPhraseRenewalTime(); 
-        setPhraseSpeed();
+        getPhrasesList();   
+        getPhraseRenewalTime(); 
+        getPhraseSpeed();
         timeBase = new Time.Moment(Time.now().value()); 
         
 	}		
 	
-	function setPhrasesList() {
+	function getPhrasesList() {
 		phraseType = Application.getApp().getProperty("MotivationalPhrase").toNumber();
 		phrasesList = 0;		
     	
@@ -335,12 +335,12 @@ class Phrases {
 	    //motivationalDisplay.setText(scrolledPhrase);
     }
     
-    function setPhraseRenewalTime()
+    function getPhraseRenewalTime()
     {
     	phraseTime = Application.getApp().getProperty("PhraseRenewalTime").toNumber();
     }
 	
-	function setPhraseSpeed()
+	function getPhraseSpeed()
     {
     	phraseSpeed = Application.getApp().getProperty("PhraseSpeed").toNumber();
     	speedCount = 4;

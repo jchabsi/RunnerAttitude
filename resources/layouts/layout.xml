@@ -54,6 +54,13 @@
 			justification="Gfx.TEXT_JUSTIFY_LEFT" 
 			color="Gfx.COLOR_GREEN" />
 			
+	<label id="WeatherDisplay" 
+			text="00" 
+			x="center" y="top" 
+			font="@Fonts.NormalFont" 
+			justification="Gfx.TEXT_JUSTIFY_LEFT" 
+			color="Gfx.COLOR_GREEN" />
+			
 	<drawable class="ProgressBar" />
 	<drawable class="Battery" />
 	<drawable id="Time" class="LaHora" />

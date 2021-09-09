@@ -1,5 +1,6 @@
 <fonts>
 	<font id="HoursFont" filename="titillium-web-bold-80-tall.fnt" antialias="true"/>
 	<font id="MinutesFont" filename="titillium-web-light-80-tall.fnt" antialias="true"/>
-	
+	<!-- .fnt file modified such that day icons start from "A", night icons start from "a", "broken clouds" ("I") is shared -->
+	<font id="WeatherIconsFont" filename="weather-icons-28.fnt" antialias="true" filter="ABCDEFGHIabcdefgh"/>
 </fonts>

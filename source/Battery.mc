@@ -100,7 +100,7 @@ class Battery extends WatchUi.Drawable {
     	return screenRes[4]; 	
     }
     
-    static function setBatteryPercentage() {
+    static function getBatteryPercentage() {
     	Battery.batteryPercentage = Application.getApp().getProperty("BatteryPercentage");
     }    
 

@@ -171,4 +171,8 @@
 	<string id="DateConfig3">Tue 20 Jul</string>
 	<string id="DateConfig4">Jul 20 Tue</string>
 	
+	<string id="TemperatureUnits">Temperature Units</string>
+	<string id="Celsius">Celsius</string>
+	<string id="Fahrenheit">Fahrenheit</string>
+	<string id="WeatherOff">Weather off</string>		
 </strings>
