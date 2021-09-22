@@ -16,7 +16,7 @@ class Phrases {
 	hidden const numberOfPhrases = 50;
 	hidden const numberOfWords = 23;
 	private var rndMax = 0;
-	hidden var phrasesList;		
+	//hidden var phrasesList;		
 	hidden var scrolledPhrase;
 	hidden var phraseTime = 300;
 	hidden var phraseSpeed;
@@ -52,162 +52,272 @@ class Phrases {
 	
 	function getPhrasesList() {
 		phraseType = Application.getApp().getProperty("MotivationalPhrase").toNumber();
-		phrasesList = 0;		
-    	
+		    	
     	if (phraseType == scrolled) {  	
-    		phrasesList = new [numberOfPhrases];
     		rndMax = numberOfPhrases;
-	    	phrasesList[0] = sp + WatchUi.loadResource(Rez.Strings.Phrase1) + sl;
-	    	phrasesList[1] = sp + WatchUi.loadResource(Rez.Strings.Phrase2) + sl;
-	    	phrasesList[2] = sp + WatchUi.loadResource(Rez.Strings.Phrase3) + sl;
-	    	phrasesList[3] = sp + WatchUi.loadResource(Rez.Strings.Phrase4) + sl;
-	    	phrasesList[4] = sp + WatchUi.loadResource(Rez.Strings.Phrase5) + sl;
-	    	phrasesList[5] = sp + WatchUi.loadResource(Rez.Strings.Phrase6) + sl;
-	    	phrasesList[6] = sp + WatchUi.loadResource(Rez.Strings.Phrase7) + sl;
-	    	phrasesList[7] = sp + WatchUi.loadResource(Rez.Strings.Phrase8) + sl;
-	    	phrasesList[8] = sp + WatchUi.loadResource(Rez.Strings.Phrase9) + sl;
-	    	phrasesList[9] = sp + WatchUi.loadResource(Rez.Strings.Phrase10) + sl;
-	    	phrasesList[10] = sp + WatchUi.loadResource(Rez.Strings.Phrase11) + sl;
-	    	phrasesList[11] = sp + WatchUi.loadResource(Rez.Strings.Phrase12) + sl;
-	    	phrasesList[12] = sp + WatchUi.loadResource(Rez.Strings.Phrase13) + sl;
-	    	phrasesList[13] = sp + WatchUi.loadResource(Rez.Strings.Phrase14) + sl;
-	    	phrasesList[14] = sp + WatchUi.loadResource(Rez.Strings.Phrase15) + sl;
-	    	phrasesList[15] = sp + WatchUi.loadResource(Rez.Strings.Phrase16) + sl;
-	    	phrasesList[16] = sp + WatchUi.loadResource(Rez.Strings.Phrase17) + sl;
-	    	phrasesList[17] = sp + WatchUi.loadResource(Rez.Strings.Phrase18) + sl;
-	    	phrasesList[18] = sp + WatchUi.loadResource(Rez.Strings.Phrase19) + sl;
-	    	phrasesList[19] = sp + WatchUi.loadResource(Rez.Strings.Phrase20) + sl;
-	    	phrasesList[20] = sp + WatchUi.loadResource(Rez.Strings.Phrase21) + sl;
-	    	phrasesList[21] = sp + WatchUi.loadResource(Rez.Strings.Phrase22) + sl;
-	    	phrasesList[22] = sp + WatchUi.loadResource(Rez.Strings.Phrase23) + sl;
-	    	phrasesList[23] = sp + WatchUi.loadResource(Rez.Strings.Phrase24) + sl;
-	    	phrasesList[24] = sp + WatchUi.loadResource(Rez.Strings.Phrase25) + sl;
-	    	phrasesList[25] = sp + WatchUi.loadResource(Rez.Strings.Phrase26) + sl;
-	    	phrasesList[26] = sp + WatchUi.loadResource(Rez.Strings.Phrase27) + sl;
-	    	phrasesList[27] = sp + WatchUi.loadResource(Rez.Strings.Phrase28) + sl;
-	    	phrasesList[28] = sp + WatchUi.loadResource(Rez.Strings.Phrase29) + sl;
-	    	phrasesList[29] = sp + WatchUi.loadResource(Rez.Strings.Phrase30) + sl;
-	    	phrasesList[30] = sp + WatchUi.loadResource(Rez.Strings.Phrase31) + sl;
-	    	phrasesList[31] = sp + WatchUi.loadResource(Rez.Strings.Phrase32) + sl;
-	    	phrasesList[32] = sp + WatchUi.loadResource(Rez.Strings.Phrase33) + sl;
-	    	phrasesList[33] = sp + WatchUi.loadResource(Rez.Strings.Phrase34) + sl;
-	    	phrasesList[34] = sp + WatchUi.loadResource(Rez.Strings.Phrase35) + sl;
-	    	phrasesList[35] = sp + WatchUi.loadResource(Rez.Strings.Phrase36) + sl;
-	    	phrasesList[36] = sp + WatchUi.loadResource(Rez.Strings.Phrase37) + sl;
-	    	phrasesList[37] = sp + WatchUi.loadResource(Rez.Strings.Phrase38) + sl;
-	    	phrasesList[38] = sp + WatchUi.loadResource(Rez.Strings.Phrase39) + sl;
-	    	phrasesList[39] = sp + WatchUi.loadResource(Rez.Strings.Phrase40) + sl;
-	    	phrasesList[40] = sp + WatchUi.loadResource(Rez.Strings.Phrase41) + sl;
-	    	phrasesList[41] = sp + WatchUi.loadResource(Rez.Strings.Phrase42) + sl;
-	    	phrasesList[42] = sp + WatchUi.loadResource(Rez.Strings.Phrase43) + sl;
-	    	phrasesList[43] = sp + WatchUi.loadResource(Rez.Strings.Phrase44) + sl;
-	    	phrasesList[44] = sp + WatchUi.loadResource(Rez.Strings.Phrase45) + sl;
-	    	phrasesList[45] = sp + WatchUi.loadResource(Rez.Strings.Phrase46) + sl;
-	    	phrasesList[46] = sp + WatchUi.loadResource(Rez.Strings.Phrase47) + sl;
-	    	phrasesList[47] = sp + WatchUi.loadResource(Rez.Strings.Phrase48) + sl;
-	    	phrasesList[48] = sp + WatchUi.loadResource(Rez.Strings.Phrase49) + sl;
-	    	phrasesList[49] = sp + WatchUi.loadResource(Rez.Strings.Phrase50) + sl;
+	    	
 	    }
 	    else if (phraseType == twinkling) {
-	    	phrasesList = new [numberOfPhrases];
-    		rndMax = numberOfPhrases;
-	    	phrasesList[0] = WatchUi.loadResource(Rez.Strings.Phrase1);
-	    	phrasesList[1] = WatchUi.loadResource(Rez.Strings.Phrase2);
-	    	phrasesList[2] = WatchUi.loadResource(Rez.Strings.Phrase3);
-	    	phrasesList[3] = WatchUi.loadResource(Rez.Strings.Phrase4);
-	    	phrasesList[4] = WatchUi.loadResource(Rez.Strings.Phrase5);
-	    	phrasesList[5] = WatchUi.loadResource(Rez.Strings.Phrase6);
-	    	phrasesList[6] = WatchUi.loadResource(Rez.Strings.Phrase7);
-	    	phrasesList[7] = WatchUi.loadResource(Rez.Strings.Phrase8);
-	    	phrasesList[8] = WatchUi.loadResource(Rez.Strings.Phrase9);
-	    	phrasesList[9] = WatchUi.loadResource(Rez.Strings.Phrase10);
-	    	phrasesList[10] = WatchUi.loadResource(Rez.Strings.Phrase11);
-	    	phrasesList[11] = WatchUi.loadResource(Rez.Strings.Phrase12);
-	    	phrasesList[12] = WatchUi.loadResource(Rez.Strings.Phrase13);
-	    	phrasesList[13] = WatchUi.loadResource(Rez.Strings.Phrase14);
-	    	phrasesList[14] = WatchUi.loadResource(Rez.Strings.Phrase15);
-	    	phrasesList[15] = WatchUi.loadResource(Rez.Strings.Phrase16);
-	    	phrasesList[16] = WatchUi.loadResource(Rez.Strings.Phrase17);
-	    	phrasesList[17] = WatchUi.loadResource(Rez.Strings.Phrase18);
-	    	phrasesList[18] = WatchUi.loadResource(Rez.Strings.Phrase19);
-	    	phrasesList[19] = WatchUi.loadResource(Rez.Strings.Phrase20);
-	    	phrasesList[20] = WatchUi.loadResource(Rez.Strings.Phrase21);
-	    	phrasesList[21] = WatchUi.loadResource(Rez.Strings.Phrase22);
-	    	phrasesList[22] = WatchUi.loadResource(Rez.Strings.Phrase23);
-	    	phrasesList[23] = WatchUi.loadResource(Rez.Strings.Phrase24);
-	    	phrasesList[24] = WatchUi.loadResource(Rez.Strings.Phrase25);
-	    	phrasesList[25] = WatchUi.loadResource(Rez.Strings.Phrase26);
-	    	phrasesList[26] = WatchUi.loadResource(Rez.Strings.Phrase27);
-	    	phrasesList[27] = WatchUi.loadResource(Rez.Strings.Phrase28);
-	    	phrasesList[28] = WatchUi.loadResource(Rez.Strings.Phrase29);
-	    	phrasesList[29] = WatchUi.loadResource(Rez.Strings.Phrase30);
+	    	rndMax = numberOfPhrases;
 	    	
-	    	phrasesList[30] = WatchUi.loadResource(Rez.Strings.Phrase31);
-	    	phrasesList[31] = WatchUi.loadResource(Rez.Strings.Phrase32);
-	    	phrasesList[32] = WatchUi.loadResource(Rez.Strings.Phrase33);
-	    	phrasesList[33] = WatchUi.loadResource(Rez.Strings.Phrase34);
-	    	phrasesList[34] = WatchUi.loadResource(Rez.Strings.Phrase35);
-	    	phrasesList[35] = WatchUi.loadResource(Rez.Strings.Phrase36);
-	    	phrasesList[36] = WatchUi.loadResource(Rez.Strings.Phrase37);
-	    	phrasesList[37] = WatchUi.loadResource(Rez.Strings.Phrase38);
-	    	phrasesList[38] = WatchUi.loadResource(Rez.Strings.Phrase39);
-	    	phrasesList[39] = WatchUi.loadResource(Rez.Strings.Phrase40);
-	    	
-	    	phrasesList[40] = WatchUi.loadResource(Rez.Strings.Phrase41);
-	    	phrasesList[41] = WatchUi.loadResource(Rez.Strings.Phrase42);
-	    	phrasesList[42] = WatchUi.loadResource(Rez.Strings.Phrase43);
-	    	phrasesList[43] = WatchUi.loadResource(Rez.Strings.Phrase44);
-	    	phrasesList[44] = WatchUi.loadResource(Rez.Strings.Phrase45);
-	    	phrasesList[45] = WatchUi.loadResource(Rez.Strings.Phrase46);
-	    	phrasesList[46] = WatchUi.loadResource(Rez.Strings.Phrase47);
-	    	phrasesList[47] = WatchUi.loadResource(Rez.Strings.Phrase48);
-	    	phrasesList[48] = WatchUi.loadResource(Rez.Strings.Phrase49);
-	    	phrasesList[49] = WatchUi.loadResource(Rez.Strings.Phrase50);
 	    }
 	    else if (phraseType == fixed) {
-	    	phrasesList = new [numberOfWords];
 	    	rndMax = numberOfWords;
-	    	phrasesList[0] = WatchUi.loadResource(Rez.Strings.Fixed1);
-	    	phrasesList[1] = WatchUi.loadResource(Rez.Strings.Fixed2);
-	    	phrasesList[2] = WatchUi.loadResource(Rez.Strings.Fixed3);
-	    	phrasesList[3] = WatchUi.loadResource(Rez.Strings.Fixed4);
-	    	phrasesList[4] = WatchUi.loadResource(Rez.Strings.Fixed5);
-	    	phrasesList[5] = WatchUi.loadResource(Rez.Strings.Fixed6);
-	    	phrasesList[6] = WatchUi.loadResource(Rez.Strings.Fixed7);
-	    	phrasesList[7] = WatchUi.loadResource(Rez.Strings.Fixed8);
-	    	phrasesList[8] = WatchUi.loadResource(Rez.Strings.Fixed9);
-	    	phrasesList[9] = WatchUi.loadResource(Rez.Strings.Fixed10);
-	    	phrasesList[10] = WatchUi.loadResource(Rez.Strings.Fixed11);
-	    	phrasesList[11] = WatchUi.loadResource(Rez.Strings.Fixed12);
-	    	phrasesList[12] = WatchUi.loadResource(Rez.Strings.Fixed13);
-	    	phrasesList[13] = WatchUi.loadResource(Rez.Strings.Fixed14);
-	    	phrasesList[14] = WatchUi.loadResource(Rez.Strings.Fixed15);
-	    	phrasesList[15] = WatchUi.loadResource(Rez.Strings.Fixed16);
-	    	phrasesList[16] = WatchUi.loadResource(Rez.Strings.Fixed17);
-	    	phrasesList[17] = WatchUi.loadResource(Rez.Strings.Fixed18);
-	    	phrasesList[18] = WatchUi.loadResource(Rez.Strings.Fixed19);
-	    	phrasesList[19] = WatchUi.loadResource(Rez.Strings.Fixed20);
-	    	phrasesList[20] = WatchUi.loadResource(Rez.Strings.Fixed21);
-	    	phrasesList[21] = WatchUi.loadResource(Rez.Strings.Fixed22);
-	    	phrasesList[22] = WatchUi.loadResource(Rez.Strings.Fixed23);
+	    	
 	    }
 	    else {
-	    	var prop = "CustomText";
-	    	if (phraseType == personalized2) {
-	    		prop = "CustomText2";
-	    	} else if (phraseType == personalized3) {
-	    		prop = "CustomText3";
-	    	}
-	    	
-	    	phrasesList = new [1];
-	    	rndMax = 1;
-	    	phrasesList[0] = Application.getApp().getProperty(prop);
-	    	
-	    	if (phrasesList[0].length() == 0) {
-	    		phrasesList[0] = WatchUi.loadResource(Rez.Strings.InsertYourPhrase);
-	    	} 	
-	    	
+	    	rndMax = 1;	    	
 	    }
+	}
+	
+	function getPhraseFromRez(phraseNo) {
+		var phrase;
+		if (phraseType == scrolled || phraseType == twinkling) {
+			switch (phraseNo) {
+				case 0:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase1);				
+					break;
+				case 1:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase2);				
+					break;
+				case 2:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase3);				
+					break;
+				case 3:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase4);				
+					break;
+				case 4:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase5);				
+					break;
+				case 5:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase6);				
+					break;
+				case 6:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase7);				
+					break;
+				case 7:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase8);				
+					break;
+				case 8:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase9);				
+					break;
+				case 9:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase10);				
+					break;
+				case 10:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase11);				
+					break;
+				case 11:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase12);				
+					break;
+				case 12:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase13);				
+					break;
+				case 13:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase14);				
+					break;
+				case 14:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase15);				
+					break;
+				case 15:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase16);				
+					break;
+				case 16:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase17);				
+					break;
+				case 17:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase18);				
+					break;
+				case 18:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase19);				
+					break;
+				case 19:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase20);				
+					break;
+				case 20:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase21);				
+					break;
+				case 21:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase22);				
+					break;
+				case 22:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase23);				
+					break;
+				case 23:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase24);				
+					break;
+				case 24:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase25);				
+					break;
+				case 25:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase26);				
+					break;
+				case 26:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase27);				
+					break;
+				case 27:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase28);				
+					break;
+				case 28:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase29);				
+					break;
+				case 29:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase30);				
+					break;
+				case 30:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase31);				
+					break;
+				case 31:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase32);				
+					break;
+				case 32:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase33);				
+					break;
+				case 33:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase34);				
+					break;
+				case 34:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase35);				
+					break;
+				case 35:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase36);				
+					break;
+				case 36:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase37);				
+					break;
+				case 37:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase38);				
+					break;
+				case 38:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase39);				
+					break;
+				case 39:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase40);				
+					break;
+				case 40:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase41);				
+					break;
+				case 41:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase42);				
+					break;
+				case 42:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase43);				
+					break;
+				case 43:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase44);				
+					break;
+				case 44:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase45);				
+					break;
+				case 45:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase46);				
+					break;
+				case 46:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase47);				
+					break;
+				case 47:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase48);				
+					break;
+				case 48:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase49);				
+					break;
+				case 49:
+					phrase = WatchUi.loadResource(Rez.Strings.Phrase50);				
+					break;
+			}
+		} else {
+			switch (phraseNo) {
+				case 0:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed1);				
+					break;
+				case 1:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed2);				
+					break;
+				case 2:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed3);				
+					break;
+				case 3:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed4);				
+					break;
+				case 4:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed5);				
+					break;
+				case 5:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed6);				
+					break;
+				case 6:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed7);				
+					break;
+				case 7:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed8);				
+					break;
+				case 8:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed9);				
+					break;
+				case 9:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed10);				
+					break;
+				case 10:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed11);				
+					break;
+				case 11:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed12);				
+					break;
+				case 12:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed13);				
+					break;
+				case 13:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed14);				
+					break;
+				case 14:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed15);				
+					break;
+				case 15:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed16);				
+					break;
+				case 16:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed17);				
+					break;
+				case 17:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed18);				
+					break;
+				case 18:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed19);				
+					break;
+				case 19:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed20);				
+					break;
+				case 20:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed21);				
+					break;
+				case 21:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed22);				
+					break;
+				case 22:
+					phrase = WatchUi.loadResource(Rez.Strings.Fixed23);				
+					break;
+			}			
+		}		
+		if (phraseType == scrolled) {
+			phrase = sp + phrase + sl;
+		}
+		return phrase;
+	}
+	
+	function getCustomPhrase() {
+		var prop = "CustomText";
+    	if (phraseType == personalized2) {
+    		prop = "CustomText2";
+    	} else if (phraseType == personalized3) {
+    		prop = "CustomText3";
+    	}
+    	
+    	var phrase = Application.getApp().getProperty(prop);
+    	
+    	if (phrase.length() == 0) {
+    		phrase = WatchUi.loadResource(Rez.Strings.InsertYourPhrase);
+    	}
+    	return phrase;
 	}
 		
 	function selectPhrase() {
@@ -215,11 +325,11 @@ class Phrases {
 		//If we have a list we choose a random phrase,
     	if (rndMax > 1) {
 	    	Math.srand(System.getTimer());
-			rndInd = Math.rand() % (rndMax - 1);
-			scrolledPhrase = phrasesList[rndInd];
+			rndInd = Math.rand() % (rndMax - 1);			
+			scrolledPhrase = getPhraseFromRez(rndInd);
 		} else {
-			rndInd = 0;
-			scrolledPhrase = phrasesList[rndInd];
+			
+			scrolledPhrase = getCustomPhrase();
 			if (scrolledPhrase.length() < 16) {
 				phraseType = fixed;  
 			} else {

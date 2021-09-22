@@ -34,6 +34,9 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.16.1 
+- Optimizations to use less memory and avoid reported issues and crashes on some devices
+
 Version 1.16.0
 - Added Garmin Weather support (Only for supported Devices) 
 

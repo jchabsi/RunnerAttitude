@@ -16,9 +16,10 @@ class ProgressBar extends WatchUi.Drawable {
 		avatarRunnerDisabled
 	}
 	
-	hidden var runnerGirl;
-	hidden var runnerBoy;
-	hidden var trophyIcon;
+	//hidden var runnerGirl;
+	//hidden var runnerBoy;
+	//hidden var trophyIcon;
+	hidden var progressIcon;
 	hidden var height;
 	hidden var width;
 	
@@ -26,9 +27,9 @@ class ProgressBar extends WatchUi.Drawable {
 	//var test;	
 
     function initialize() {
-    	runnerGirl = WatchUi.loadResource(Rez.Drawables.RunnerGirl);
-    	runnerBoy = WatchUi.loadResource(Rez.Drawables.RunnerBoy);
-    	trophyIcon = WatchUi.loadResource(Rez.Drawables.TrophyIcon);
+    	//runnerGirl = WatchUi.loadResource(Rez.Drawables.RunnerGirl);
+    	//runnerBoy = WatchUi.loadResource(Rez.Drawables.RunnerBoy);
+    	//trophyIcon = WatchUi.loadResource(Rez.Drawables.TrophyIcon);
     	
         var dictionary = {
             :identifier => "ProgressBar"
@@ -108,28 +109,29 @@ class ProgressBar extends WatchUi.Drawable {
     		xwAvatar = 33; 
     		ywAvatar = 51;
     	}
-    	var genderBitmap;
-	    	
+    		    	
     	if (ProgressBar.runnerAvatar == genderSettings) {
 	    	var profile = UserProfile.getProfile();
-	    	genderBitmap = runnerGirl;
 	    	if (profile.gender == UserProfile.GENDER_MALE) {
-	    		genderBitmap = runnerBoy;
+	    		progressIcon = WatchUi.loadResource(Rez.Drawables.RunnerBoy);	
+	    	}
+	    	else {
+	    		progressIcon = WatchUi.loadResource(Rez.Drawables.RunnerGirl);
 	    	}
 	    }
 	    else if (ProgressBar.runnerAvatar == avatarRunnerGirl) {
-	    	genderBitmap = runnerGirl;
+	    	progressIcon = WatchUi.loadResource(Rez.Drawables.RunnerGirl);	    	
 		}
 		else {
-			genderBitmap = runnerBoy;
-		}
+			progressIcon = WatchUi.loadResource(Rez.Drawables.RunnerBoy);	
+	    }
 						
 		if(gTheme.background4Runner != gTheme.background) {				
 			dc.setColor(gTheme.background4Runner, Graphics.COLOR_TRANSPARENT);
 			dc.fillRoundedRectangle(xAvatar - 1, yAvatar - 1, xwAvatar, ywAvatar, 5);
 		}
     	
-    	dc.drawBitmap(xAvatar, yAvatar, genderBitmap);
+    	dc.drawBitmap(xAvatar, yAvatar, progressIcon);
 
     }
     
@@ -150,10 +152,10 @@ class ProgressBar extends WatchUi.Drawable {
     		xwTrophy = 53; 
     		ywTrophy = 50;
     	}
-		
+		progressIcon = WatchUi.loadResource(Rez.Drawables.TrophyIcon);
 		dc.setColor(gTheme.background4Runner, Graphics.COLOR_TRANSPARENT);
 		dc.fillRoundedRectangle(xTrophy - 1, yTrophy - 1, xwTrophy, ywTrophy, 5);
-    	dc.drawBitmap(xTrophy, yTrophy, trophyIcon);
+    	dc.drawBitmap(xTrophy, yTrophy, progressIcon);
     }
     static function getRunnerAvatar() {
     	ProgressBar.runnerAvatar = Application.getApp().getProperty("RunnerAvatar").toNumber();

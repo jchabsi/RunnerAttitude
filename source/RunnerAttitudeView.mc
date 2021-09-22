@@ -78,8 +78,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     // Load your resources here
     function onLayout(dc) {
     	iconsFont = WatchUi.loadResource(Rez.Fonts.IconsFont);
-    	weatherIconsFont = WatchUi.loadResource(Rez.Fonts.WeatherIconsFont);
-    	
+    	if (Toybox has :Weather) {
+    		weatherIconsFont = WatchUi.loadResource(Rez.Fonts.WeatherIconsFont);
+    	}
         setLayout(Rez.Layouts.WatchFace(dc));
         
         width = dc.getWidth();
@@ -167,10 +168,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     	} 
     	else {
     		iconWeatherColor = Graphics.COLOR_TRANSPARENT;
-    	}   	
-    		    	 	
-	    iconWeather = new MyTextView("A", iconWeatherColor, weatherIconsFont, width / 2.6, height / 1.15, Graphics.TEXT_JUSTIFY_LEFT );
-	    	       	    	
+    	}
+    	if (Toybox has :Weather) {    		    	 	
+	    	iconWeather = new MyTextView("A", iconWeatherColor, weatherIconsFont, width / 2.6, height / 1.15, Graphics.TEXT_JUSTIFY_LEFT );
+	    }       	    	
     }
     
     function calcXY(screenRes, coord)
