@@ -34,6 +34,10 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.16.2
+- Now the Watch Face can run on devices that before were running out of memory: D2 Bravo, D2 Bravo Titanium, Fenix 3, Fenix 3HR, Tactix Bravo, Quatix 3
+
+
 Version 1.16.1 
 - Optimizations to use less memory and avoid reported issues and crashes on some devices
 
