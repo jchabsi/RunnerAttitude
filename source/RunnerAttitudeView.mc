@@ -10,6 +10,9 @@ using Toybox.ActivityMonitor as Mon;
 using Toybox.Activity;
 using Toybox.Weather;
 
+using Toybox.Time;
+using Toybox.Time.Gregorian;
+
 class RunnerAttitudeView extends WatchUi.WatchFace {
 	
 	hidden var height;
@@ -56,6 +59,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	private var distanceConfig;		
 	private var dateConfig;	
 	private var temperatureUnits;
+	hidden var weatherRefreshInterval = 900;
+	hidden var timeBase;
+	hidden var firstRun = true;
 	
 	hidden enum {
 		DistanceInSteps,
@@ -73,7 +79,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 
     function initialize() {
         WatchFace.initialize();
-    }
+		if (Toybox has :Weather) {
+			timeBase = new Time.Moment(Time.now().value());			
+		}
+	}
 
     // Load your resources here
     function onLayout(dc) {
@@ -216,7 +225,17 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		setHeartrateDisplay();	
 		setFloorsClimbedDisplay(info);
 		if (Toybox has :Weather && temperatureUnits != WeatherOff) {
-			setWeather();
+			var timeNow = new Time.Moment(Time.now().value());
+			var timeInc = timeNow.compare(timeBase);
+		    	
+			if (timeInc > weatherRefreshInterval)
+			{
+				setWeather();
+				timeBase = new Time.Moment(Time.now().value());
+			}
+			else if (firstRun == true) {
+				setWeather();
+			}						
 		}
 		else {
 			var notificationWeather = View.findDrawableById("WeatherDisplay");
@@ -252,6 +271,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 			iconWeather.setColor(gTheme.iconWeather);
         	iconWeather.draw(dc);
 		}
+
+		firstRun = false;
 				        
     }
     function onPartialUpdate(dc) { 
