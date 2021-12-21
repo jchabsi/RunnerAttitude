@@ -33,6 +33,10 @@ I hope you enjoy it!
 
 
 What’s New
+Version 1.16.5
+- Built with the latest SDK - 4.0.7
+- Weather feature optimizations
+- Weather is off by default
 
 Version 1.16.4 
 - Weather feature optimizations

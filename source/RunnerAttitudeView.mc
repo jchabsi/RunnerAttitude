@@ -59,7 +59,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	private var distanceConfig;		
 	private var dateConfig;	
 	private var temperatureUnits;
-	hidden var weatherRefreshInterval = 900;
+	hidden var weatherRefreshInterval = 3600;
 	hidden var timeBase;
 	hidden var firstRun = true;
 	
@@ -707,5 +707,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
     }
     function getTemperatureUnits() {
     	temperatureUnits = Application.getApp().getProperty("TemperatureUnits");
+    	firstRun = true;
     }
 }

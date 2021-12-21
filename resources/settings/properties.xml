@@ -15,5 +15,5 @@
     <property id="Altitude" type="number">0</property>
     <property id="BatteryPercentage" type="boolean">true</property>
 	<property id="DateConfig" type="number">2</property>
-	<property id="TemperatureUnits" type="number">0</property>
+	<property id="TemperatureUnits" type="number">2</property>
 </properties>
