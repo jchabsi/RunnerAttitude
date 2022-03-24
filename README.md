@@ -33,6 +33,9 @@ I hope you enjoy it!
 
 
 What’s New
+- Built with latest - CIQ 4.1.1
+- Added new dvices: Fenix 7 series - D2Air x10 - epix gen 2 - Venu 2 Plus 
+
 Version 1.16.5
 - Built with the latest SDK - 4.0.7
 - Weather feature optimizations
