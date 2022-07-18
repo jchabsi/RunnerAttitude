@@ -48,7 +48,7 @@ class RunnerAttitudeApp extends Application.AppBase {
         runnerAttitudeView.getPhraseOnSleepMode();
         Battery.getBatteryPercentage();
         runnerAttitudeView.getDateConfig();
-        runnerAttitudeView.getTemperatureUnits();
+        //runnerAttitudeView.getTemperatureUnits();
         WatchUi.requestUpdate();
     }
     

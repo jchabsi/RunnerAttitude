@@ -128,12 +128,12 @@
         </settingConfig>
     </setting>
     
-    <setting propertyKey="@Properties.TemperatureUnits" title="@Strings.TemperatureUnits">
+    <!--<setting propertyKey="@Properties.TemperatureUnits" title="@Strings.TemperatureUnits">
         <settingConfig type="list">
         	<listEntry value="0">@Strings.Celsius</listEntry>
             <listEntry value="1">@Strings.Fahrenheit</listEntry>
             <listEntry value="2">@Strings.WeatherOff</listEntry>              
         </settingConfig>
-    </setting>    
+    </setting>-->   
 
 </settings>
