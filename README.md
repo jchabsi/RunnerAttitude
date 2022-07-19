@@ -33,12 +33,12 @@ I hope you enjoy it!
 
 
 What’s New
-Version 1.16.7
+Version 1.17.1
 - Built with latest SDK - CIQ 4.4.1
 - New devices supported
 - Weather temporaly disabled
 
-Version 1.16.6
+Version 1.17.0
 - Built with latest - CIQ 4.1.1
 - Added new dvices: Fenix 7 series - D2Air x10 - epix gen 2 - Venu 2 Plus 
 
