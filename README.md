@@ -33,7 +33,7 @@ I hope you enjoy it!
 
 
 What’s New
-Version 1.17.1
+Version 1.17.1 / 1.17.2
 - Built with latest SDK - CIQ 4.4.1
 - New devices supported
 - Weather temporaly disabled
