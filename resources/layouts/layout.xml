@@ -25,6 +25,13 @@
 			font="@Fonts.NormalFont" 
 			justification="Gfx.TEXT_JUSTIFY_LEFT" 
 			color="Gfx.COLOR_BLUE" />
+
+	<label id="StepsIconDisplay"
+			text="0"
+			x="0" y="0"
+			font="@Fonts.IconsFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
+			color="Gfx.COLOR_BLUE" />
 			
     <label id="CaloriesDisplay" 
     		text="0000" 
@@ -32,6 +39,13 @@
     		font="@Fonts.NormalFont" 
     		justification="Gfx.TEXT_JUSTIFY_LEFT" 
     		color="Gfx.COLOR_BLUE" />
+
+	<label id="CaloriesIconDisplay"
+			text="6"
+			x="0" y="0"
+			font="@Fonts.IconsFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
+			color="Gfx.COLOR_BLUE" />
     		
     <label id="NotificationDisplay" 
     		text="000" 
@@ -39,12 +53,40 @@
     		font="@Fonts.NormalFont" 
     		justification="Gfx.TEXT_JUSTIFY_LEFT" 
     		color="Gfx.COLOR_GREEN" />
+
+	<label id="NotificationIconDisplay"
+			text="5"
+			x="center" y="top"
+			font="@Fonts.IconsFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
+			color="Gfx.COLOR_GREEN" />
     		
 	<label id="HeartrateDisplay" 
 			text="000" 
-			x="center" y="top" 
+			x="left" y="top" 
 			font="@Fonts.NormalFont" 
-			justification="Gfx.TEXT_JUSTIFY_CENTER" 
+			justification="Gfx.TEXT_JUSTIFY_LEFT" 
+			color="Gfx.COLOR_GREEN" />
+
+	<label id="HeartIconDisplay"
+			text="3"
+			x="left" y="top"
+			font="@Fonts.IconsFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
+			color="Gfx.COLOR_GREEN" />
+
+	<label id="BluetoothIconDisplay"
+			text="8"
+			x="right" y="top"
+			font="@Fonts.IconsFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
+			color="Gfx.COLOR_GREEN" />
+
+	<label id="BatteryDisplay"
+			text="100%"
+			x="right" y="bottom"
+			font="@Fonts.NormalFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
 			color="Gfx.COLOR_GREEN" />
 	
 	<label id="FloorsClimbedDisplay" 
@@ -52,6 +94,13 @@
 			x="center" y="top" 
 			font="@Fonts.NormalFont" 
 			justification="Gfx.TEXT_JUSTIFY_LEFT" 
+			color="Gfx.COLOR_GREEN" />
+
+	<label id="FloorsIconDisplay"
+			text=";"
+			x="center" y="top"
+			font="@Fonts.IconsFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
 			color="Gfx.COLOR_GREEN" />
 			
 	 <!--<label id="WeatherDisplay" 
@@ -61,9 +110,28 @@
 			justification="Gfx.TEXT_JUSTIFY_LEFT" 
 			color="Gfx.COLOR_GREEN" />-->
 			
+	<label id="TimeHoursDisplay"
+			text="00"
+			x="center" y="center"
+			font="@Fonts.HoursFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
+			color="Gfx.COLOR_BLUE" />
+
+	<label id="TimeMinutesDisplay"
+			text="00"
+			x="center" y="center"
+			font="@Fonts.MinutesFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
+			color="Gfx.COLOR_BLUE" />
+
+	<label id="TimeSecondsDisplay"
+			text="00"
+			x="center" y="center"
+			font="@Fonts.SecondsFont"
+			justification="Gfx.TEXT_JUSTIFY_LEFT"
+			color="Gfx.COLOR_BLUE" />
+
 	<drawable class="ProgressBar" />
-	<drawable class="Battery" />
-	<drawable id="Time" class="LaHora" />
 
 			
 </layout>

@@ -34,7 +34,7 @@ class Phrases {
 		speed3X = 3
 	}
 	var phraseType;
-	hidden var twinklingPhrase = new[15];
+	hidden var twinklingPhrase as Lang.Array = new[15];
 	hidden var twinklingCount;
 	hidden var groupCount;
 	hidden var timeBase;
@@ -51,7 +51,7 @@ class Phrases {
 	}		
 	
 	function getPhrasesList() {
-		phraseType = Application.getApp().getProperty("MotivationalPhrase").toNumber();
+		phraseType = getSettingValue("MotivationalPhrase").toNumber();
 		    	
     	if (phraseType == scrolled) {  	
     		rndMax = numberOfPhrases;
@@ -71,7 +71,7 @@ class Phrases {
 	}
 	
 	function getPhraseFromRez(phraseNo) {
-		var phrase;
+		var phrase = "";
 		if (phraseType == scrolled || phraseType == twinkling) {
 			switch (phraseNo) {
 				case 0:
@@ -312,7 +312,11 @@ class Phrases {
     		prop = "CustomText3";
     	}
     	
-    	var phrase = Application.getApp().getProperty(prop);
+		var value = getSettingValue(prop);
+		var phrase = "";
+		if (value != null) {
+			phrase = value.toString();
+		}
     	
     	if (phrase.length() == 0) {
     		phrase = WatchUi.loadResource(Rez.Strings.InsertYourPhrase);
@@ -338,7 +342,6 @@ class Phrases {
 		}			
 		
 		if (phraseType == fixed) {
-			var tempPhrase = scrolledPhrase;
 			var lng = scrolledPhrase.length();
 			lng = (20 - lng) / 2;			
 			lng = lng.toNumber();
@@ -352,45 +355,48 @@ class Phrases {
 		else if (phraseType == twinkling) {
 			var lng = scrolledPhrase.length();
 			twinklingCount = 0;
+			twinklingPhrase = [];
 			var firstPos = 0;
-			//var currentPos = 1;
-			var wordsCount = 0;
-			var wordsArray = new[50];
+			var wordsArray = [];
 			
 			for (var i = 0; i <= lng; ++i) {
 				var currentChar = scrolledPhrase.substring(i, i+1);
 				if (currentChar.equals(" ") || i == lng){
-					wordsArray[wordsCount] = scrolledPhrase.substring(firstPos, i);
+					wordsArray.add(scrolledPhrase.substring(firstPos, i));
 					++i; //dismiss the white space
-					//System.println(wordsArray[wordsCount]);
-					wordsCount ++;
 					firstPos = i;
 				}			
 			} 
-			if (wordsCount == 1) {
-				twinklingPhrase[0] = wordsArray[0];				
+			if (wordsArray.size() == 1) {
+				twinklingPhrase.add(wordsArray[0].toString());
 			}
 			else
 			{
 				groupCount = 0;
-				var tt = (wordsArray[0].length() + wordsArray[1].length() + wordsArray[2].length());
-				//System.println(tt);
-				for (var i = 0; i < wordsCount; ++i) {
-					if (i < (wordsCount - 2) && (wordsArray[i].length() + wordsArray[i+1].length() + wordsArray[i+2].length()) < 16) {
-						twinklingPhrase[groupCount] = wordsArray[i] + " " + wordsArray[i+1] + " " + wordsArray[i+2];
-						i+=2;					
+				for (var i = 0; i < wordsArray.size(); ++i) {
+					var w0 = wordsArray[i].toString();
+					if (i < (wordsArray.size() - 2)) {
+						var w1 = wordsArray[i+1].toString();
+						var w2 = wordsArray[i+2].toString();
+						if ((w0.length() + w1.length() + w2.length()) < 16) {
+							twinklingPhrase.add(w0 + " " + w1 + " " + w2);
+							++groupCount;
+							i+=2;
+							continue;
+						}
 					}
-					else if (i < (wordsCount - 1) && wordsArray[i].length() + wordsArray[i+1].length() < 16) {
-						twinklingPhrase[groupCount] = wordsArray[i] + " " + wordsArray[i+1];
-						++i;					
+					if (i < (wordsArray.size() - 1)) {
+						var w1b = wordsArray[i+1].toString();
+						if (w0.length() + w1b.length() < 16) {
+							twinklingPhrase.add(w0 + " " + w1b);
+							++i;
+							++groupCount;
+							continue;
+						}
 					}
-					else {
-						twinklingPhrase[groupCount] = wordsArray[i];
-					}
-					//System.println(twinklingPhrase[groupCount]);
-					++groupCount;					
+					twinklingPhrase.add(w0);
+					++groupCount;
 				}
-				
 			}
 		}	
 		//System.print("nro:  " + rndInd);
@@ -427,7 +433,7 @@ class Phrases {
 	    	speedCount --;
 	    	if (speedCount == phraseSpeed) {
 	    	
-		    	scrolledPhrase = twinklingPhrase[twinklingCount];
+		    	scrolledPhrase = twinklingPhrase[twinklingCount].toString();
 		    	if (twinklingCount == groupCount -1) {
 		    		twinklingCount = 0;
 		    	} 
@@ -447,14 +453,21 @@ class Phrases {
     
     function getPhraseRenewalTime()
     {
-    	phraseTime = Application.getApp().getProperty("PhraseRenewalTime").toNumber();
+		phraseTime = getSettingValue("PhraseRenewalTime").toNumber();
     }
 	
 	function getPhraseSpeed()
     {
-    	phraseSpeed = Application.getApp().getProperty("PhraseSpeed").toNumber();
+		phraseSpeed = getSettingValue("PhraseSpeed").toNumber();
     	speedCount = 4;
     }
+
+	private function getSettingValue(key) {
+		if (Application has :Properties) {
+			return Application.Properties.getValue(key);
+		}
+		return Application.getApp().getProperty(key);
+	}
 	function getJustification()
 	{
 		if (phraseType == scrolled){

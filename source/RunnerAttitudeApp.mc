@@ -40,13 +40,13 @@ class RunnerAttitudeApp extends Application.AppBase {
         gPhrase.selectPhrase(); 
         gPhrase.getPhraseRenewalTime(); 
         gPhrase.getPhraseSpeed();
-        LaHora.getSecondsConfig();
-        LaHora.getLeadingZeroConfig();
+        runnerAttitudeView.getSecondsConfig();
+        runnerAttitudeView.getLeadingZeroConfig();
         ProgressBar.getRunnerAvatar();  
         runnerAttitudeView.getDistanceConfig();
         runnerAttitudeView.getAltitudeConfig(); 
         runnerAttitudeView.getPhraseOnSleepMode();
-        Battery.getBatteryPercentage();
+        runnerAttitudeView.getBatteryPercentageConfig();
         runnerAttitudeView.getDateConfig();
         //runnerAttitudeView.getTemperatureUnits();
         WatchUi.requestUpdate();

@@ -1,3 +1,6 @@
 .DS_Store
 .project
 bin/
+source/gen/
+source/internal-mir/
+source/mir/

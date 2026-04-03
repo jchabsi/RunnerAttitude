@@ -1,0 +1,117 @@
+<layout id="WatchFace">
+    <drawable class="Background" />
+
+    <label id="DateDisplay"
+            text="00/00/00"
+            x="109" y="59"
+            font="Gfx.FONT_SMALL"
+            justification="Gfx.TEXT_JUSTIFY_CENTER"
+            color="Gfx.COLOR_BLUE" />
+
+    <label id="StepCountDisplay"
+            text="00000"
+            x="55" y="39"
+            font="@Fonts.NormalFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_BLUE" />
+
+    <label id="StepsIconDisplay"
+            text="0"
+            x="32" y="40"
+            font="@Fonts.IconsFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_BLUE" />
+
+    <label id="CaloriesDisplay"
+            text="0000"
+            x="150" y="168"
+            font="@Fonts.NormalFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_BLUE" />
+
+    <label id="CaloriesIconDisplay"
+            text="6"
+            x="127" y="168"
+            font="@Fonts.IconsFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_BLUE" />
+
+    <label id="NotificationDisplay"
+            text="000"
+            x="177" y="39"
+            font="@Fonts.NormalFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_GREEN" />
+
+    <label id="NotificationIconDisplay"
+            text="5"
+            x="150" y="40"
+            font="@Fonts.IconsFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_GREEN" />
+
+    <label id="HeartrateDisplay"
+            text="000"
+            x="22" y="109"
+            font="@Fonts.NormalFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_GREEN" />
+
+    <label id="HeartIconDisplay"
+            text="3"
+            x="6" y="89"
+            font="@Fonts.IconsFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_GREEN" />
+
+    <label id="BluetoothIconDisplay"
+            text="8"
+            x="185" y="62"
+            font="@Fonts.IconsFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_GREEN" />
+
+    <label id="BatteryDisplay"
+            text="100%"
+            x="182" y="208"
+            font="@Fonts.NormalFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_GREEN" />
+
+    <label id="FloorsClimbedDisplay"
+            text="000"
+            x="86" y="168"
+            font="@Fonts.NormalFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_GREEN" />
+
+    <label id="FloorsIconDisplay"
+            text=";"
+            x="59" y="168"
+            font="@Fonts.IconsFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_GREEN" />
+
+    <label id="TimeHoursDisplay"
+            text="00"
+            x="center" y="95"
+            font="@Fonts.HoursFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_BLUE" />
+
+    <label id="TimeMinutesDisplay"
+            text="00"
+            x="center" y="95"
+            font="@Fonts.MinutesFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_BLUE" />
+
+    <label id="TimeSecondsDisplay"
+            text="00"
+            x="center" y="95"
+            font="@Fonts.SecondsFont"
+            justification="Gfx.TEXT_JUSTIFY_LEFT"
+            color="Gfx.COLOR_BLUE" />
+
+    <drawable class="ProgressBar" />
+</layout>

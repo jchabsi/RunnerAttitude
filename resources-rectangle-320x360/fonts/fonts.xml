@@ -1,0 +1,8 @@
+<fonts>
+	<font id="IconsFont" filename="../../resources-round-390x390/fonts/icons-extra-large.fnt" antialias="true"/>
+	<font id="HoursFont" filename="../../resources-round-280x280/fonts/titillium-web-bold-80-tall.fnt" antialias="true"/>
+	<font id="MinutesFont" filename="../../resources-round-280x280/fonts/titillium-web-light-80-tall.fnt" antialias="true"/>
+	<font id="SecondsFont" filename="../../resources-round-416x416/fonts/titillium-web-semibold-42.fnt" antialias="true" filter="0123456789-"/>
+	<font id="NormalFont" filename="../../resources/fonts/titillium-web-semibold-24.fnt" antialias="true" filter="0123456789+-Goal!.%CF " />
+	<font id="WeatherIconsFont" filename="../../resources-round-280x280/fonts/weather-icons-28.fnt" antialias="true" filter="ABCDEFGHIabcdefgh"/>
+</fonts>

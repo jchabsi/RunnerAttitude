@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "Run App",
+            "request": "launch",
+            "type": "monkeyc",
+            "stopAtLaunch": false,
+            "device": "${command:GetTargetDevice}"
+        }
+    ]
+}

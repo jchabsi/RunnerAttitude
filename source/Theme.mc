@@ -62,12 +62,16 @@ class Theme {
 		
         getTheme();        
 	}			
+
+	private function getSettingValue(key) {
+		if (Application has :Properties) {
+			return Application.Properties.getValue(key);
+		}
+		return Application.getApp().getProperty(key);
+	}
 	
 	function getTheme() {
-		var selectedTheme = Application.getApp().getProperty("ThemeColor").toNumber();
-		if (selectedTheme == null) {
-        	selectedTheme = 0;
-        }
+		var selectedTheme = getSettingValue("ThemeColor").toNumber();
 		
 		switch (selectedTheme) {
 			case RunnerAttitude:

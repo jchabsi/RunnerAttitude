@@ -1,0 +1,5 @@
+<drawables>
+    <bitmap id="RunnerGirl" filename="../../resources-round-390x390/drawables/RunnerGirl.png" />
+    <bitmap id="RunnerBoy" filename="../../resources-round-390x390/drawables/RunnerBoy.png" />
+    <bitmap id="TrophyIcon" filename="../../resources-round-390x390/drawables/trophy.png" />
+</drawables>
