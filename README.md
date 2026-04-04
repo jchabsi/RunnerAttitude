@@ -33,6 +33,11 @@ I hope you enjoy it!
 
 
 What’s New
+Version 1.18.0
+- Built with latest SDK - CIQ 9.1.0
+- All new devices supported! (except 2 color displays)
+- Code refactored and optimized for better performance
+
 Version 1.17.1 / 1.17.2
 - Built with latest SDK - CIQ 4.4.1
 - New devices supported
