@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Release",
+      "type": "shell",
+      "command": "java",
+      "args": [
+        "-Xms1g",
+        "-Dfile.encoding=UTF-8",
+        "-Dapple.awt.UIElement=true",
+        "-jar",
+        "/Users/juanchi/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.1.0-2026-03-09-6a872a80b/bin/monkeybrains.jar",
+        "-o",
+        "bin/RunnerAttitude.prg",
+        "-f",
+        "${workspaceFolder}/monkey.jungle",
+        "-y",
+        "/Users/juanchi/Dev/Connect IQ Dev Key/developer_key",
+        "-d",
+        "d2air_sim",
+        "-w"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Tests",
+      "type": "shell",
+      "command": "java",
+      "args": [
+        "-Xms1g",
+        "-Dfile.encoding=UTF-8",
+        "-Dapple.awt.UIElement=true",
+        "-jar",
+        "/Users/juanchi/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.1.0-2026-03-09-6a872a80b/bin/monkeybrains.jar",
+        "-o",
+        "bin/RunnerAttitude-tests.prg",
+        "-f",
+        "${workspaceFolder}/monkey-tests.jungle",
+        "-y",
+        "/Users/juanchi/Dev/Connect IQ Dev Key/developer_key",
+        "-d",
+        "d2air_sim",
+        "-w"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
