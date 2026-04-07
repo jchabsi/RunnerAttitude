@@ -52,21 +52,21 @@
 
     <label id="HeartrateDisplay"
             text="000"
-            x="36" y="180"
+            x="25" y="204"
             font="@Fonts.NormalFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_GREEN" />
 
     <label id="HeartIconDisplay"
             text="3"
-            x="18" y="147"
+            x="18" y="170"
             font="@Fonts.IconsFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_GREEN" />
 
     <label id="BluetoothIconDisplay"
             text="8"
-            x="305" y="103"
+            x="305" y="107"
             font="@Fonts.IconsFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_GREEN" />
@@ -94,21 +94,21 @@
 
     <label id="TimeHoursDisplay"
             text="00"
-            x="center" y="113"
+            x="center" y="110"
             font="@Fonts.HoursFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_BLUE" />
 
     <label id="TimeMinutesDisplay"
             text="00"
-            x="center" y="113"
+            x="center" y="110"
             font="@Fonts.MinutesFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_BLUE" />
 
     <label id="TimeSecondsDisplay"
             text="00"
-            x="center" y="113"
+            x="center" y="188"
             font="@Fonts.SecondsFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_BLUE" />

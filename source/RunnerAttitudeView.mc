@@ -25,7 +25,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 	hidden var dateBaseY;
 	hidden var bluetoothBaseY;
 	hidden var bluetoothBaseX;
-	hidden var timeBaseY;
+	hidden var secondsBaseXOffset;
+	hidden var secondsBaseYOffset;
 	
 	hidden var iconsChars as Lang.Dictionary<Lang.Symbol, Lang.String> = { :steps => "0",
 							  :floors => "1",
@@ -69,7 +70,8 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
         
         width = dc.getWidth();
         height = dc.getHeight();
-		timeBaseY = null;
+		secondsBaseXOffset = null;
+		secondsBaseYOffset = null;
 		bluetoothBaseX = null;
         
     }
@@ -255,40 +257,11 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		minutesDisplay.setColor(gTheme.mins);
 		secondsDisplay.setColor(gTheme.seconds);
 
-		if (timeBaseY == null) {
-			timeBaseY = hoursDisplay.locY;
+		if (secondsBaseXOffset == null) {
+			secondsBaseXOffset = secondsDisplay.locX - (width / 2.09);
 		}
-		var y = timeBaseY;
-		if (!isRoundScreen() && width == 320 && height == 360) {
-			y -= 20;
-		}
-		if (!isRoundScreen() && width == 448 && height == 486) {
-			y -= 45;
-		}
-		if (isRoundScreen() && width == 416 && height == 416) {
-			y -= 5;
-		}
-		if (isRoundScreen() && width == 390 && height == 390) {
-			y -= 2;
-		}
-		if (isRoundScreen() && width == 360 && height == 360) {
-			y -= 3;
-		}
-		if (isRoundScreen() && width == 280 && height == 280) {
-			y -= 3;
-		}
-		if (isRoundScreen() && width == 260 && height == 260) {
-			y -= 3;
-		}
-		if (width == 218 && height == 218) {
-			y -= 3;
-		}
-		if (width == 240 && height == 240) {
-			y += 2;
-		}
-		if (isRoundScreen() && width == 454 && height == 454) {
-			y -= 4;
-		}
+
+		var y = hoursDisplay.locY;
 		var hoursWidth = dc.getTextWidthInPixels(sHour, hoursFont);
 		var minutesWidth = dc.getTextWidthInPixels(sMin, minutesFont);
 		var totalWidth = hoursWidth + minutesWidth;
@@ -300,57 +273,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		minutesDisplay.locX = x + hoursWidth;
 		minutesDisplay.locY = y;
 
-		var secondsX = x + totalWidth + 4;
-		if (!isRoundScreen() && width == 320 && height == 360) {
-			secondsX += 12;
-		} else if (!isRoundScreen() && width == 448 && height == 486) {
-			secondsX += 14;
-		}
-		if (isRoundScreen() && width == 454 && height == 454) {
-			secondsX += 12;
-		}
-		if (isRoundScreen() && width == 416 && height == 416) {
-			secondsX += 3;
-		}
-		if (isRoundScreen() && width == 390 && height == 390) {
-			secondsX += 2;
-		}
-		if (width == 218 && height == 218) {
-			secondsX -= 2;
-		}
+		var secondsX = x + totalWidth + secondsBaseXOffset;
 		secondsDisplay.locX = secondsX;
-		if (!isRoundScreen() && width == 320 && height == 360) {
-			secondsDisplay.locY = y + (dc.getFontHeight(hoursFont) - dc.getFontHeight(secondsFont)) - 18;
-		} else if (!isRoundScreen() && width == 448 && height == 486) {
-			secondsDisplay.locY = y + (dc.getFontHeight(hoursFont) - dc.getFontHeight(secondsFont)) - 32;
-		} else if (!isRoundScreen() || width <= 240) {
-			secondsDisplay.locY = y + (dc.getFontHeight(hoursFont) - dc.getFontHeight(secondsFont));
-			if (width == 218 && height == 218) {
-				secondsDisplay.locY += 8;
-			}
-			if (width == 240 && height == 240) {
-				secondsDisplay.locY += 6;
-			}
-		} else if (width >= 454) {
-			secondsDisplay.locY = y + (y - dc.getFontHeight(secondsFont) / 1.76) - (height / 35).toLong();
-			if (isRoundScreen() && width == 454 && height == 454) {
-				secondsDisplay.locY += 1;
-			}
-		} else {
-			secondsDisplay.locY = y + (y - dc.getFontHeight(secondsFont) / 1.76);
-			if (isRoundScreen() && width == 416 && height == 416) {
-				secondsDisplay.locY += 3;
-			}
-			if (isRoundScreen() && width == 360 && height == 360) {
-				secondsDisplay.locY += 2;
-			}
-			if (isRoundScreen() && width == 280 && height == 280) {
-				secondsDisplay.locY += 3;
-			}
-			if (isRoundScreen() && width == 260 && height == 260) {
-				secondsDisplay.locY += 3;
-			}
-		}
+		//secondsDisplay.locY = y + secondsBaseYOffset;
 
 		if (renderNow) {
 			hoursDisplay.draw(dc);
@@ -488,26 +413,6 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		}   	
     	
 		var heartrateDisplay = View.findDrawableById("HeartrateDisplay") as WatchUi.Text;
-		var heartIconDisplay = View.findDrawableById("HeartIconDisplay") as WatchUi.Text;
-		var timeHoursDisplay = View.findDrawableById("TimeHoursDisplay") as WatchUi.Text;
-		var timeTopY = getTimeTopY(dc, timeHoursDisplay);
-		var iconWidth = dc.getTextWidthInPixels(iconsChars[:heart] as Lang.String, iconsFont);
-		var valueWidth = dc.getTextWidthInPixels(value, normalFont);
-		var valueYOffset = (width <= 218) ? 5 : 2;
-		if (isRoundScreen() && width >= 454) {
-			valueYOffset += (height / 64).toLong();
-		}
-		if (!isRoundScreen() && width == 320 && height == 360) {
-			valueYOffset += 28;
-		}
-		if (!isRoundScreen() && width == 448 && height == 486) {
-			valueYOffset += 58;
-		}
-		if (isRoundScreen() && width == 416 && height == 416) {
-			valueYOffset -= 2;
-		}
-		heartrateDisplay.locX = heartIconDisplay.locX + ((iconWidth - valueWidth) / 2);
-		heartrateDisplay.locY = timeTopY + dc.getFontHeight(iconsFont) + valueYOffset;
 		heartrateDisplay.setColor(gTheme.metricsText);
 		heartrateDisplay.setText(value);
 		
@@ -540,43 +445,10 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 
 	private function setHeartAndBluetoothDisplay(dc) {
 		var heartIconDisplay = View.findDrawableById("HeartIconDisplay") as WatchUi.Text;
-		var timeHoursDisplay = View.findDrawableById("TimeHoursDisplay") as WatchUi.Text;
-		var timeTopY = getTimeTopY(dc, timeHoursDisplay);
-		var heartY = timeTopY;
-		if (isRoundScreen() && width >= 454) {
-			heartY += (height / 64).toLong();
-		}
-		if (!isRoundScreen() && width == 320 && height == 360) {
-			heartY += 28;
-		}
-		if (!isRoundScreen() && width == 448 && height == 486) {
-			heartY += 58;
-		}
-		if (isRoundScreen() && width == 416 && height == 416) {
-			heartY -= 2;
-		}
-		heartIconDisplay.locY = heartY;
 		heartIconDisplay.setColor(gTheme.iconHeart);
 		heartIconDisplay.setText(iconsChars[:heart] as Lang.String);
 
 		var bluetoothIconDisplay = View.findDrawableById("BluetoothIconDisplay") as WatchUi.Text;
-		if (bluetoothBaseY == null) {
-			bluetoothBaseY = bluetoothIconDisplay.locY;
-		}
-		if (bluetoothBaseX == null) {
-			bluetoothBaseX = bluetoothIconDisplay.locX;
-		}
-		bluetoothIconDisplay.locX = bluetoothBaseX;
-		if (isRoundScreen() && width == 454 && height == 454) {
-			bluetoothIconDisplay.locX -= 7;
-		}
-		bluetoothIconDisplay.locY = bluetoothBaseY + (height / 42).toLong();
-		if (isRoundScreen() && width == 416 && height == 416) {
-			bluetoothIconDisplay.locY -= 2;
-		}
-		if (isRoundScreen() && width == 454 && height == 454) {
-			bluetoothIconDisplay.locY -= 4;
-		}
 		bluetoothIconDisplay.setColor(setBTIconColor());
 		bluetoothIconDisplay.setText("8");
 	}
@@ -608,7 +480,7 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 
 		var tipWidth = 5;
 		var tipHeight = (bodyHeight / 2).toLong();
-		var rightMargin = 4;
+		var rightMargin = width / 55;
 
 		var x = (width - bodyWidth - tipWidth - rightMargin).toLong();
 		if (width <= 218) {
@@ -632,6 +504,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		}
 		if (width == 218 && height == 218) {
 			y += 7;
+		}
+		if (width == 215 && height == 180) {
+			y += 9;
 		}
 		if (width == 240 && height == 240) {
 			y += 4;

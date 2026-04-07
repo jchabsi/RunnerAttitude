@@ -52,14 +52,14 @@
 
     <label id="HeartrateDisplay"
             text="000"
-            x="22" y="109"
+            x="10" y="118"
             font="@Fonts.NormalFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_GREEN" />
 
     <label id="HeartIconDisplay"
             text="3"
-            x="6" y="89"
+            x="6" y="95"
             font="@Fonts.IconsFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_GREEN" />
@@ -94,21 +94,21 @@
 
     <label id="TimeHoursDisplay"
             text="00"
-            x="center" y="95"
+            x="center" y="92"
             font="@Fonts.HoursFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_BLUE" />
 
     <label id="TimeMinutesDisplay"
             text="00"
-            x="center" y="95"
+            x="center" y="92"
             font="@Fonts.MinutesFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_BLUE" />
 
     <label id="TimeSecondsDisplay"
             text="00"
-            x="center" y="95"
+            x="107" y="113"
             font="@Fonts.SecondsFont"
             justification="Gfx.TEXT_JUSTIFY_LEFT"
             color="Gfx.COLOR_BLUE" />
