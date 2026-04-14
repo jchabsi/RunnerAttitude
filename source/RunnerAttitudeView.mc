@@ -486,6 +486,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 		if (width <= 218) {
 			x += 5;
 		}
+		if (width <= 208) {
+			x += 2;
+		}
 		if (isRoundScreen() && width == 454 && height == 454) {
 			x -= 7;
 		}
@@ -503,6 +506,9 @@ class RunnerAttitudeView extends WatchUi.WatchFace {
 			y -= 4;
 		}
 		if (width == 218 && height == 218) {
+			y += 7;
+		}
+		if (width == 208 && height == 208) {
 			y += 7;
 		}
 		if (width == 215 && height == 180) {
