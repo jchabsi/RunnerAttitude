@@ -33,6 +33,14 @@ I hope you enjoy it!
 
 
 What’s New
+
+Version 1.19.0
+- New awesome Color Themes for AMOLED Displays!
+- New laguages: French and Portuguese
+- Fixed Screen resolution issue for 208x208 devices like FR 55
+- Performance optimizations
+- Raised API Level to 2.4 (Legacy devices like fenix 3 family are no longer supported due hardware linitaions)
+
 Version 1.18.0
 - Built with latest SDK - CIQ 9.1.0
 - All new devices supported! (except 2 color displays)
