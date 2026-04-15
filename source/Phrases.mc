@@ -33,12 +33,22 @@ class Phrases {
 		speed2X = 2,
 		speed3X = 3
 	}
+	hidden enum {
+		langAuto,
+		langEnglish,
+		langSpanish,
+		langItalian,
+		langFrench,
+		langPortuguese
+	}
 	var phraseType;
+	hidden var phraseLanguage = langAuto;
 	hidden var twinklingPhrase as Lang.Array = new[15];
 	hidden var twinklingCount;
 	hidden var groupCount;
 	hidden var timeBase;
 	hidden var speedCount = 4;
+	hidden var lastLocaleProbe;
 	
 	
 	function initialize() {		
@@ -47,11 +57,22 @@ class Phrases {
         getPhraseRenewalTime(); 
         getPhraseSpeed();
         timeBase = new Time.Moment(Time.now().value()); 
+		lastLocaleProbe = WatchUi.loadResource(Rez.Strings.Phrase1);
         
 	}		
+
+	function refreshPhraseIfLanguageChanged() {
+		var localeProbe = WatchUi.loadResource(Rez.Strings.Phrase1);
+		if (localeProbe != lastLocaleProbe) {
+			lastLocaleProbe = localeProbe;
+			getPhrasesList();
+			selectPhrase();
+		}
+	}
 	
 	function getPhrasesList() {
 		phraseType = getSettingValue("MotivationalPhrase").toNumber();
+		getPhraseLanguage();
 		    	
     	if (phraseType == scrolled) {  	
     		rndMax = numberOfPhrases;
@@ -69,9 +90,35 @@ class Phrases {
 	    	rndMax = 1;	    	
 	    }
 	}
+
+	function getPhraseLanguage() {
+		var value = getSettingValue("PhraseLanguage");
+		if (value != null) {
+			phraseLanguage = value.toNumber();
+		} else {
+			phraseLanguage = langAuto;
+		}
+	}
 	
 	function getPhraseFromRez(phraseNo) {
 		var phrase = "";
+		if (phraseLanguage != langAuto) {
+			var phraseList;
+			if (phraseType == scrolled || phraseType == twinkling) {
+				phraseList = PhrasesTranslations.getPhraseList(phraseLanguage);
+			} else {
+				phraseList = PhrasesTranslations.getFixedList(phraseLanguage);
+			}
+
+			if (phraseList != null && phraseNo >= 0 && phraseNo < phraseList.size()) {
+				phrase = phraseList[phraseNo].toString();
+			}
+			if (phraseType == scrolled) {
+				phrase = sp + phrase + sl;
+			}
+			return phrase;
+		}
+
 		if (phraseType == scrolled || phraseType == twinkling) {
 			switch (phraseNo) {
 				case 0:
@@ -319,7 +366,16 @@ class Phrases {
 		}
     	
     	if (phrase.length() == 0) {
-    		phrase = WatchUi.loadResource(Rez.Strings.InsertYourPhrase);
+			if (phraseLanguage == langAuto) {
+				phrase = WatchUi.loadResource(Rez.Strings.InsertYourPhrase);
+			} else {
+				var insertText = PhrasesTranslations.getInsertText(phraseLanguage);
+				if (insertText != null) {
+					phrase = insertText;
+				} else {
+					phrase = WatchUi.loadResource(Rez.Strings.InsertYourPhrase);
+				}
+			}
     	}
     	return phrase;
 	}
@@ -405,6 +461,9 @@ class Phrases {
     }
     
     function setMotivationalPhrase() {
+		if (phraseLanguage == langAuto) {
+			refreshPhraseIfLanguageChanged();
+		}
     	//Changes the phrase every certain seconds according to phraseTime value 
     	var timeNow = new Time.Moment(Time.now().value());
 		var timeInc = timeNow.compare(timeBase);

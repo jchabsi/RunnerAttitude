@@ -1,0 +1,203 @@
+<strings>
+
+    <string id="AppName">RunnerAttitude</string>
+
+	<string id="ThemeColorTitle">Theme de Couleurs</string>
+
+    <string id="RunnerAttitude">Runner Attitude</string>
+    <string id="NightRunner">Coureur Nocturne</string>
+    <string id="Twilight">Crepuscule</string>
+    <string id="MountainTrails">Sentiers de Montagne</string>
+    <string id="CityRunner">Coureur Urbain</string>
+    <string id="TrackTraining">Entrainement sur Piste</string>
+    <string id="RunningGirl">Coureuse</string>
+    <string id="ShinyDay">Journee Radieuse</string>
+    <string id="SnowRun">Course sur Neige</string>
+    <string id="ClassicRunner">Coureur Classique</string>
+    <string id="ForestTrain">Entrainement en Foret</string>
+    <string id="SunsetRun">Course au Coucher du Soleil</string>
+    <string id="StarryNightRun">Course sous les Etoiles</string>
+    <string id="Ultraviolet">Ultraviolet</string>
+    <string id="FinishLine">Ligne d'Arrivee</string>
+    <string id="QuirkyRunner">Coureur Original</string>
+    <string id="RunningIsColor">La Course, c'est la Couleur!</string>
+    <string id="RunningIsColor2">La Course, c'est la Couleur 2!</string>
+    <string id="RunningIsColor3">La Course, c'est la Couleur 3!</string>
+    <string id="MuddySneakers">Baskets Boueuses</string>
+    <string id="PurpleSky">Ciel Violet</string>
+    <string id="NorthernLights">Aurores Boreales</string>
+    <string id="WatchBacklight">Vieille Montre Retroeclairee</string>
+    <string id="FluoTrainingTShirt">T-shirt d'Entrainement Fluorescent</string>
+    <string id="LilacSneakers">Ses Baskets Lilas</string>
+    <string id="AmberDisplay">Affichage Ambre de Ligne d'Arrivee</string>
+    <string id="FinisherMedal">Medaille de Finisher</string>
+    <string id="GoldenTrophy">Trophee Dore</string>
+	<string id="ElegantGray">Gris Elegant (AMOLED)</string>
+	<string id="ElegantBlue">Bleu Elegant (AMOLED)</string>
+	<string id="ElegantRuby">Rubis Elegant (AMOLED)</string>
+	<string id="ElegantEmerald">Emeraude Elegante (AMOLED)</string>
+	<string id="CopperNight">Nuit Cuivree (AMOLED)</string>
+	<string id="IcyWhite">Blanc Glace (AMOLED)</string>
+	<string id="RetroGreenPhosphor">Phosphore Vert Retro (AMOLED)</string>
+	<string id="SunsetOrange">Orange Coucher de Soleil (AMOLED)</string>
+	<string id="LapisVelvetEvening">Soiree Velours Lapis (AMOLED)</string>
+	<string id="UrbanNocturne">Nocturne Urbain (AMOLED)</string>
+	<string id="YachtClub">Yacht Club (AMOLED)</string>
+	<string id="Neptune">Neptune (AMOLED)</string>
+	<string id="RoyalGlimmer">Eclat Royal (AMOLED)</string>
+	<string id="Inked">Encre (AMOLED)</string>
+	<string id="TropicalHeat">Chaleur Tropicale (AMOLED)</string>
+	<string id="HibiscusAura">Aura Hibiscus (AMOLED)</string>
+	<string id="CelestialBurst">Eclat Celeste (AMOLED)</string>
+	<string id="NeonLagoon">Lagon Neon (AMOLED)</string>
+	<string id="SeashellGarnetAfternoon">Apres-midi Coquillage et Grenat (AMOLED)</string>
+
+
+    <string id="MotivationalPhrase">Type de Phrase Motivante</string>
+	<string id="PhraseLanguage">Langue de la phrase</string>
+	<string id="PhraseLangAuto">Auto (langue de l'appareil)</string>
+	<string id="PhraseLangEnglish">Anglais</string>
+	<string id="PhraseLangSpanish">Espagnol</string>
+	<string id="PhraseLangItalian">Italien</string>
+	<string id="PhraseLangFrench">Francais</string>
+	<string id="PhraseLangPortuguese">Portugais</string>
+
+    <string id="Scrolling">Phrase Defilante</string>
+    <string id="Fixed">Petite Phrase Fixe</string>
+    <string id="Twinkling">Phrase Clignotante</string>
+    <string id="Personalized">Phrase Personnalisee 1</string>
+    <string id="Personalized2">Phrase Personnalisee 2</string>
+    <string id="Personalized3">Phrase Personnalisee 3</string>
+
+    <string id="CustomText">Si vous avez selectionne 'Phrase Personnalisee 1', saisissez-la ici :</string>
+    <string id="CustomText2">Si vous avez selectionne 'Phrase Personnalisee 2', saisissez-la ici :</string>
+    <string id="CustomText3">Si vous avez selectionne 'Phrase Personnalisee 3', saisissez-la ici :</string>
+    <string id="InsertYourPhrase">Vous devez saisir ici une phrase ou un mot a afficher</string>
+
+
+    <string id="PhraseRenewalTime">Frequence de Renouvellement de la Phrase</string>
+
+    <string id="OneMin">1 minute</string>
+    <string id="FiveMins">5 Minutes</string>
+    <string id="FifteenMins">15 Minutes</string>
+    <string id="HalfHour">30 Minutes</string>
+    <string id="OneHour">60 Minutes</string>
+
+
+	<string id="Phrase1">Merci d'utiliser le cadran Runner Attitude. Allez courir !</string>
+	<string id="Phrase2">Courir, c'est trouver sa paix interieure, comme dans une vie bien vecue.</string>
+	<string id="Phrase3">Cours pour ajouter de la vie a tes journees.</string>
+	<string id="Phrase4">Choisis la course comme therapie.</string>
+	<string id="Phrase5">N'attends rien de ta course, et tu recevras plus que tu ne l'imagines.</string>
+	<string id="Phrase6">Ce qui compte, c'est d'etre coureur, pas ta vitesse ni la distance parcourue.</string>
+	<string id="Phrase7">Gagner ne veut pas toujours dire finir premier; cela veut dire donner le meilleur de soi.</string>
+	<string id="Phrase8">Tu dois faire ce que tu crois impossible.</string>
+	<string id="Phrase9">Si cela ne te met pas au defi, cela ne te changera pas.</string>
+	<string id="Phrase10">L'homme qui deplace une montagne commence par de petites pierres.</string>
+	<string id="Phrase11">Quelqu'un de plus occupe que toi est en train de courir maintenant.</string>
+	<string id="Phrase12">N'aie pas peur d'avancer lentement... crains de rester immobile.</string>
+	<string id="Phrase13">Une heure de course, c'est 4 % de ta journee. Pas d'excuses.</string>
+	<string id="Phrase14">Une course peut changer ta journee. Beaucoup de courses peuvent changer ta vie.</string>
+	<string id="Phrase15">Cours les deux premiers tiers avec la tete et le dernier tiers avec le coeur.</string>
+	<string id="Phrase16">Inspire la force et expire la faiblesse.</string>
+	<string id="Phrase17">Fixe des objectifs et depasse-toi.</string>
+	<string id="Phrase18">Ne remets pas a demain, aujourd'hui est ton jour.</string>
+	<string id="Phrase19">Ton esprit abandonnera mille fois avant ton corps. Ressens la peur et fais-le quand meme !</string>
+	<string id="Phrase20">Regarde dans le miroir. Voila ton adversaire.</string>
+	<string id="Phrase21">Aucun type de corps ne garantit le succes. Accepte ton corps et deviens la meilleure version de toi.</string>
+	<string id="Phrase22">Chaque jour est un bon jour pour courir. N'est-ce pas ?</string>
+	<string id="Phrase23">N'abandonne jamais, continue d'essayer et de progresser.</string>
+	<string id="Phrase24">Ne te fixe pas de limites, explore-les !</string>
+	<string id="Phrase25">Rivalise avec toi-meme et admire les autres.</string>
+	<string id="Phrase26">Cours et libere ton esprit.</string>
+
+	<string id="Phrase27">Celebre tes petites victoires.</string>
+	<string id="Phrase28">Tu peux subir la douleur de la discipline ou celle du regret. Le choix t'appartient.</string>
+	<string id="Phrase29">L'impossible n'est qu'une opinion.</string>
+	<string id="Phrase30">"Ta passion attend que ton courage la rejoigne</string>
+	<string id="Phrase31">La magie, c'est croire en soi. Si tu y parviens, tout devient possible.</string>
+	<string id="Phrase32">Ne te laisse pas guider par tes peurs. Laisse tes reves guider ton coeur.</string>
+	<string id="Phrase33">Travaille dur en silence, laisse ton succes faire le bruit.</string>
+	<string id="Phrase34">Ne limite pas tes defis. Defie tes limites.</string>
+	<string id="Phrase35">Fais un effort de plus. Ce chemin n'est jamais encombre.</string>
+	<string id="Phrase36">On peut accomplir tout ce qu'on veut si l'on persiste assez longtemps.</string>
+	<string id="Phrase37">Tu es bien plus fort que tes excuses.</string>
+	<string id="Phrase38">Ne raconte pas tes plans a tout le monde, montre plutot tes resultats.</string>
+	<string id="Phrase39">Fais ce que tu peux, avec ce que tu as, la ou tu es.</string>
+	<string id="Phrase40">Si tu peux le rever, tu peux le faire.</string>
+	<string id="Phrase41">Tu peux faire tout ce que tu decides.</string>
+	<string id="Phrase42">Tu ne sauras jamais de quoi tu es capable tant que tu n'essaies pas.</string>
+	<string id="Phrase43">Un gagnant est un reveur qui n'abandonne jamais.</string>
+	<string id="Phrase44">La question n'est pas qui me laissera faire, mais qui pourra m'arreter.</string>
+	<string id="Phrase45">Ne regarde pas l'horloge; fais comme elle. Continue.</string>
+	<string id="Phrase46">Les mots inspirent, les pensees stimulent, mais seule l'action te rapproche vraiment de tes reves.</string>
+	<string id="Phrase47">N'arrete pas quand tu es fatigue. Arrete quand c'est termine.</string>
+	<string id="Phrase48">La motivation te lance, mais c'est l'habitude qui te fait continuer.</string>
+	<string id="Phrase49">Ce ne sera peut-etre pas facile, mais cela en vaudra la peine.</string>
+	<string id="Phrase50">Tu ne seras pas toujours motive, alors apprends a etre discipline.</string>
+
+
+	<string id="Fixed1">Runner Attitude</string>
+	<string id="Fixed2">Cours souvent</string>
+	<string id="Fixed3">Sois perseverant</string>
+	<string id="Fixed4">Dors bien</string>
+	<string id="Fixed5">Mange bien</string>
+	<string id="Fixed6">Vie saine</string>
+	<string id="Fixed7">Sois heureux</string>
+	<string id="Fixed8">Paix interieure</string>
+	<string id="Fixed9">Therapie par la course</string>
+	<string id="Fixed10">Ajoute des kilometres</string>
+	<string id="Fixed11">Amelioration de soi</string>
+	<string id="Fixed12">Reste positif</string>
+	<string id="Fixed13">Cours avec des amis</string>
+	<string id="Fixed14">Depasse-toi</string>
+	<string id="Fixed15">Va plus loin</string>
+	<string id="Fixed16">Brise les limites</string>
+	<string id="Fixed17">Profite de tes courses</string>
+	<string id="Fixed18">N'abandonne jamais</string>
+	<string id="Fixed19">Trouve des defis</string>
+	<string id="Fixed20">Reste equilibre</string>
+	<string id="Fixed21">Fixe des objectifs</string>
+	<string id="Fixed22">Reste concentre</string>
+	<string id="Fixed23">Profite d'aujourd'hui</string>
+
+	<string id="ShowSeconds">Afficher les secondes</string>
+	<string id="ShowLeadingZero">Afficher le zero initial</string>
+	<string id="PhraseOnSleepMode">Permettre a la phrase de continuer en mode basse consommation</string>
+
+	<string id="RunnerAvatar">Choisir l'avatar du coureur de progression</string>
+	<string id="GenderSettings">Genre selon les reglages de la montre</string>
+	<string id="RunnerGirl">Avatar fille</string>
+	<string id="RunnerBoy">Avatar garcon</string>
+	<string id="RunnerDisabled">Masquer l'avatar du coureur</string>
+
+	<string id="DistanceConfig">Afficher la distance totale en</string>
+	<string id="DistanceInSteps">Pas</string>
+	<string id="DistanceInKilometers">Kilometres</string>
+	<string id="DistanceInMiles">Miles</string>
+	<string id="DistanceInStepsKilometers">Pas et kilometres</string>
+	<string id="DistanceInStepsMiles">Pas et miles</string>
+
+
+	<string id="Altitude">Afficher le denivele positif total en :</string>
+	<string id="FloorsClimbed">Etages montes</string>
+	<string id="MetersClimbed">Metres verticaux</string>
+
+	<string id="PhraseSpeed">Vitesse de la phrase</string>
+	<string id="Speed1X">1X</string>
+	<string id="Speed2X">2X</string>
+	<string id="Speed3X">3X</string>
+
+	<string id="BatteryPercentage">Afficher le pourcentage de batterie</string>
+
+	<string id="DateConfig">Format de date</string>
+	<string id="DateConfig1">juil. 20, 2021</string>
+	<string id="DateConfig2">20 juil., 2021</string>
+	<string id="DateConfig3">mar. 20 juil.</string>
+	<string id="DateConfig4">juil. 20 mar.</string>
+
+	<string id="TemperatureUnits">Unites de Temperature</string>
+	<string id="Celsius">Celsius</string>
+	<string id="Fahrenheit">Fahrenheit</string>
+	<string id="WeatherOff">Meteo desactivee</string>
+</strings>

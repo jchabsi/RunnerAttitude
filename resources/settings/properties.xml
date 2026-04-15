@@ -2,6 +2,7 @@
 
     <property id="ThemeColor" type="number">0</property>
     <property id="MotivationalPhrase" type="number">0</property>
+    <property id="PhraseLanguage" type="number">0</property>
     <property id="CustomText" type="string"></property>
     <property id="CustomText2" type="string"></property>
     <property id="CustomText3" type="string"></property>

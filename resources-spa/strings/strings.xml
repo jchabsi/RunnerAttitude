@@ -54,6 +54,13 @@
         
     
     <string id="MotivationalPhrase">Tipo de Frase Motivacional</string>
+	<string id="PhraseLanguage">Idioma de la frase</string>
+	<string id="PhraseLangAuto">Automatico (idioma del dispositivo)</string>
+	<string id="PhraseLangEnglish">Ingles</string>
+	<string id="PhraseLangSpanish">Espanol</string>
+	<string id="PhraseLangItalian">Italiano</string>
+	<string id="PhraseLangFrench">Frances</string>
+	<string id="PhraseLangPortuguese">Portugues</string>
     
     <string id="Scrolling">Frase con desplazamiento</string>
     <string id="Fixed">Pequeña frase fija</string>

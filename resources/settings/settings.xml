@@ -64,6 +64,17 @@
             
         </settingConfig>
     </setting>
+
+    <setting propertyKey="@Properties.PhraseLanguage" title="@Strings.PhraseLanguage">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.PhraseLangAuto</listEntry>
+            <listEntry value="1">@Strings.PhraseLangEnglish</listEntry>
+            <listEntry value="2">@Strings.PhraseLangSpanish</listEntry>
+            <listEntry value="3">@Strings.PhraseLangItalian</listEntry>
+            <listEntry value="4">@Strings.PhraseLangFrench</listEntry>
+            <listEntry value="5">@Strings.PhraseLangPortuguese</listEntry>
+        </settingConfig>
+    </setting>
     
     <setting propertyKey="@Properties.CustomText" title="@Strings.CustomText">
         <settingConfig type="alphaNumeric" maxLength="150"/>

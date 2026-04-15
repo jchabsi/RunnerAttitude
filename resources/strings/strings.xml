@@ -54,6 +54,13 @@
          
     
     <string id="MotivationalPhrase">Motivational phrase type</string>
+	<string id="PhraseLanguage">Phrase language</string>
+	<string id="PhraseLangAuto">Auto (device language)</string>
+	<string id="PhraseLangEnglish">English</string>
+	<string id="PhraseLangSpanish">Spanish</string>
+	<string id="PhraseLangItalian">Italian</string>
+	<string id="PhraseLangFrench">French</string>
+	<string id="PhraseLangPortuguese">Portuguese</string>
         
     <string id="Scrolling">Phrase with scrolling</string>
     <string id="Fixed">Small fixed phrase</string>
