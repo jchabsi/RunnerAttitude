@@ -463,10 +463,7 @@ class Phrases {
     }
 
 	private function getSettingValue(key) {
-		if (Application has :Properties) {
-			return Application.Properties.getValue(key);
-		}
-		return Application.getApp().getProperty(key);
+		return Application.Properties.getValue(key);
 	}
 	function getJustification()
 	{

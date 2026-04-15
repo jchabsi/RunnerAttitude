@@ -30,9 +30,27 @@
     <string id="FluoTrainingTShirt">T-shirt da allenamento fluorescente</string>
     <string id="LilacSneakers">Sneakers lilla</string>
     <string id="AmberDisplay">Display giallo</string>
-    <string id="GreenDisplay">Display verde</string>
     <string id="FinisherMedal">Vincitore di medaglia</string>
     <string id="GoldenTrophy">Trofeo d'Oro</string>
+	<string id="ElegantGray">Grigio Elegante (AMOLED)</string>
+	<string id="ElegantBlue">Blu Elegante (AMOLED)</string>
+	<string id="ElegantRuby">Ruby Elegante (AMOLED)</string>
+	<string id="ElegantEmerald">Smeraldo Elegante (AMOLED)</string>
+	<string id="CopperNight">Notte di Rame (AMOLED)</string>
+	<string id="IcyWhite">Bianco Ghiaccio (AMOLED)</string>
+	<string id="RetroGreenPhosphor">Fosforo Verde Retrò (AMOLED)</string>
+	<string id="SunsetOrange">Arancione Tramonto (AMOLED)</string>
+	<string id="LapisVelvetEvening">Sera Velluto Lapis (AMOLED)</string>
+	<string id="UrbanNocturne">Notturno Urbano (AMOLED)</string>
+	<string id="YachtClub">Yacht Club (AMOLED)</string>
+	<string id="Neptune">Nettuno (AMOLED)</string>
+	<string id="RoyalGlimmer">Bagliore Reale (AMOLED)</string>
+	<string id="Inked">Inchiostrato (AMOLED)</string>
+	<string id="TropicalHeat">Calore Tropicale (AMOLED)</string>
+	<string id="HibiscusAura">Aura Ibisco (AMOLED)</string>
+	<string id="CelestialBurst">Esplosione Celeste (AMOLED)</string>
+	<string id="NeonLagoon">Laguna Neon (AMOLED)</string>
+	<string id="SeashellGarnetAfternoon">Conchiglia e Granato Pomeriggio (AMOLED)</string>
      
     
     <string id="MotivationalPhrase">Tipo di frasi motivazionali</string>

@@ -30,9 +30,27 @@
     <string id="FluoTrainingTShirt">Flourescent Training T-shirt</string> 
     <string id="LilacSneakers">Her lilac running sneakers</string> 
     <string id="AmberDisplay">Finish line Amber display</string> 
-    <string id="GreenDisplay">Finish line Green Display</string> 
     <string id="FinisherMedal">Finisher Medal</string>
     <string id="GoldenTrophy">Golden Trophy</string>
+	<string id="ElegantGray">Elegant Gray (AMOLED)</string>
+	<string id="ElegantBlue">Elegant Blue (AMOLED)</string>
+	<string id="ElegantRuby">Elegant Ruby (AMOLED)</string>
+	<string id="ElegantEmerald">Elegant Emerald (AMOLED)</string>
+	<string id="CopperNight">Copper Night (AMOLED)</string>
+	<string id="IcyWhite">Icy White (AMOLED)</string>
+	<string id="RetroGreenPhosphor">Retro Green Phosphor (AMOLED)</string>
+	<string id="SunsetOrange">Sunset Orange (AMOLED)</string>
+	<string id="LapisVelvetEvening">Lapis Velvet Evening (AMOLED)</string>
+	<string id="UrbanNocturne">Urban Nocturne (AMOLED)</string>
+	<string id="YachtClub">Yacht Club (AMOLED)</string>
+	<string id="Neptune">Neptune (AMOLED)</string>
+	<string id="RoyalGlimmer">Royal Glimmer (AMOLED)</string>
+	<string id="Inked">Inked (AMOLED)</string>
+	<string id="TropicalHeat">Tropical Heat (AMOLED)</string>
+	<string id="HibiscusAura">Hibiscus Aura (AMOLED)</string>
+	<string id="CelestialBurst">Celestial Burst (AMOLED)</string>
+	<string id="NeonLagoon">Neon Lagoon (AMOLED)</string>
+	<string id="SeashellGarnetAfternoon">Seashell Garnet Afternoon (AMOLED)</string>
          
     
     <string id="MotivationalPhrase">Motivational phrase type</string>
