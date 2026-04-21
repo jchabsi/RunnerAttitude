@@ -56,14 +56,14 @@ class Phrases {
         getPhrasesList();   
         getPhraseRenewalTime(); 
         getPhraseSpeed();
-        timeBase = new Time.Moment(Time.now().value()); 
+		timeBase = System.getTimer();
 		lastLocaleProbe = WatchUi.loadResource(Rez.Strings.Phrase1);
         
 	}		
 
 	function refreshPhraseIfLanguageChanged() {
 		var localeProbe = WatchUi.loadResource(Rez.Strings.Phrase1);
-		if (localeProbe != lastLocaleProbe) {
+		if (lastLocaleProbe == null || !localeProbe.equals(lastLocaleProbe)) {
 			lastLocaleProbe = localeProbe;
 			getPhrasesList();
 			selectPhrase();
@@ -461,17 +461,30 @@ class Phrases {
     }
     
     function setMotivationalPhrase() {
+		var previousPhraseLanguage = phraseLanguage;
+		getPhraseLanguage();
+		if (phraseLanguage != previousPhraseLanguage) {
+			getPhrasesList();
+			selectPhrase();
+			timeBase = System.getTimer();
+		}
+
 		if (phraseLanguage == langAuto) {
 			refreshPhraseIfLanguageChanged();
 		}
     	//Changes the phrase every certain seconds according to phraseTime value 
-    	var timeNow = new Time.Moment(Time.now().value());
-		var timeInc = timeNow.compare(timeBase);
+		var timeNow = System.getTimer();
+		var timeInc = timeNow - timeBase;
+		if (timeInc < 0) {
+			timeBase = timeNow;
+			timeInc = 0;
+		}
+		var renewalIntervalMs = phraseTime * 1000;
 		    	
-    	if (timeInc > phraseTime)
+	    if (timeInc >= renewalIntervalMs)
     	{
     		selectPhrase();
-    		timeBase = new Time.Moment(Time.now().value());
+	    	timeBase = timeNow;
     	}
     	    	
     	if (phraseType == scrolled) { 

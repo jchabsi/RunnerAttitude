@@ -34,6 +34,9 @@ I hope you enjoy it!
 
 What’s New
 
+Version 1.19.1
+- Bug fixes and theme tweaks
+
 Version 1.19.0
 - New awesome Color Themes for AMOLED Displays!
 - New laguages: French and Portuguese

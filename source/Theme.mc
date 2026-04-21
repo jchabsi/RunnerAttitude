@@ -481,7 +481,7 @@ class Theme {
 				metricsText = 0xD1CEC8;
 				setColor4BTIcon(0x4D5056, 0xA6B3C3);
 				setColor4BatteryIcon(0x9AB59A, 0xC9A46A, 0xB56E6E, metricsText);
-				background = 0x1A1D20;
+				background = 0x2A2D30;
 				setTrackLine(0x61666D, 0xA9B0B8, background);
 				break;
 
@@ -498,7 +498,7 @@ class Theme {
 				metricsText = 0xCCD7E8;
 				setColor4BTIcon(0x3D4B63, 0x8AA9D8);
 				setColor4BatteryIcon(0x86AE97, 0xC3A36E, 0xB87272, metricsText);
-				background = 0x060B14;
+				background = 0x161B24;
 				setTrackLine(0x425675, 0x94AED3, background);
 				break;
 
@@ -515,7 +515,7 @@ class Theme {
 				metricsText = 0xE6B9C9;
 				setColor4BTIcon(0x653D4E, 0xD7789E);
 				setColor4BatteryIcon(0x8FAC92, 0xD3A15C, 0xD6526E, metricsText);
-				background = 0x14060C;
+				background = 0x24161C;
 				setTrackLine(0x7C324D, 0xD87A9D, background);
 				break;
 
@@ -532,7 +532,7 @@ class Theme {
 				metricsText = 0xC6E6D8;
 				setColor4BTIcon(0x36584C, 0x7FC9AF);
 				setColor4BatteryIcon(0x84B495, 0xC8A56D, 0xB86D73, metricsText);
-				background = 0x04110C;
+				background = 0x14211C;
 				setTrackLine(0x3D6B5B, 0x8ED4BA, background);
 				break;
 
@@ -549,7 +549,7 @@ class Theme {
 				metricsText = 0xD8C2B4;
 				setColor4BTIcon(0x4A5157, 0x8FB4C8);
 				setColor4BatteryIcon(0x8FB08E, 0xCC9B58, 0xBA6C64, metricsText);
-				background = 0x0C0E11;
+				background = 0x1C1E21;
 				setTrackLine(0x5B4B43, 0xC58A56, background);
 				break;
 
@@ -583,7 +583,7 @@ class Theme {
 				metricsText = 0xB8FFAB;
 				setColor4BTIcon(0x365038, 0x99FF91);
 				setColor4BatteryIcon(0x7DE574, 0xC1D660, 0xB98A5D, metricsText);
-				background = 0x010601;
+				background = 0x111611;
 				setTrackLine(0x214821, 0x99FF91, background);
 				break;
 
@@ -600,7 +600,7 @@ class Theme {
 				metricsText = 0xFFD0AE;
 				setColor4BTIcon(0x674E4B, 0xFFA46E);
 				setColor4BatteryIcon(0x98B583, 0xD9A358, 0xCB666A, metricsText);
-				background = 0x160802;
+				background = 0x261812;
 				setTrackLine(0x7A4333, 0xFF9C52, background);
 				break;
 
@@ -617,7 +617,7 @@ class Theme {
 				metricsText = 0xCFCBDE;
 				setColor4BTIcon(0x4C4A66, 0x9CB2D9);
 				setColor4BatteryIcon(0x84AA95, 0xC9A56B, 0xB8717F, metricsText);
-				background = 0x0A0C1A;
+				background = 0x1A1C2A;
 				setTrackLine(0x3A3B61, 0x9B8FC8, background);
 				break;
 
@@ -634,7 +634,7 @@ class Theme {
 				metricsText = 0xCAD4D9;
 				setColor4BTIcon(0x4F5861, 0x9FB9C8);
 				setColor4BatteryIcon(0x89A88D, 0xBFAB63, 0xB47777, metricsText);
-				background = 0x06080B;
+				background = 0x16181B;
 				setTrackLine(0x2F343A, 0xA4B5BE, background);
 				break;
 
@@ -651,7 +651,7 @@ class Theme {
 				metricsText = 0xCDD5DC;
 				setColor4BTIcon(0x4A5562, 0x93B2CE);
 				setColor4BatteryIcon(0x88A790, 0xC0A464, 0xB97777, metricsText);
-				background = 0x081119;
+				background = 0x182129;
 				setTrackLine(0x30485A, 0x8FAFC9, background);
 				break;
 
@@ -668,7 +668,7 @@ class Theme {
 				metricsText = 0xC0E1F0;
 				setColor4BTIcon(0x3E6172, 0x7CC7DF);
 				setColor4BatteryIcon(0x80AE93, 0xC9A360, 0xBA7075, metricsText);
-				background = 0x031018;
+				background = 0x132028;
 				setTrackLine(0x245B76, 0x7FCFEB, background);
 				break;
 
@@ -685,7 +685,7 @@ class Theme {
 				metricsText = 0xD7C9EE;
 				setColor4BTIcon(0x5D4E7A, 0xA8B7E3);
 				setColor4BatteryIcon(0x8CA993, 0xCEA462, 0xC07482, metricsText);
-				background = 0x10081C;
+				background = 0x20182C;
 				setTrackLine(0x4F3D73, 0xAE93E2, background);
 				break;
 
@@ -702,7 +702,7 @@ class Theme {
 				metricsText = 0xD7DFE2;
 				setColor4BTIcon(0x4B5B62, 0x79C5C9);
 				setColor4BatteryIcon(0x88A990, 0xC7A361, 0xB87575, metricsText);
-				background = 0x070A0D;
+				background = 0x171A1D;
 				setTrackLine(0x333C41, 0x6FC6CB, background);
 				break;
 
@@ -787,7 +787,7 @@ class Theme {
 				metricsText = 0xe6dcdc;
 				setColor4BTIcon(0x972121, 0xFF7237);
 				setColor4BatteryIcon(0x972121, 0xFF7237, 0x972121, 0xFFC9C1);
-				background = 0x6B5757;
+				background = 0x7B6767;
 				setTrackLine(0xE2E2E2, 0xFFC9C1, background);
 				break;		
 		}
